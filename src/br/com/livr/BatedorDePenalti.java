@@ -2,8 +2,8 @@ package br.com.livr;
 
 import br.com.livr.statics.Jogador;
 import br.com.livr.statics.Sessao;
-import br.com.livr.views.InGameWindow;
-import br.com.livr.views.Notificacao;
+import br.com.livr.views.boundary.InGameWindow;
+import br.com.livr.views.boundary.Notificacao;
 import java.util.Random;
 
 /*
