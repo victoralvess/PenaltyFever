@@ -3,7 +3,7 @@ package br.com.livr;
 import br.com.livr.Equipe;
 import br.com.livr.statics.AmanteDoFutebol;
 import br.com.livr.statics.ComponenteDoTime;
-import br.com.livr.views.Notificacao;
+import br.com.livr.views.boundary.Notificacao;
 import javax.swing.JOptionPane;
 
 /*
