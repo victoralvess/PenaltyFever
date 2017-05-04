@@ -125,14 +125,6 @@ public class InGameWindowController {
         return indicesSelecionados;
     }
 
-    //    private int correcaoDoValor(int selecionado) {
-    //        for(Integer is : indicesSelecionados) {
-    //            if(is.intValue() == selecionado) selecionado++;
-    //            if(selecionado > 4) selecionado = 0;
-    //        }
-    //
-    //        return selecionado;
-    //    }
     public boolean jaFoi(int selecionado) {
         List<Integer> is = getIndicesSelecionados();
         if (is.size() == 4) {
@@ -273,7 +265,7 @@ public class InGameWindowController {
             } else {
                 JOptionPane.showMessageDialog(null, "Escolha OUtro");
             }
-        } else{
+        } else {
             inGameWindow.getBtnTirarParOuImpar().doClick();
         }
     }
