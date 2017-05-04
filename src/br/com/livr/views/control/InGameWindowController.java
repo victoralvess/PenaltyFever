@@ -274,6 +274,7 @@ public class InGameWindowController {
                 JOptionPane.showMessageDialog(null, "Escolha OUtro");
             }
         } else {
+            System.out.println("");
             inGameWindow.getBtnTirarParOuImpar().doClick();
         }
     }
