@@ -256,8 +256,6 @@ public class InGameWindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSuaVezActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSuaVezActionPerformed
-        // TODO add your handling code here:
-        System.out.println("");
         inGameWindowController.btnSuaVezActionPerformed();
     }//GEN-LAST:event_btnSuaVezActionPerformed
 
