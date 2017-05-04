@@ -4,6 +4,7 @@ import br.com.livr.statics.Jogador;
 import br.com.livr.statics.Sessao;
 import br.com.livr.views.boundary.InGameWindow;
 import br.com.livr.views.boundary.Notificacao;
+import br.com.livr.views.control.InGameWindowController;
 import java.util.Random;
 
 /*
@@ -32,7 +33,7 @@ public class BatedorDePenalti extends Jogador {
         int chanceDeFazerGol = r.nextInt(101);
 
         if (chanceDeFazerGol >= valorMinimoParaMarcar) {
-            Goleiro g = InGameWindow.verificarEquipeDoGoleiro(equipeDoBatedor);
+            Goleiro g = InGameWindowController.verificarEquipeDoGoleiro(equipeDoBatedor);
             if (!g.tentarDefender()) {
                 setMarcouGol(true);
                 notificacao.exibirNotificacao(this);
