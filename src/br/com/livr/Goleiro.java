@@ -14,7 +14,7 @@ import java.util.Random;
  */
 public class Goleiro extends Jogador {
 
-    private final int porcentagemMinimaParaDefender = 65;
+    private final int precisaoMinimaParaDefender = 65;
     public Goleiro(String nomeGoleiro) {
         super();
         super.setNomeJogador(nomeGoleiro);
@@ -23,9 +23,8 @@ public class Goleiro extends Jogador {
     public boolean defender() {
         boolean defendeu = false;
         Random r = new Random();
-        int chanceDeDefender = r.nextInt(101);
-        System.out.println(chanceDeDefender);
-        if (chanceDeDefender >= porcentagemMinimaParaDefender) {
+        int precisaoDefesa = r.nextInt(101);
+        if (precisaoDefesa >= precisaoMinimaParaDefender) {
             return defendeu;
         } else {
             return !defendeu;

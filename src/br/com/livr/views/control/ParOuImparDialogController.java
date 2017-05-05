@@ -8,6 +8,7 @@ package br.com.livr.views.control;
 import br.com.livr.Tecnico;
 import static br.com.livr.statics.Sessao.getTecnico;
 import br.com.livr.views.boundary.ParOuImparDialog;
+import com.notification.NotificationFactory;
 import javax.swing.JRadioButton;
 
 /**
@@ -35,7 +36,7 @@ public class ParOuImparDialogController {
         
         parOuImparDialog.getBtnJogar().setEnabled(false);
 
-        parOuImparDialog.getNotificacao().exibirNotificacao("Quem começa!?", getQuemComeca(), "shamrock.png", true, 3);
+        parOuImparDialog.getNotificacao().exibirNotificacao("Quem começa!?", getQuemComeca(), "shamrock.png", true, 3, NotificationFactory.Location.NORTHEAST);
 
         parOuImparDialog.dispose();
     }

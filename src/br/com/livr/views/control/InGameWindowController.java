@@ -33,6 +33,8 @@ import javax.swing.Timer;
  */
 public class InGameWindowController {
 
+    int delayParaIAJogar = 8 * 1000;
+
     public static Goleiro verificarEquipeDoGoleiro(Equipe equipeDoBatedor) {
         if (equipeDoBatedor.getGoleiro().equals(getGoleiroEquipePlayer())) {
             //Se bp e gk forem do mesmo time
@@ -95,7 +97,7 @@ public class InGameWindowController {
     }
 
     public void runIA() {
-        Timer t = new Timer(5000, (ActionEvent e) -> {
+        Timer t = new Timer(delayParaIAJogar, (ActionEvent e) -> {
             int numeroBatedorPenaltiIA = getNumeroBatedorIA();
             if (numeroBatedorPenaltiIA >= getJogadoresPorTime()) {
                 numeroBatedorPenaltiIA = 0;
@@ -249,7 +251,7 @@ public class InGameWindowController {
         if (!inGameWindow.getBtnTirarParOuImpar().isEnabled()) {
             int selecionado = inGameWindow.getListJogadoresTimePlayer().getSelectedIndex();
             boolean temCartaoVermelho = Sessao.getBatedoresEquipePlayer().get(selecionado).getCartaoVermelho();
-            
+
             if ((!jaFoi(selecionado)) && (!temCartaoVermelho)) {
                 getIndicesSelecionados().add(selecionado);
                 BatedorDePenaltis bp = getTecnico().escolherBatedor(selecionado);

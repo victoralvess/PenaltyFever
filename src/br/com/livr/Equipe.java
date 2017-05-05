@@ -1,5 +1,6 @@
 package br.com.livr;
 
+import br.com.livr.statics.enums.TipoTorcida;
 import java.util.HashMap;
 import java.util.List;
 
@@ -18,10 +19,12 @@ public class Equipe {
     private String nomeEquipe;
     private Tecnico tecnico;
     private Goleiro goleiro;
-    private HashMap<Boolean, Torcida> torcidas;
+    private HashMap<TipoTorcida, Torcida> torcidas;
+    public long id;
 
     public Equipe(String nomeEquipe) {
         this.nomeEquipe = nomeEquipe;
+        id = System.nanoTime();
     }
 
     public List<BatedorDePenaltis> getBatedoresDePenaltis() {
@@ -56,11 +59,16 @@ public class Equipe {
         this.goleiro = goleiro;
     }
 
-    public HashMap<Boolean, Torcida> getTorcidas() {
+    public HashMap<TipoTorcida, Torcida> getTorcidas() {
         return torcidas;
     }
 
-    public void setTorcidas(HashMap<Boolean, Torcida> torcidas) {
+    public void setTorcidas(HashMap<TipoTorcida, Torcida> torcidas) {
         this.torcidas = torcidas;
+    }
+    
+    @Override
+    public boolean equals(Object equipe) {
+        return (this.id == ((Equipe) equipe).id);
     }
 }

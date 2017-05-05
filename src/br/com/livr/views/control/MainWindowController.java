@@ -19,6 +19,7 @@ import static br.com.livr.statics.Sessao.getTecnico;
 import static br.com.livr.statics.Sessao.setEquipeAdversaria;
 import static br.com.livr.statics.Sessao.setEquipePlayer;
 import static br.com.livr.statics.Sessao.setTecnico;
+import br.com.livr.statics.enums.TipoTorcida;
 import br.com.livr.views.boundary.ErrorDialog;
 import br.com.livr.views.boundary.InGameWindow;
 import br.com.livr.views.boundary.MainWindow;
@@ -100,8 +101,8 @@ public class MainWindowController {
     }
 
     private void setTorcidasNosTimes() {
-        HashMap<Boolean, Torcida> torcidasPro = new HashMap<>();
-        HashMap<Boolean, Torcida> torcidasContra = new HashMap<>();
+        HashMap<TipoTorcida, Torcida> torcidasPro = new HashMap<>();
+        HashMap<TipoTorcida, Torcida> torcidasContra = new HashMap<>();
 
         //Torcidas do Time do Jogador
         //Educada
@@ -110,23 +111,23 @@ public class MainWindowController {
         torcidaProEducada.setTime(getEquipePlayer());
         //Mal Educada
         Torcida torcidaProMalEducada = new Torcida();
-        torcidaProEducada.setEducado(false);
-        torcidaProEducada.setTime(getEquipePlayer());
+        torcidaProMalEducada.setEducado(false);
+        torcidaProMalEducada.setTime(getEquipePlayer());
         //Setando nos time do Jogador
-        torcidasPro.put(Boolean.TRUE, torcidaProEducada);
-        torcidasPro.put(Boolean.FALSE, torcidaProMalEducada);
+        torcidasPro.put(TipoTorcida.EDUCADA, torcidaProEducada);
+        torcidasPro.put(TipoTorcida.MAL_EDUCADA, torcidaProMalEducada);
         getEquipePlayer().setTorcidas(torcidasPro);
         //Mesmo processo para o time da IA
         Torcida torcidaContraEducada = new Torcida();
         torcidaContraEducada.setEducado(true);
-        torcidaContraEducada.setTime(getEquipePlayer());
+        torcidaContraEducada.setTime(getEquipeAdversaria());
 
         Torcida torcidaContraMalEducada = new Torcida();
         torcidaContraMalEducada.setEducado(false);
-        torcidaContraMalEducada.setTime(getEquipePlayer());
+        torcidaContraMalEducada.setTime(getEquipeAdversaria());
 
-        torcidasContra.put(Boolean.TRUE, torcidaContraEducada);
-        torcidasContra.put(Boolean.FALSE, torcidaContraMalEducada);
+        torcidasContra.put(TipoTorcida.EDUCADA, torcidaContraEducada);
+        torcidasContra.put(TipoTorcida.MAL_EDUCADA, torcidaContraMalEducada);
         getEquipeAdversaria().setTorcidas(torcidasContra);
 
         Sessao.setTorcidaEducadaEquipeAdversaria(torcidaContraEducada);

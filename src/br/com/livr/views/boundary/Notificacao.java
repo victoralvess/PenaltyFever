@@ -64,8 +64,8 @@ public class Notificacao {
         return simpleManager;
     }
 
-    public void exibirNotificacao(String titulo, String texto, String icone, boolean fecharComClick, int duracaoEmSegundos) {
-        getSimpleManager().setLocation(Location.EAST);
+    public void exibirNotificacao(String titulo, String texto, String icone, boolean fecharComClick, int duracaoEmSegundos, Location posicao) {
+        getSimpleManager().setLocation(posicao);
         ImageIcon icon = new ImageIcon(InGameWindow.class.getResource("/br/com/livr/assets/" + icone));
         IconNotification iconNotification = getNotificationFactory().buildIconNotification(titulo, texto, icon);
         iconNotification.setCloseOnClick(fecharComClick);
