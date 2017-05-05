@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class Equipe {
 
-    private List<BatedorDePenalti> jogadores;
+    private List<BatedorDePenaltis> jogadores;
     private String nomeTime;
     private Tecnico tecnico;
     private Goleiro goleiro;
@@ -24,11 +24,11 @@ public class Equipe {
         this.nomeTime = nomeTime;
     }
 
-    public List<BatedorDePenalti> getJogadores() {
+    public List<BatedorDePenaltis> getJogadores() {
         return jogadores;
     }
 
-    public void setJogadores(List<BatedorDePenalti> jogadores) {
+    public void setJogadores(List<BatedorDePenaltis> jogadores) {
         this.jogadores = jogadores;
     }
 

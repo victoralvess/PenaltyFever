@@ -5,6 +5,7 @@
  */
 package br.com.livr.statics;
 
+import br.com.livr.views.boundary.Notificacao;
 import java.util.Random;
 
 /**
@@ -33,7 +34,7 @@ public abstract class Arbitro {
         return !decisaoCerta;
     }
 
-    public String explicarRegras() {
-        return "REGRAS ...";
+    public void explicarRegras() {
+        new Notificacao().exibirNotificacao("Regras", "Vale quase tudo!", "angry.png", true, 5);
     }
 }

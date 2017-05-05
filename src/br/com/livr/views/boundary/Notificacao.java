@@ -5,7 +5,7 @@
  */
 package br.com.livr.views.boundary;
 
-import br.com.livr.BatedorDePenalti;
+import br.com.livr.BatedorDePenaltis;
 import br.com.livr.Equipe;
 import br.com.livr.Goleiro;
 import com.notification.NotificationFactory;
@@ -35,7 +35,7 @@ public class Notificacao {
         manager.setFadeTime(Time.seconds(tempoDefaultDeDuracaoDaNotificacao));
     }
 
-    public void exibirNotificacao(BatedorDePenalti bp) {
+    public void exibirNotificacao(BatedorDePenaltis bp) {
         ImageIcon icon = new ImageIcon(InGameWindow.class.getResource("/br/com/livr/assets/soccer.png"));
         IconNotification iconNotification = this.getFactory().buildIconNotification("Goooooooool", bp.getNomeJogador() + getTextosAtaque()[new Random().nextInt(getTextosAtaque().length)], icon);
         iconNotification.setCloseOnClick(true);

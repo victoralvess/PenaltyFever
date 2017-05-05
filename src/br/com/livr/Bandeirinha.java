@@ -13,39 +13,14 @@ import br.com.livr.statics.Arbitro;
  */
 public class Bandeirinha extends Arbitro {
 
-    private int nivelHonestidade;
     boolean irregularidade;
 
     public Bandeirinha(int nivelHonestidade) {
-        this.nivelHonestidade = nivelHonestidade;
+        super.setNivelHonestidade(nivelHonestidade);
     }
 
-    public boolean comunicarGol(boolean foiGol) {
-        if (foiGol) {
-            return foiGol;
-        } else {
-            System.out.println("Gol Inválido!");
-            return !foiGol;
-        }
-    }
-
-    public boolean comunicarIrregularidade(boolean irregularidade) {
-        if (!irregularidade) {
-            System.out.println("Sem irregularidades.");
-        } else {
-            System.out.println("Gol impedido!");
-        }
-        return roubar(getNivelHonestidade(), irregularidade);
-    }
-
-    @Override
-    public int getNivelHonestidade() {
-        return nivelHonestidade;
-    }
-
-    @Override
-    public void setNivelHonestidade(int nivelHonestidade) {
-        this.nivelHonestidade = nivelHonestidade;
+    public boolean comunicarIrregularidadeAoJuiz() {
+        return roubar(getNivelHonestidade(), true);
     }
 
 }

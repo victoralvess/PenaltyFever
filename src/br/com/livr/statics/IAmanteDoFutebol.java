@@ -10,13 +10,13 @@ package br.com.livr.statics;
  *
  * @author Aluno_2
  */
-public interface AmanteDoFutebol {
+public interface IAmanteDoFutebol {
 
-    public String reclamar(String reclamacao);
+    public void reclamar(String reclamacao);
 
-    public String elogiar(ComponenteDoTime componenteDoTime, String elogio);
+    public void elogiar(IComponenteDoTime componenteDoTime, String elogio);
 
-    public String comemorar(String comemoracao);
+    public void comemorar(String comemoracao);
     
     public void lamentar();
 

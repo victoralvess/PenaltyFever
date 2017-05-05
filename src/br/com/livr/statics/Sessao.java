@@ -6,7 +6,7 @@
 package br.com.livr.statics;
 
 import br.com.livr.Bandeirinha;
-import br.com.livr.BatedorDePenalti;
+import br.com.livr.BatedorDePenaltis;
 import br.com.livr.Equipe;
 import br.com.livr.Gandula;
 import br.com.livr.Goleiro;
@@ -25,7 +25,7 @@ public abstract class Sessao {
     private static Equipe equipePlayer, equipeAdversaria;
     private static Goleiro goleiroEquipePlayer, goleiroEquipeAdversaria;
     private static List<Goleiro> goleirosParticipantes;
-    private static List<BatedorDePenalti> batedoresParticipantes, batedoresEquipePlayer = new ArrayList<>(), batedoresEquipeAdversaria = new ArrayList<>();
+    private static List<BatedorDePenaltis> batedoresParticipantes, batedoresEquipePlayer = new ArrayList<>(), batedoresEquipeAdversaria = new ArrayList<>();
     ;
     private static Tecnico tecnico;
     private static Gandula gandula;
@@ -64,15 +64,15 @@ public abstract class Sessao {
         return goleirosParticipantes;
     }
 
-    public static List<BatedorDePenalti> getBatedoresParticipantes() {
+    public static List<BatedorDePenaltis> getBatedoresParticipantes() {
         return batedoresParticipantes;
     }
 
-    public static List<BatedorDePenalti> getBatedoresEquipePlayer() {
+    public static List<BatedorDePenaltis> getBatedoresEquipePlayer() {
         return batedoresEquipePlayer;
     }
 
-    public static List<BatedorDePenalti> getBatedoresEquipeAdversaria() {
+    public static List<BatedorDePenaltis> getBatedoresEquipeAdversaria() {
         return batedoresEquipeAdversaria;
     }
 
@@ -120,15 +120,15 @@ public abstract class Sessao {
         goleirosParticipantes = aGoleirosParticipantes;
     }
 
-    public static void setBatedoresParticipantes(List<BatedorDePenalti> aBatedoresParticipantes) {
+    public static void setBatedoresParticipantes(List<BatedorDePenaltis> aBatedoresParticipantes) {
         batedoresParticipantes = aBatedoresParticipantes;
     }
 
-    public static void setBatedoresEquipePlayer(List<BatedorDePenalti> aBatedoresEquipePlayer) {
+    public static void setBatedoresEquipePlayer(List<BatedorDePenaltis> aBatedoresEquipePlayer) {
         batedoresEquipePlayer = aBatedoresEquipePlayer;
     }
 
-    public static void setBatedoresEquipeAdversaria(List<BatedorDePenalti> aBatedoresEquipeAdversaria) {
+    public static void setBatedoresEquipeAdversaria(List<BatedorDePenaltis> aBatedoresEquipeAdversaria) {
         batedoresEquipeAdversaria = aBatedoresEquipeAdversaria;
     }
 

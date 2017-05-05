@@ -9,7 +9,7 @@ package br.com.livr.statics;
  *
  * @author Aluno_2
  */
-public abstract class Jogador implements ComponenteDoTime {
+public abstract class Jogador implements IComponenteDoTime {
 
     private boolean cartaoAmarelo, cartaoVermelho;
     private String nomeJogador;
@@ -18,10 +18,6 @@ public abstract class Jogador implements ComponenteDoTime {
     public Jogador() {
         this.cartaoAmarelo = false;
         this.cartaoVermelho = false;
-    }
-
-    public void obedecerAoTecnico() {
-        System.out.println("Sim, senhor!");
     }
 
     public boolean getCartaoAmarelo() {
@@ -65,18 +61,18 @@ public abstract class Jogador implements ComponenteDoTime {
     }
 
     @Override
-    public String reclamar(String reclamacao) {
-        return reclamacao;
+    public void reclamar(String reclamacao) {
+        
     }
 
     @Override
-    public String elogiar(ComponenteDoTime componenteDoTime, String elogio) {
-        return elogio;
+    public void elogiar(IComponenteDoTime componenteDoTime, String elogio) {
+        
     }
 
     @Override
-    public String comemorar(String comemoracao) {
-        return comemoracao;
+    public void comemorar(String comemoracao) {
+        
     }
 
     @Override
@@ -84,7 +80,7 @@ public abstract class Jogador implements ComponenteDoTime {
     }
     
     @Override
-    public String darEntrevista(String textoEntrevista) {
-        return textoEntrevista;
+    public void darEntrevista(String discurso) {
+        
     }
 }

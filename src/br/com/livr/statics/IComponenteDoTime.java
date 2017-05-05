@@ -9,7 +9,7 @@ package br.com.livr.statics;
  *
  * @author Aluno_2
  */
-public interface ComponenteDoTime extends AmanteDoFutebol {
+public interface IComponenteDoTime extends IAmanteDoFutebol {
 
-    public String darEntrevista(String textoEntrevista);
+    public void darEntrevista(String discurso);
 }

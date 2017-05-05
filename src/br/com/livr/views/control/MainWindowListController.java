@@ -5,7 +5,7 @@
  */
 package br.com.livr.views.control;
 
-import br.com.livr.BatedorDePenalti;
+import br.com.livr.BatedorDePenaltis;
 import br.com.livr.Goleiro;
 import br.com.livr.statics.Sessao;
 import static br.com.livr.statics.Sessao.getBatedoresEquipeAdversaria;
@@ -102,7 +102,7 @@ public class MainWindowListController implements ListSelectionListener {
         setBatedoresParticipantes(new ArrayList<>());        
         int cont = 0;
         while (cont < 8) {
-            getBatedoresParticipantes().add(new BatedorDePenalti(Sessao.getNomesJogadores()[cont], (cont +1)));
+            getBatedoresParticipantes().add(new BatedorDePenaltis(Sessao.getNomesJogadores()[cont], (cont +1)));
             cont++;
         }
         //Até o momento, todos são jogadores adversários
@@ -118,9 +118,9 @@ public class MainWindowListController implements ListSelectionListener {
 
     }
 
-    private static void getNomesJogadores(List<BatedorDePenalti> jogadoresParticipantes, String[] arrayQueSeraUsado) {
+    private static void getNomesJogadores(List<BatedorDePenaltis> jogadoresParticipantes, String[] arrayQueSeraUsado) {
         int cont = 0;
-        for (BatedorDePenalti jogador : jogadoresParticipantes) {
+        for (BatedorDePenaltis jogador : jogadoresParticipantes) {
             arrayQueSeraUsado[cont] = jogador.getNomeJogador();
             cont++;
         }

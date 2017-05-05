@@ -5,7 +5,7 @@
  */
 package br.com.livr.views.control;
 
-import br.com.livr.BatedorDePenalti;
+import br.com.livr.BatedorDePenaltis;
 import br.com.livr.Equipe;
 import br.com.livr.Goleiro;
 import br.com.livr.statics.Sessao;
@@ -63,10 +63,10 @@ public class InGameWindowController {
         }
     }
 
-    public void gerarRelatorio(BatedorDePenalti bp, Equipe equipeDoBatedor) {
+    public void gerarRelatorio(BatedorDePenaltis bp, Equipe equipeDoBatedor) {
         getRelatorio().add(bp.baterPenalti(equipeDoBatedor));
         updateScrollPane(inGameWindow.getScrollPaneRelatorio(), inGameWindow.getListRelatorio());
-        boolean foiGol = BatedorDePenalti.isMarcouGol();
+        boolean foiGol = BatedorDePenaltis.isMarcouGol();
         if (foiGol) {
             alterarPlacarDe(equipeDoBatedor);
         }
@@ -102,7 +102,7 @@ public class InGameWindowController {
                 setNumeroBatedorIA(0);
             }
             Equipe equipeDaIA = getEquipeAdversaria();
-            BatedorDePenalti bp = equipeDaIA.getTecnico().escolherBatedor(numeroBatedorPenaltiIA);
+            BatedorDePenaltis bp = equipeDaIA.getTecnico().escolherBatedor(numeroBatedorPenaltiIA);
             gerarRelatorio(bp, equipeDaIA);
             setNumeroBatedorIA(numeroBatedorPenaltiIA + 1);
             verificarPlacar(equipeDaIA);
@@ -214,9 +214,9 @@ public class InGameWindowController {
     }
 
     public void initListaJogadores() {
-        List<BatedorDePenalti> lst = getEquipePlayer().getJogadores();
+        List<BatedorDePenaltis> lst = getEquipePlayer().getJogadores();
         List<String> nomes = new ArrayList<>();
-        lst.forEach((BatedorDePenalti bp) -> {
+        lst.forEach((BatedorDePenaltis bp) -> {
             nomes.add(bp.getNomeJogador());
         });
         inGameWindow.getListJogadoresTimePlayer().setListData(nomes.toArray(new String[nomes.size()]));
@@ -248,22 +248,22 @@ public class InGameWindowController {
     public void btnSuaVezActionPerformed() {
         if (!inGameWindow.getBtnTirarParOuImpar().isEnabled()) {
             int selecionado = inGameWindow.getListJogadoresTimePlayer().getSelectedIndex();
-            if (!jaFoi(selecionado)) {
+            boolean temCartaoVermelho = Sessao.getBatedoresEquipePlayer().get(selecionado).getCartaoVermelho();
+            
+            if ((!jaFoi(selecionado)) && (!temCartaoVermelho)) {
                 getIndicesSelecionados().add(selecionado);
-                BatedorDePenalti bp = getTecnico().escolherBatedor(selecionado);
+                BatedorDePenaltis bp = getTecnico().escolherBatedor(selecionado);
                 gerarRelatorio(bp, getEquipePlayer());
                 inGameWindow.getBtnSuaVez().setEnabled(false);
 
                 verificarPlacar(getEquipePlayer());
 
                 if (!isHaVencedor()) {
-                    System.out.println("NÃO HÁ VENCEDOR");
-
                     runIA();
                 }
 
             } else {
-                JOptionPane.showMessageDialog(null, "Escolha OUtro");
+                JOptionPane.showMessageDialog(null, "Escolha Outro");
             }
         } else {
             inGameWindow.getBtnTirarParOuImpar().doClick();

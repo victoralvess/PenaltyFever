@@ -5,7 +5,7 @@
  */
 package br.com.livr.statics;
 
-import br.com.livr.BatedorDePenalti;
+import br.com.livr.BatedorDePenaltis;
 import br.com.livr.Goleiro;
 import static br.com.livr.statics.Sessao.getBatedoresEquipeAdversaria;
 import static br.com.livr.statics.Sessao.getBatedoresEquipePlayer;
@@ -44,13 +44,9 @@ public class ListListener implements ListSelectionListener {
         this.limiteDeEscolhas = limiteDeEscolhas;
     }
 
-    ListListener() {
-
-    }
-
     @Override
-    public void valueChanged(ListSelectionEvent e) {
-        JList lista = (JList) e.getSource();
+    public void valueChanged(ListSelectionEvent listSelectionEvent) {
+        JList lista = (JList) listSelectionEvent.getSource();
 
         setQuantidadeItensSelecionados(lista.getSelectedIndices().length);
 
@@ -105,7 +101,7 @@ public class ListListener implements ListSelectionListener {
         setBatedoresParticipantes(new ArrayList<>());        
         int cont = 0;
         while (cont < 8) {
-            getBatedoresParticipantes().add(new BatedorDePenalti(Sessao.getNomesJogadores()[cont], (cont +1)));
+            getBatedoresParticipantes().add(new BatedorDePenaltis(Sessao.getNomesJogadores()[cont], (cont +1)));
             cont++;
         }
         //Até o momento, todos são jogadores adversários
@@ -121,9 +117,9 @@ public class ListListener implements ListSelectionListener {
 
     }
 
-    private static void getNomesJogadores(List<BatedorDePenalti> jogadoresParticipantes, String[] arrayQueSeraUsado) {
+    private static void getNomesJogadores(List<BatedorDePenaltis> jogadoresParticipantes, String[] arrayQueSeraUsado) {
         int cont = 0;
-        for (BatedorDePenalti jogador : jogadoresParticipantes) {
+        for (BatedorDePenaltis jogador : jogadoresParticipantes) {
             arrayQueSeraUsado[cont] = jogador.getNomeJogador();
             cont++;
         }

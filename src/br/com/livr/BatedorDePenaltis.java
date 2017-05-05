@@ -2,7 +2,6 @@ package br.com.livr;
 
 import br.com.livr.statics.Jogador;
 import br.com.livr.statics.Sessao;
-import br.com.livr.views.boundary.InGameWindow;
 import br.com.livr.views.boundary.Notificacao;
 import br.com.livr.views.control.InGameWindowController;
 import java.util.Random;
@@ -16,12 +15,12 @@ import java.util.Random;
  *
  * @author Aluno_2
  */
-public class BatedorDePenalti extends Jogador {
+public class BatedorDePenaltis extends Jogador {
 
     private final int valorMinimoParaMarcar = 35;
     private static boolean marcouGol;
 
-    public BatedorDePenalti(String nomeBatedor, int numeroJogador) {
+    public BatedorDePenaltis(String nomeBatedor, int numeroJogador) {
         super();
         super.setNomeJogador(nomeBatedor);
         super.setNumeroJogador(numeroJogador);
@@ -61,6 +60,6 @@ public class BatedorDePenalti extends Jogador {
 
     @Override
     public boolean equals(Object obj) {
-        return (this.getNumeroJogador() == ((BatedorDePenalti) obj).getNumeroJogador());
+        return (this.getNumeroJogador() == ((BatedorDePenaltis) obj).getNumeroJogador());
     }
 }

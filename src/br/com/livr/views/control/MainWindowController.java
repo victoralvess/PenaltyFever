@@ -81,14 +81,14 @@ public class MainWindowController {
 //            });
 //            
 //            System.out.println(equipePlayer.getGoleiro().getNomeJogador() + "(GK)");
-//            System.out.println(equipePlayer.getTecnico().getUsername() + "(Coach)");
+//            System.out.println(equipePlayer.getTecnico().getNome() + "(Coach)");
 //            System.out.println(nomeTimeAdv);
 //            equipeAdversaria.getJogadores().forEach((j) -> {
 //                System.out.println(j.getNomeJogador());
 //            });
 //            
 //            System.out.println(equipeAdversaria.getGoleiro().getNomeJogador() + "(GK)");
-//            System.out.println(equipeAdversaria.getTecnico().getUsername() + "(Coach)");
+//            System.out.println(equipeAdversaria.getTecnico().getNome() + "(Coach)");
 //
 //            System.out.println();
             new InGameWindow().setVisible(true);

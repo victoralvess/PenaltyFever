@@ -1,10 +1,8 @@
 package br.com.livr;
 
-import br.com.livr.Equipe;
-import br.com.livr.statics.AmanteDoFutebol;
-import br.com.livr.statics.ComponenteDoTime;
 import br.com.livr.views.boundary.Notificacao;
-import javax.swing.JOptionPane;
+import br.com.livr.statics.IAmanteDoFutebol;
+import br.com.livr.statics.IComponenteDoTime;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -15,7 +13,7 @@ import javax.swing.JOptionPane;
  *
  * @author Aluno_2
  */
-public class Torcida implements AmanteDoFutebol {
+public class Torcida implements IAmanteDoFutebol {
 
     private Equipe time;
     private boolean educado;
@@ -50,19 +48,20 @@ public class Torcida implements AmanteDoFutebol {
         this.educado = educado;
     }
 
+
     @Override
-    public String reclamar(String reclamacao) {
-        return reclamacao;
+    public void reclamar(String reclamacao) {
+       
     }
 
     @Override
-    public String elogiar(ComponenteDoTime componenteDoTime, String elogio) {
-        return elogio;
+    public void elogiar(IComponenteDoTime componenteDoTime, String elogio) {
+       
     }
 
     @Override
-    public String comemorar(String comemoracao) {
-        return comemoracao;
+    public void comemorar(String comemoracao) {
+        
     }
 
     @Override

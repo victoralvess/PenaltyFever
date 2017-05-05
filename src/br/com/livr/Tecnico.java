@@ -1,8 +1,8 @@
 package br.com.livr;
 
 
-import br.com.livr.statics.ComponenteDoTime;
 import java.util.Random;
+import br.com.livr.statics.IComponenteDoTime;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -13,37 +13,37 @@ import java.util.Random;
  *
  * @author Aluno_2
  */
-public class Tecnico implements ComponenteDoTime {
+public class Tecnico implements IComponenteDoTime {
 
-    private String username;
+    private String nome;
     private Equipe equipe;
     
     public Tecnico(String username, Equipe equipe) {
-        this.username = username;
+        this.nome = username;
         this.equipe = equipe;
     }
 
-    public String getUsername() {
-        return username;
+    public String getNome() {
+        return nome;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public BatedorDePenalti escolherBatedor(int numeroJogador) {
+    public BatedorDePenaltis escolherBatedor(int numeroJogador) {
         return equipe.getJogadores().get(numeroJogador);       
     }
 
-    public boolean tirarParOuImpar(int numero, boolean par) {
+    public boolean tirarParOuImpar(int numeroEscolhido, boolean par) {
         int numeroIA = new Random().nextInt(2);
-        int resultado = numero + numeroIA;
+        int resultado = numeroEscolhido + numeroIA;
         return ((resultado % 2 == 0) && par);
     }
-
-    public void escolherTime(Equipe time, BatedorDePenalti jogador) {
-        time.getJogadores().add(jogador);
-    }
+    
+//    public void escolherTime(Equipe time, BatedorDePenaltis jogador) {
+//        time.getJogadores().add(jogador);
+//    }
 
     public Equipe getEquipe() {
         return equipe;
@@ -54,26 +54,27 @@ public class Tecnico implements ComponenteDoTime {
     }
 
     @Override
-    public String reclamar(String reclamacao) {
-        return reclamacao;
+    public void darEntrevista(String discurso) {
+        
     }
 
     @Override
-    public String elogiar(ComponenteDoTime componenteDoTime, String elogio) {
-        return elogio;
+    public void reclamar(String reclamacao) {
+       
     }
 
     @Override
-    public String comemorar(String comemoracao) {
-        return comemoracao;
+    public void elogiar(IComponenteDoTime componenteDoTime, String elogio) {
+       
+    }
+
+    @Override
+    public void comemorar(String comemoracao) {
+        
     }
 
     @Override
     public void lamentar() {
-    }
-    
-    @Override
-    public String darEntrevista(String textoEntrevista) {
-        return textoEntrevista;
+       
     }
 }
