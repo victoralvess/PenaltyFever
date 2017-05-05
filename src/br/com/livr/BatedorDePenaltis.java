@@ -17,7 +17,7 @@ import java.util.Random;
  */
 public class BatedorDePenaltis extends Jogador {
 
-    private final int valorMinimoParaMarcar = 35;
+    private final int porcentagemMinimaParaChutarAoGol = 35;
     private static boolean marcouGol;
 
     public BatedorDePenaltis(String nomeBatedor, int numeroJogador) {
@@ -26,14 +26,14 @@ public class BatedorDePenaltis extends Jogador {
         super.setNumeroJogador(numeroJogador);
     }
 
-    public String baterPenalti(Equipe equipeDoBatedor) {
+    public String baterPenalti(Equipe equipeDoBatedor) {        
         Notificacao notificacao = new Notificacao();
         Random r = new Random();
         int chanceDeFazerGol = r.nextInt(101);
 
-        if (chanceDeFazerGol >= valorMinimoParaMarcar) {
+        if (chanceDeFazerGol >= porcentagemMinimaParaChutarAoGol) {
             Goleiro g = InGameWindowController.verificarEquipeDoGoleiro(equipeDoBatedor);
-            if (!g.tentarDefender()) {
+            if (!g.defender()) {
                 setMarcouGol(true);
                 notificacao.exibirNotificacao(this);
                 Sessao.getTorcidaEducadaEquipeAdversaria().lamentar();
@@ -54,12 +54,12 @@ public class BatedorDePenaltis extends Jogador {
         return marcouGol;
     }
 
-    public static void setMarcouGol(boolean aMarcouGol) {
-        marcouGol = aMarcouGol;
+    public static void setMarcouGol(boolean marcou) {
+        marcouGol = marcou;
     }
 
     @Override
-    public boolean equals(Object obj) {
-        return (this.getNumeroJogador() == ((BatedorDePenaltis) obj).getNumeroJogador());
+    public boolean equals(Object batedorDePenaltis) {
+        return (this.getNumeroJogador() == ((BatedorDePenaltis) batedorDePenaltis).getNumeroJogador());
     }
 }

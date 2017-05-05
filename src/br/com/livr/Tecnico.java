@@ -1,6 +1,7 @@
 package br.com.livr;
 
 
+import br.com.livr.statics.IAmanteDoFutebol;
 import java.util.Random;
 import br.com.livr.statics.IComponenteDoTime;
 
@@ -13,7 +14,7 @@ import br.com.livr.statics.IComponenteDoTime;
  *
  * @author Aluno_2
  */
-public class Tecnico implements IComponenteDoTime {
+public class Tecnico implements IComponenteDoTime, IAmanteDoFutebol {
 
     private String nome;
     private Equipe equipe;
@@ -32,7 +33,7 @@ public class Tecnico implements IComponenteDoTime {
     }
 
     public BatedorDePenaltis escolherBatedor(int numeroJogador) {
-        return equipe.getJogadores().get(numeroJogador);       
+        return equipe.getBatedoresDePenaltis().get(numeroJogador);       
     }
 
     public boolean tirarParOuImpar(int numeroEscolhido, boolean par) {

@@ -214,7 +214,7 @@ public class InGameWindowController {
     }
 
     public void initListaJogadores() {
-        List<BatedorDePenaltis> lst = getEquipePlayer().getJogadores();
+        List<BatedorDePenaltis> lst = getEquipePlayer().getBatedoresDePenaltis();
         List<String> nomes = new ArrayList<>();
         lst.forEach((BatedorDePenaltis bp) -> {
             nomes.add(bp.getNomeJogador());

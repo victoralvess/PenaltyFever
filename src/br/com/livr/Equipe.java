@@ -14,30 +14,30 @@ import java.util.List;
  */
 public class Equipe {
 
-    private List<BatedorDePenaltis> jogadores;
-    private String nomeTime;
+    private List<BatedorDePenaltis> batedoresDePenaltis;
+    private String nomeEquipe;
     private Tecnico tecnico;
     private Goleiro goleiro;
     private HashMap<Boolean, Torcida> torcidas;
 
-    public Equipe(String nomeTime) {
-        this.nomeTime = nomeTime;
+    public Equipe(String nomeEquipe) {
+        this.nomeEquipe = nomeEquipe;
     }
 
-    public List<BatedorDePenaltis> getJogadores() {
-        return jogadores;
+    public List<BatedorDePenaltis> getBatedoresDePenaltis() {
+        return batedoresDePenaltis;
     }
 
-    public void setJogadores(List<BatedorDePenaltis> jogadores) {
-        this.jogadores = jogadores;
+    public void setBatedoresDePenaltis(List<BatedorDePenaltis> batedoresDePenaltis) {
+        this.batedoresDePenaltis = batedoresDePenaltis;
     }
 
-    public String getNomeTime() {
-        return nomeTime;
+    public String getNomeEquipe() {
+        return nomeEquipe;
     }
 
-    public void setNomeTime(String nomeTime) {
-        this.nomeTime = nomeTime;
+    public void setNomeEquipe(String nomeEquipe) {
+        this.nomeEquipe = nomeEquipe;
     }
 
     public Tecnico getTecnico() {
@@ -47,17 +47,11 @@ public class Equipe {
     public void setTecnico(Tecnico tecnico) {
         this.tecnico = tecnico;
     }
-
-    /**
-     * @return the goleiro
-     */
+    
     public Goleiro getGoleiro() {
         return goleiro;
     }
-
-    /**
-     * @param goleiro the goleiro to set
-     */
+    
     public void setGoleiro(Goleiro goleiro) {
         this.goleiro = goleiro;
     }

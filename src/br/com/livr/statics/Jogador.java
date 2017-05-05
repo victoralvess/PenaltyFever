@@ -9,7 +9,7 @@ package br.com.livr.statics;
  *
  * @author Aluno_2
  */
-public abstract class Jogador implements IComponenteDoTime {
+public abstract class Jogador implements IComponenteDoTime, IAmanteDoFutebol {
 
     private boolean cartaoAmarelo, cartaoVermelho;
     private String nomeJogador;

@@ -10,7 +10,7 @@ package br.com.livr;
  * @author Aluno_2
  */
 public class Gandula {
-    public String posicionarBolaNaMarcaDoPenalti() {
-        return "Bola Posicionada";
+    public void posicionarBolaNaMarcaDoPenalti() {
+        //Exibir Notificação
     }
 }

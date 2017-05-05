@@ -276,7 +276,7 @@ public class MainWindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        mainWindowController.btnLoginActionPerformed(evt);
+        mainWindowController.btnLoginClick();
     }//GEN-LAST:event_btnLoginActionPerformed
 
     public static void main(String args[]) {

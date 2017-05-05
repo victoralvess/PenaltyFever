@@ -22,7 +22,6 @@ import static br.com.livr.statics.Sessao.setTecnico;
 import br.com.livr.views.boundary.ErrorDialog;
 import br.com.livr.views.boundary.InGameWindow;
 import br.com.livr.views.boundary.MainWindow;
-import java.awt.event.ActionEvent;
 import java.util.HashMap;
 import javax.swing.JTextField;
 
@@ -38,7 +37,7 @@ public class MainWindowController {
         this.mainWindow = mainWindow;
     }
     
-    public void btnLoginActionPerformed(ActionEvent evt) {
+    public void btnLoginClick() {
         boolean erro = false;
         ErrorDialog dialogErro;
         
@@ -139,21 +138,21 @@ public class MainWindowController {
 
     private void createTecnico() {
         String nomeTecnico = mainWindow.getTxfNomeTreinador().getText();
-        setTecnico(new Tecnico(nomeTecnico.substring(0, (19 > nomeTecnico.length()) ? nomeTecnico.length() : 19), getEquipePlayer()));
+        setTecnico(new Tecnico(nomeTecnico.substring(0, (12 > nomeTecnico.length()) ? nomeTecnico.length() : 12), getEquipePlayer()));
         getEquipePlayer().setTecnico(getTecnico());
     }
 
     private void createEquipes() {
         String nomeTime = mainWindow.getTxfNomeEquipe().getText();
-        setEquipePlayer(new Equipe(nomeTime.substring(0, (19 > nomeTime.length()) ? nomeTime.length() : 19)));
+        setEquipePlayer(new Equipe(nomeTime.substring(0, (12 > nomeTime.length()) ? nomeTime.length() : 12)));
         getEquipePlayer().setGoleiro(getGoleiroEquipePlayer());
-        getEquipePlayer().setJogadores(getBatedoresEquipePlayer());
+        getEquipePlayer().setBatedoresDePenaltis(getBatedoresEquipePlayer());
 
         MainWindowListController.cadastrarEquipeAdversaria();
         String nomeTimeAdv = new StringBuffer(nomeTime).reverse().toString();
-        setEquipeAdversaria(new Equipe(nomeTimeAdv.substring(0, (19 > nomeTimeAdv.length()) ? nomeTimeAdv.length() : 19)));
+        setEquipeAdversaria(new Equipe(nomeTimeAdv.substring(0, (12 > nomeTimeAdv.length()) ? nomeTimeAdv.length() : 12)));
         getEquipeAdversaria().setGoleiro(getGoleiroEquipeAdversaria());
-        getEquipeAdversaria().setJogadores(getBatedoresEquipeAdversaria());
+        getEquipeAdversaria().setBatedoresDePenaltis(getBatedoresEquipeAdversaria());
         getEquipeAdversaria().setTecnico(new Tecnico("IA", getEquipeAdversaria()));
     }
 }

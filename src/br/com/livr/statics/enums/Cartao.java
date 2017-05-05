@@ -3,8 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.livr.statics;
+package br.com.livr.statics.enums;
 
-public enum Lamentar {
-    GOL, CARTAO;   
+/**
+ *
+ * @author victor
+ */
+public enum Cartao {
+    AMARELO, VERMELHO;
 }

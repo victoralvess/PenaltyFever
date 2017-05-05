@@ -6,7 +6,7 @@
 package br.com.livr;
 
 import br.com.livr.statics.Arbitro;
-import br.com.livr.statics.Cartao;
+import br.com.livr.statics.enums.Cartao;
 import br.com.livr.statics.Jogador;
 
 /**

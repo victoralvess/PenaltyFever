@@ -23,7 +23,7 @@ public class Torcida implements IAmanteDoFutebol {
     }
 
     public void torcer() {
-        new Notificacao().exibirNotificacao("Olê olê olê", "VAMO " + this.getTime().getNomeTime() + "!!!", "", true, 5);
+        new Notificacao().exibirNotificacao("Olê olê olê", "VAMO " + this.getTime().getNomeEquipe() + "!!!", "", true, 5);
     }
 
     public Equipe getTime() {

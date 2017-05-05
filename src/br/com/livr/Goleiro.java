@@ -14,26 +14,22 @@ import java.util.Random;
  */
 public class Goleiro extends Jogador {
 
-    private final int valorMinimoParaDefender = 65;
+    private final int porcentagemMinimaParaDefender = 65;
     public Goleiro(String nomeGoleiro) {
         super();
         super.setNomeJogador(nomeGoleiro);
     }
 
-    public boolean tentarDefender() {
+    public boolean defender() {
         boolean defendeu = false;
         Random r = new Random();
         int chanceDeDefender = r.nextInt(101);
         System.out.println(chanceDeDefender);
-        if (chanceDeDefender >= valorMinimoParaDefender) {
+        if (chanceDeDefender >= porcentagemMinimaParaDefender) {
             return defendeu;
         } else {
             return !defendeu;
         }
-    }
-
-    public String provocarBatedor(String provocacao) {
-        return provocacao;
     }
 
 }
