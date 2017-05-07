@@ -43,14 +43,17 @@ public class ParOuImparDialog extends javax.swing.JDialog {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
         btnGroupParOuImpar = new javax.swing.ButtonGroup();
         pnlContent = new javax.swing.JPanel();
         lblTituloParOuImpar = new javax.swing.JLabel();
-        lblDedos = new javax.swing.JLabel();
-        sliderQuantidadeDedos = new javax.swing.JSlider();
+        jLabel2 = new javax.swing.JLabel();
+        closeButton = new javax.swing.JLabel();
+        separator = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         btnJogar = new javax.swing.JButton();
+        sliderQuantidadeDedos = new javax.swing.JSlider();
+        lblDedos = new javax.swing.JLabel();
         rbPar = new javax.swing.JRadioButton();
         rbImpar = new javax.swing.JRadioButton();
 
@@ -59,54 +62,70 @@ public class ParOuImparDialog extends javax.swing.JDialog {
         setUndecorated(true);
         setResizable(false);
 
-        pnlContent.setBackground(new java.awt.Color(255, 255, 255));
-        pnlContent.setLayout(new java.awt.GridBagLayout());
+        pnlContent.setBackground(new java.awt.Color(35, 182, 132));
 
-        lblTituloParOuImpar.setBackground(new java.awt.Color(255, 255, 255));
-        lblTituloParOuImpar.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
-        lblTituloParOuImpar.setForeground(new java.awt.Color(255, 102, 102));
+        lblTituloParOuImpar.setBackground(new java.awt.Color(35, 182, 132));
+        lblTituloParOuImpar.setFont(new java.awt.Font("ADAM.CG PRO", 1, 48)); // NOI18N
+        lblTituloParOuImpar.setForeground(new java.awt.Color(255, 255, 255));
         lblTituloParOuImpar.setText("Par ou Impar");
         lblTituloParOuImpar.setOpaque(true);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.ipadx = 93;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(12, 114, 0, 37);
-        pnlContent.add(lblTituloParOuImpar, gridBagConstraints);
 
-        lblDedos.setBackground(new java.awt.Color(255, 255, 255));
-        lblDedos.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
-        lblDedos.setForeground(new java.awt.Color(255, 102, 102));
-        lblDedos.setText("Dedos");
-        lblDedos.setOpaque(true);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(1, 12, 0, 0);
-        pnlContent.add(lblDedos, gridBagConstraints);
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel2.setOpaque(true);
 
-        sliderQuantidadeDedos.setBackground(new java.awt.Color(255, 255, 255));
-        sliderQuantidadeDedos.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
-        sliderQuantidadeDedos.setForeground(new java.awt.Color(255, 102, 102));
-        sliderQuantidadeDedos.setMajorTickSpacing(1);
-        sliderQuantidadeDedos.setMaximum(5);
-        sliderQuantidadeDedos.setMinorTickSpacing(1);
-        sliderQuantidadeDedos.setPaintLabels(true);
-        sliderQuantidadeDedos.setValue(0);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.ipadx = 242;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.insets = new java.awt.Insets(1, 9, 0, 0);
-        pnlContent.add(sliderQuantidadeDedos, gridBagConstraints);
+        closeButton.setFont(new java.awt.Font("ADAM.CG PRO", 1, 24)); // NOI18N
+        closeButton.setForeground(new java.awt.Color(4, 61, 93));
+        closeButton.setText("X");
+        closeButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                closeButtonMouseClicked(evt);
+            }
+        });
 
-        btnJogar.setBackground(new java.awt.Color(255, 102, 102));
-        btnJogar.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
+        separator.setBackground(new java.awt.Color(15, 89, 94));
+        separator.setForeground(new java.awt.Color(15, 89, 94));
+        separator.setText(".");
+        separator.setOpaque(true);
+
+        javax.swing.GroupLayout pnlContentLayout = new javax.swing.GroupLayout(pnlContent);
+        pnlContent.setLayout(pnlContentLayout);
+        pnlContentLayout.setHorizontalGroup(
+            pnlContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlContentLayout.createSequentialGroup()
+                .addGroup(pnlContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlContentLayout.createSequentialGroup()
+                        .addGap(344, 344, 344)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 4, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlContentLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblTituloParOuImpar)
+                        .addGap(116, 116, 116)))
+                .addComponent(closeButton)
+                .addContainerGap())
+            .addComponent(separator, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        pnlContentLayout.setVerticalGroup(
+            pnlContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlContentLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlContentLayout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblTituloParOuImpar))
+                    .addComponent(closeButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addComponent(separator, javax.swing.GroupLayout.PREFERRED_SIZE, 7, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        btnJogar.setBackground(new java.awt.Color(35, 182, 132));
+        btnJogar.setFont(new java.awt.Font("ADAM.CG PRO", 1, 18)); // NOI18N
         btnJogar.setForeground(new java.awt.Color(255, 255, 255));
         btnJogar.setText("JOGAR");
         btnJogar.setBorder(null);
@@ -117,50 +136,88 @@ public class ParOuImparDialog extends javax.swing.JDialog {
                 btnJogarActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.ipadx = 85;
-        gridBagConstraints.ipady = 15;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(2, 165, 121, 37);
-        pnlContent.add(btnJogar, gridBagConstraints);
+
+        sliderQuantidadeDedos.setBackground(new java.awt.Color(255, 255, 255));
+        sliderQuantidadeDedos.setFont(new java.awt.Font("PT Sans", 1, 18)); // NOI18N
+        sliderQuantidadeDedos.setForeground(new java.awt.Color(35, 182, 132));
+        sliderQuantidadeDedos.setMajorTickSpacing(1);
+        sliderQuantidadeDedos.setMaximum(5);
+        sliderQuantidadeDedos.setMinorTickSpacing(1);
+        sliderQuantidadeDedos.setPaintLabels(true);
+        sliderQuantidadeDedos.setValue(0);
+
+        lblDedos.setBackground(new java.awt.Color(255, 255, 255));
+        lblDedos.setFont(new java.awt.Font("PT Sans", 1, 18)); // NOI18N
+        lblDedos.setForeground(new java.awt.Color(35, 182, 132));
+        lblDedos.setText("Dedos");
+        lblDedos.setOpaque(true);
 
         rbPar.setBackground(new java.awt.Color(255, 255, 255));
         btnGroupParOuImpar.add(rbPar);
-        rbPar.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
-        rbPar.setForeground(new java.awt.Color(255, 102, 102));
+        rbPar.setFont(new java.awt.Font("PT Sans", 1, 18)); // NOI18N
+        rbPar.setForeground(new java.awt.Color(35, 182, 132));
         rbPar.setSelected(true);
         rbPar.setText("Par");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.ipadx = 13;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(27, 17, 0, 130);
-        pnlContent.add(rbPar, gridBagConstraints);
 
         rbImpar.setBackground(new java.awt.Color(255, 255, 255));
         btnGroupParOuImpar.add(rbImpar);
-        rbImpar.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
-        rbImpar.setForeground(new java.awt.Color(255, 102, 102));
+        rbImpar.setFont(new java.awt.Font("PT Sans", 1, 18)); // NOI18N
+        rbImpar.setForeground(new java.awt.Color(35, 182, 132));
         rbImpar.setText("Ímpar");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(3, 17, 0, 130);
-        pnlContent.add(rbImpar, gridBagConstraints);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(281, 281, 281)
+                        .addComponent(btnJogar, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(lblDedos)
+                                .addGap(25, 25, 25)
+                                .addComponent(sliderQuantidadeDedos, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(540, 540, 540)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(rbImpar)
+                                    .addComponent(rbPar, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(12, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(7, 7, 7)
+                .addComponent(rbPar)
+                .addGap(1, 1, 1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblDedos)
+                    .addComponent(sliderQuantidadeDedos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(3, 3, 3)
+                .addComponent(rbImpar)
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnJogar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlContent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlContent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlContent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(pnlContent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -170,14 +227,22 @@ public class ParOuImparDialog extends javax.swing.JDialog {
         getParOuImparDialogController().btnJogarActionPerformed();
     }//GEN-LAST:event_btnJogarActionPerformed
 
+    private void closeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeButtonMouseClicked
+        parOuImparDialogController.closeButtonOnClick();
+    }//GEN-LAST:event_closeButtonMouseClicked
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup btnGroupParOuImpar;
     private javax.swing.JButton btnJogar;
+    private javax.swing.JLabel closeButton;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblDedos;
     private javax.swing.JLabel lblTituloParOuImpar;
     private javax.swing.JPanel pnlContent;
     private javax.swing.JRadioButton rbImpar;
     private javax.swing.JRadioButton rbPar;
+    private javax.swing.JLabel separator;
     private javax.swing.JSlider sliderQuantidadeDedos;
     // End of variables declaration//GEN-END:variables
 

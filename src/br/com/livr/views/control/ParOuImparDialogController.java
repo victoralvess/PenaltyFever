@@ -74,11 +74,15 @@ public class ParOuImparDialogController {
         }
         
         if (isVenceuParOuImpar()) {
-            setQuemComeca("Você começa o jogo!");
+            setQuemComeca("O player começa o jogo!");
         } else {
             setQuemComeca("A IA começa o jogo!");
         }
         setJogou(true);
+    }
+
+    public void closeButtonOnClick() {
+        parOuImparDialog.dispose();
     }
 
 }

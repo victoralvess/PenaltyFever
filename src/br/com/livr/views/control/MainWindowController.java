@@ -37,29 +37,29 @@ public class MainWindowController {
     public MainWindowController(MainWindow mainWindow) {
         this.mainWindow = mainWindow;
     }
-    
+
     public void btnLoginClick() {
         boolean erro = false;
         ErrorDialog dialogErro;
-        
-        if (!(verificarEntradaDe(mainWindow.getTxfNomeEquipe()))) {
-            erro = true;
-            dialogErro = new ErrorDialog(null, true, "Qual é seu time?", "Treinador(a), coloque o nome do seu time.");
-            dialogErro.setVisible(true);
-        }
-        
-        if (!(verificarEntradaDe(mainWindow.getTxfNomeTreinador()))) {
+
+        if (!(verificarEntradaDe(mainWindow.getTxtNome()))) {
             erro = true;
             dialogErro = new ErrorDialog(null, true, "Qual é seu nome?", "Treinador(a), informe seu nome.");
             dialogErro.setVisible(true);
         }
-        
+
+        if (!(verificarEntradaDe(mainWindow.getTxtEquipe()))) {
+            erro = true;
+            dialogErro = new ErrorDialog(null, true, "Qual é seu time?", "Treinador(a), coloque o nome do seu time.");
+            dialogErro.setVisible(true);
+        }
+
         if (getBatedoresEquipePlayer().size() != 4) {
             erro = true;
             dialogErro = new ErrorDialog(null, true, "Sem escalação", "Selecione apenas 4 batedores de pênaltis.");
             dialogErro.setVisible(true);
         }
-        
+
         if (getGoleiroEquipePlayer() == null) {
             erro = true;
             dialogErro = new ErrorDialog(null, true, "Sem goleiro", "Selecione 1 goleiro.");
@@ -91,7 +91,7 @@ public class MainWindowController {
 //            System.out.println(equipeAdversaria.getTecnico().getNome() + "(Coach)");
 //
 //            System.out.println();
-            new InGameWindow().setVisible(true);
+            new InGameWindow().setVisible(true);            
             mainWindow.dispose();
         }
     }
@@ -138,13 +138,13 @@ public class MainWindowController {
     }
 
     private void createTecnico() {
-        String nomeTecnico = mainWindow.getTxfNomeTreinador().getText();
+        String nomeTecnico = mainWindow.getTxtNome().getText();
         setTecnico(new Tecnico(nomeTecnico.substring(0, (12 > nomeTecnico.length()) ? nomeTecnico.length() : 12), getEquipePlayer()));
         getEquipePlayer().setTecnico(getTecnico());
     }
 
     private void createEquipes() {
-        String nomeTime = mainWindow.getTxfNomeEquipe().getText();
+        String nomeTime = mainWindow.getTxtEquipe().getText();
         setEquipePlayer(new Equipe(nomeTime.substring(0, (12 > nomeTime.length()) ? nomeTime.length() : 12)));
         getEquipePlayer().setGoleiro(getGoleiroEquipePlayer());
         getEquipePlayer().setBatedoresDePenaltis(getBatedoresEquipePlayer());
@@ -155,5 +155,9 @@ public class MainWindowController {
         getEquipeAdversaria().setGoleiro(getGoleiroEquipeAdversaria());
         getEquipeAdversaria().setBatedoresDePenaltis(getBatedoresEquipeAdversaria());
         getEquipeAdversaria().setTecnico(new Tecnico("IA", getEquipeAdversaria()));
+    }
+
+    public void closeButtonOnClick() {
+        System.exit(0);
     }
 }

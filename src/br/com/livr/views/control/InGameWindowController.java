@@ -17,11 +17,12 @@ import static br.com.livr.statics.Sessao.getTecnico;
 import br.com.livr.views.boundary.InGameWindow;
 import br.com.livr.views.boundary.Notificacao;
 import br.com.livr.views.boundary.ParOuImparDialog;
+import java.awt.Color;
 import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 import java.util.List;
-import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
@@ -150,9 +151,9 @@ public class InGameWindowController {
 
     public void alterarPlacarDe(Equipe equipe) {
         if (equipe.getGoleiro().equals(getGoleiroEquipePlayer())) {
-            InGameWindow.getLblPlacarTimePlayer().setText("" + (Integer.parseInt(InGameWindow.getLblPlacarTimePlayer().getText()) + 1));
+            inGameWindow.getLblPlacarTimePlayer().setText("" + (Integer.parseInt(inGameWindow.getLblPlacarTimePlayer().getText()) + 1));
         } else {
-            InGameWindow.getLblPlacarTimeIA().setText("" + (Integer.parseInt(InGameWindow.getLblPlacarTimeIA().getText()) + 1));
+            inGameWindow.getLblPlacarTimeIA().setText("" + (Integer.parseInt(inGameWindow.getLblPlacarTimeIA().getText()) + 1));
         }
     }
 
@@ -173,8 +174,8 @@ public class InGameWindowController {
         boolean todosBateram = verificarSeTodosJaBateram(penaltisBatidos);
         boolean atingiuQuantidadeMinimaCobrancas = penaltisBatidos >= getTotalCobrancasPorTime() * 2;
         if (atingiuQuantidadeMinimaCobrancas && todosBateram) {
-            int placarIA = Integer.parseInt(InGameWindow.getLblPlacarTimeIA().getText());
-            int placarPlayer = Integer.parseInt(InGameWindow.getLblPlacarTimePlayer().getText());
+            int placarIA = Integer.parseInt(inGameWindow.getLblPlacarTimeIA().getText());
+            int placarPlayer = Integer.parseInt(inGameWindow.getLblPlacarTimePlayer().getText());
             if (placarIA != placarPlayer) {
                 if (placarIA > placarPlayer) {
                     getNotificacao().exibirNotificacao(getEquipeAdversaria(), placarIA, placarPlayer);
@@ -236,18 +237,22 @@ public class InGameWindowController {
         this.haVencedor = haVencedor;
     }
 
-    public void btnTirarParOuImparActionPerformed() {
+    public void btnTirarParOuImparOnClick() {
+        inGameWindow.setVisible(false);
         ParOuImparDialog parOuImparDialog = new ParOuImparDialog(inGameWindow, true);
         parOuImparDialog.setVisible(true);
         if (parOuImparDialog.getParOuImparDialogController().isJogou()) {
-            JButton btn = inGameWindow.getBtnTirarParOuImpar();
+            JLabel btn = inGameWindow.getBtnTirarParOuImpar();
             btn.setText(parOuImparDialog.getParOuImparDialogController().getQuemComeca().toUpperCase());
             btn.setEnabled(false);
             verificarQuemComeca(parOuImparDialog.getParOuImparDialogController().isVenceuParOuImpar());
+            inGameWindow.pack();
         }
+        inGameWindow.setVisible(true);
+
     }
 
-    public void btnSuaVezActionPerformed() {
+    public void btnSuaVezOnClick() {
         if (!inGameWindow.getBtnTirarParOuImpar().isEnabled()) {
             int selecionado = inGameWindow.getListJogadoresTimePlayer().getSelectedIndex();
             boolean temCartaoVermelho = Sessao.getBatedoresEquipePlayer().get(selecionado).getCartaoVermelho();
@@ -268,7 +273,15 @@ public class InGameWindowController {
                 JOptionPane.showMessageDialog(null, "Escolha Outro");
             }
         } else {
-            inGameWindow.getBtnTirarParOuImpar().doClick();
+            btnTirarParOuImparOnClick();
         }
+    }
+
+    public void closeButtonOnClick() {
+        System.exit(0);
+    }
+
+    public void setarNomeEquipe(JLabel lblNomeEquipe, String nomeEquipe) {
+        lblNomeEquipe.setText(nomeEquipe);
     }
 }
