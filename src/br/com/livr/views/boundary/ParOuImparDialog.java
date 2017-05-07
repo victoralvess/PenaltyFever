@@ -47,38 +47,35 @@ public class ParOuImparDialog extends javax.swing.JDialog {
         btnGroupParOuImpar = new javax.swing.ButtonGroup();
         pnlContent = new javax.swing.JPanel();
         lblTituloParOuImpar = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         closeButton = new javax.swing.JLabel();
         separator = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        btnJogar = new javax.swing.JButton();
         sliderQuantidadeDedos = new javax.swing.JSlider();
         lblDedos = new javax.swing.JLabel();
         rbPar = new javax.swing.JRadioButton();
         rbImpar = new javax.swing.JRadioButton();
+        btnJogar = new de.craften.ui.swingmaterial.MaterialButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(585, 240));
         setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(885, 652));
         setResizable(false);
 
         pnlContent.setBackground(new java.awt.Color(35, 182, 132));
+        pnlContent.setPreferredSize(new java.awt.Dimension(885, 286));
 
         lblTituloParOuImpar.setBackground(new java.awt.Color(35, 182, 132));
         lblTituloParOuImpar.setFont(new java.awt.Font("ADAM.CG PRO", 1, 48)); // NOI18N
         lblTituloParOuImpar.setForeground(new java.awt.Color(255, 255, 255));
-        lblTituloParOuImpar.setText("Par ou Impar");
+        lblTituloParOuImpar.setText("Quem começa?");
         lblTituloParOuImpar.setOpaque(true);
 
-        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jLabel2.setOpaque(true);
-
+        closeButton.setBackground(new java.awt.Color(35, 182, 132));
         closeButton.setFont(new java.awt.Font("ADAM.CG PRO", 1, 24)); // NOI18N
-        closeButton.setForeground(new java.awt.Color(4, 61, 93));
+        closeButton.setForeground(new java.awt.Color(255, 255, 255));
         closeButton.setText("X");
+        closeButton.setOpaque(true);
         closeButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 closeButtonMouseClicked(evt);
@@ -94,48 +91,28 @@ public class ParOuImparDialog extends javax.swing.JDialog {
         pnlContent.setLayout(pnlContentLayout);
         pnlContentLayout.setHorizontalGroup(
             pnlContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(separator, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(pnlContentLayout.createSequentialGroup()
-                .addGroup(pnlContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlContentLayout.createSequentialGroup()
-                        .addGap(344, 344, 344)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 4, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlContentLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(lblTituloParOuImpar)
-                        .addGap(116, 116, 116)))
+                .addGap(265, 265, 265)
+                .addComponent(lblTituloParOuImpar)
+                .addContainerGap(446, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlContentLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
                 .addComponent(closeButton)
                 .addContainerGap())
-            .addComponent(separator, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         pnlContentLayout.setVerticalGroup(
             pnlContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlContentLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pnlContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlContentLayout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblTituloParOuImpar))
-                    .addComponent(closeButton))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addComponent(closeButton)
+                .addGap(79, 79, 79)
+                .addComponent(lblTituloParOuImpar, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
                 .addComponent(separator, javax.swing.GroupLayout.PREFERRED_SIZE, 7, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-
-        btnJogar.setBackground(new java.awt.Color(35, 182, 132));
-        btnJogar.setFont(new java.awt.Font("ADAM.CG PRO", 1, 18)); // NOI18N
-        btnJogar.setForeground(new java.awt.Color(255, 255, 255));
-        btnJogar.setText("JOGAR");
-        btnJogar.setBorder(null);
-        btnJogar.setFocusPainted(false);
-        btnJogar.setFocusable(false);
-        btnJogar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnJogarActionPerformed(evt);
-            }
-        });
 
         sliderQuantidadeDedos.setBackground(new java.awt.Color(255, 255, 255));
         sliderQuantidadeDedos.setFont(new java.awt.Font("PT Sans", 1, 18)); // NOI18N
@@ -149,7 +126,7 @@ public class ParOuImparDialog extends javax.swing.JDialog {
         lblDedos.setBackground(new java.awt.Color(255, 255, 255));
         lblDedos.setFont(new java.awt.Font("PT Sans", 1, 18)); // NOI18N
         lblDedos.setForeground(new java.awt.Color(35, 182, 132));
-        lblDedos.setText("Dedos");
+        lblDedos.setText("Número");
         lblDedos.setOpaque(true);
 
         rbPar.setBackground(new java.awt.Color(255, 255, 255));
@@ -165,43 +142,50 @@ public class ParOuImparDialog extends javax.swing.JDialog {
         rbImpar.setForeground(new java.awt.Color(35, 182, 132));
         rbImpar.setText("Ímpar");
 
+        btnJogar.setBackground(new java.awt.Color(35, 182, 132));
+        btnJogar.setForeground(new java.awt.Color(255, 255, 255));
+        btnJogar.setText("JOGAR");
+        btnJogar.setFont(new java.awt.Font("PT Sans", 1, 18)); // NOI18N
+        btnJogar.setType(de.craften.ui.swingmaterial.MaterialButton.Type.RAISED);
+        btnJogar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnJogarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblDedos)
+                .addGap(151, 151, 151)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(sliderQuantidadeDedos, javax.swing.GroupLayout.DEFAULT_SIZE, 442, Short.MAX_VALUE)
+                    .addComponent(btnJogar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(281, 281, 281)
-                        .addComponent(btnJogar, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(lblDedos)
-                                .addGap(25, 25, 25)
-                                .addComponent(sliderQuantidadeDedos, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(540, 540, 540)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(rbImpar)
-                                    .addComponent(rbPar, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(12, Short.MAX_VALUE))
+                    .addComponent(rbImpar)
+                    .addComponent(rbPar, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(7, 7, 7)
-                .addComponent(rbPar)
-                .addGap(1, 1, 1)
+                .addGap(80, 80, 80)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblDedos)
                     .addComponent(sliderQuantidadeDedos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(3, 3, 3)
+                .addGap(18, 18, 18)
+                .addComponent(btnJogar, javax.swing.GroupLayout.DEFAULT_SIZE, 53, Short.MAX_VALUE)
+                .addContainerGap(129, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(rbPar)
+                .addGap(44, 44, 44)
                 .addComponent(rbImpar)
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnJogar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -209,33 +193,31 @@ public class ParOuImparDialog extends javax.swing.JDialog {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(pnlContent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlContent, javax.swing.GroupLayout.DEFAULT_SIZE, 1110, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(pnlContent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnJogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJogarActionPerformed
-        getParOuImparDialogController().btnJogarActionPerformed();
-    }//GEN-LAST:event_btnJogarActionPerformed
-
     private void closeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeButtonMouseClicked
         parOuImparDialogController.closeButtonOnClick();
     }//GEN-LAST:event_closeButtonMouseClicked
 
+    private void btnJogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJogarActionPerformed
+        parOuImparDialogController.btnJogarActionPerformed();
+    }//GEN-LAST:event_btnJogarActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup btnGroupParOuImpar;
-    private javax.swing.JButton btnJogar;
+    private de.craften.ui.swingmaterial.MaterialButton btnJogar;
     private javax.swing.JLabel closeButton;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblDedos;
     private javax.swing.JLabel lblTituloParOuImpar;

@@ -79,7 +79,7 @@ public class Torcida implements IAmanteDoFutebol {
             } else {
                 location = NotificationFactory.Location.NORTHWEST;
             }
-            notificacao.exibirNotificacao("Que peninha! -" + ((torceParaOPlayer) ? "T P1": "T IA"), "Pelo menos o goleiro tentou.", "crying.png", true, 3, location);
+            notificacao.exibirNotificacao("Que peninha!", "Torcida de " + this.getEquipe().getNomeEquipe() + ":\nPelo menos o goleiro tentou.", "crying.png", true, 3, location);
         } else {            
             if (torceParaOPlayer) {
                 location = NotificationFactory.Location.SOUTHEAST;

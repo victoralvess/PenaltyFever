@@ -37,98 +37,117 @@ public class ErrorDialog extends javax.swing.JDialog {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
         pnlContent = new javax.swing.JPanel();
-        lblTitulo = new javax.swing.JLabel();
         lblMensagemErro = new javax.swing.JLabel();
-        btnOK = new javax.swing.JButton();
+        btnCorrigir = new de.craften.ui.swingmaterial.MaterialButton();
+        jPanel1 = new javax.swing.JPanel();
+        lblTitulo = new javax.swing.JLabel();
+        separator = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Algo de Errado Não Está Certo");
         setMinimumSize(new java.awt.Dimension(450, 200));
         setModal(true);
+        setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(700, 400));
         setResizable(false);
-        getContentPane().setLayout(new java.awt.GridBagLayout());
 
         pnlContent.setBackground(new java.awt.Color(255, 255, 255));
-        pnlContent.setLayout(new java.awt.GridBagLayout());
-
-        lblTitulo.setBackground(new java.awt.Color(255, 255, 255));
-        lblTitulo.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
-        lblTitulo.setForeground(new java.awt.Color(255, 102, 102));
-        lblTitulo.setText("Título");
-        lblTitulo.setOpaque(true);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.PAGE_START;
-        gridBagConstraints.weightx = 0.4;
-        gridBagConstraints.weighty = 0.2;
-        pnlContent.add(lblTitulo, gridBagConstraints);
 
         lblMensagemErro.setBackground(new java.awt.Color(255, 255, 255));
-        lblMensagemErro.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
-        lblMensagemErro.setForeground(new java.awt.Color(255, 102, 102));
-        lblMensagemErro.setText("Mensagem de Erro");
+        lblMensagemErro.setFont(new java.awt.Font("PT Sans", 0, 24)); // NOI18N
+        lblMensagemErro.setForeground(new java.awt.Color(35, 182, 132));
         lblMensagemErro.setOpaque(true);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.PAGE_START;
-        gridBagConstraints.weightx = 0.3;
-        gridBagConstraints.weighty = 0.5;
-        pnlContent.add(lblMensagemErro, gridBagConstraints);
 
-        btnOK.setBackground(new java.awt.Color(255, 102, 102));
-        btnOK.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
-        btnOK.setForeground(new java.awt.Color(255, 255, 255));
-        btnOK.setText("CORRIGIR");
-        btnOK.setBorder(null);
-        btnOK.setBorderPainted(false);
-        btnOK.setFocusPainted(false);
-        btnOK.setFocusable(false);
-        btnOK.addActionListener(new java.awt.event.ActionListener() {
+        btnCorrigir.setBackground(new java.awt.Color(15, 89, 94));
+        btnCorrigir.setForeground(new java.awt.Color(255, 255, 255));
+        btnCorrigir.setText("CORRIGIR");
+        btnCorrigir.setFont(new java.awt.Font("PT Sans", 1, 18)); // NOI18N
+        btnCorrigir.setType(de.craften.ui.swingmaterial.MaterialButton.Type.FLAT);
+        btnCorrigir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnOKActionPerformed(evt);
+                btnCorrigirActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.weightx = 0.4;
-        gridBagConstraints.weighty = 0.3;
-        pnlContent.add(btnOK, gridBagConstraints);
 
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = java.awt.GridBagConstraints.REMAINDER;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.weightx = 0.3;
-        gridBagConstraints.weighty = 0.3;
-        getContentPane().add(pnlContent, gridBagConstraints);
+        jPanel1.setBackground(new java.awt.Color(15, 89, 94));
+
+        lblTitulo.setBackground(new java.awt.Color(15, 89, 94));
+        lblTitulo.setFont(new java.awt.Font("PT Sans", 1, 48)); // NOI18N
+        lblTitulo.setForeground(new java.awt.Color(255, 255, 255));
+        lblTitulo.setOpaque(true);
+
+        separator.setBackground(new java.awt.Color(35, 182, 132));
+        separator.setForeground(new java.awt.Color(35, 182, 132));
+        separator.setText(".");
+        separator.setOpaque(true);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(342, Short.MAX_VALUE)
+                .addComponent(lblTitulo)
+                .addContainerGap(318, Short.MAX_VALUE))
+            .addComponent(separator, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(lblTitulo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(separator, javax.swing.GroupLayout.PREFERRED_SIZE, 7, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        javax.swing.GroupLayout pnlContentLayout = new javax.swing.GroupLayout(pnlContent);
+        pnlContent.setLayout(pnlContentLayout);
+        pnlContentLayout.setHorizontalGroup(
+            pnlContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlContentLayout.createSequentialGroup()
+                .addContainerGap(330, Short.MAX_VALUE)
+                .addComponent(lblMensagemErro)
+                .addContainerGap(330, Short.MAX_VALUE))
+            .addComponent(btnCorrigir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        pnlContentLayout.setVerticalGroup(
+            pnlContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlContentLayout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lblMensagemErro)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
+                .addComponent(btnCorrigir, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnlContent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnlContent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOKActionPerformed
-        // TODO add your handling code here:
+    private void btnCorrigirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCorrigirActionPerformed
         this.dispose();
-    }//GEN-LAST:event_btnOKActionPerformed
+    }//GEN-LAST:event_btnCorrigirActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnOK;
+    private de.craften.ui.swingmaterial.MaterialButton btnCorrigir;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblMensagemErro;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JPanel pnlContent;
+    private javax.swing.JLabel separator;
     // End of variables declaration//GEN-END:variables
 }

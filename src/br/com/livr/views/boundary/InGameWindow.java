@@ -36,6 +36,14 @@ public class InGameWindow extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        content = new javax.swing.JPanel();
+        lblRelatorioTitle = new javax.swing.JLabel();
+        lblBatedoresDePenaltisList = new javax.swing.JLabel();
+        scrollPaneBatedores = new javax.swing.JScrollPane();
+        listJogadoresTimePlayer = new javax.swing.JList<>();
+        btnSuaVez = new de.craften.ui.swingmaterial.MaterialButton();
+        scrollPaneRelatorio = new javax.swing.JScrollPane();
+        listRelatorio = new javax.swing.JList<>();
         header = new javax.swing.JPanel();
         title = new javax.swing.JLabel();
         separator = new javax.swing.JLabel();
@@ -49,18 +57,92 @@ public class InGameWindow extends javax.swing.JFrame {
         lblNomeEquipeIA = new javax.swing.JLabel();
         lblNomeEquipePlayer = new javax.swing.JLabel();
         separadorPlacar = new javax.swing.JLabel();
-        content = new javax.swing.JPanel();
-        scrollPaneRelatorio = new javax.swing.JScrollPane();
-        listRelatorio = new javax.swing.JList<>();
-        lblRelatorioTitle = new javax.swing.JLabel();
-        lblBatedoresDePenaltisList = new javax.swing.JLabel();
-        scrollPaneBatedores = new javax.swing.JScrollPane();
-        listJogadoresTimePlayer = new javax.swing.JList<>();
-        btnSuaVez = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Penalty Fever");
         setUndecorated(true);
+
+        content.setBackground(new java.awt.Color(255, 255, 255));
+        content.setForeground(new java.awt.Color(4, 61, 93));
+        content.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        lblRelatorioTitle.setFont(new java.awt.Font("PT Sans", 1, 16)); // NOI18N
+        lblRelatorioTitle.setForeground(new java.awt.Color(35, 182, 132));
+        lblRelatorioTitle.setText("O que aconteceu !?");
+
+        lblBatedoresDePenaltisList.setFont(new java.awt.Font("PT Sans", 1, 16)); // NOI18N
+        lblBatedoresDePenaltisList.setForeground(new java.awt.Color(35, 182, 132));
+        lblBatedoresDePenaltisList.setText("Batedores de Pênaltis");
+
+        scrollPaneBatedores.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        scrollPaneBatedores.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+
+        listJogadoresTimePlayer.setFont(new java.awt.Font("PT Sans", 1, 14)); // NOI18N
+        listJogadoresTimePlayer.setForeground(new java.awt.Color(35, 182, 132));
+        listJogadoresTimePlayer.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        listJogadoresTimePlayer.setFocusable(false);
+        listJogadoresTimePlayer.setMaximumSize(new java.awt.Dimension(50, 57));
+        listJogadoresTimePlayer.setMinimumSize(new java.awt.Dimension(50, 57));
+        listJogadoresTimePlayer.setPreferredSize(new java.awt.Dimension(50, 57));
+        listJogadoresTimePlayer.setSelectionBackground(new java.awt.Color(35, 182, 132));
+        listJogadoresTimePlayer.setSelectionForeground(new java.awt.Color(255, 255, 255));
+        listJogadoresTimePlayer.setVisibleRowCount(1);
+        scrollPaneBatedores.setViewportView(listJogadoresTimePlayer);
+
+        btnSuaVez.setBackground(new java.awt.Color(35, 182, 132));
+        btnSuaVez.setForeground(new java.awt.Color(255, 255, 255));
+        btnSuaVez.setText("SUA VEZ!");
+        btnSuaVez.setFont(new java.awt.Font("PT Sans", 1, 18)); // NOI18N
+        btnSuaVez.setType(de.craften.ui.swingmaterial.MaterialButton.Type.FLAT);
+        btnSuaVez.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSuaVezActionPerformed(evt);
+            }
+        });
+
+        listRelatorio.setFont(new java.awt.Font("PT Sans", 1, 14)); // NOI18N
+        listRelatorio.setForeground(new java.awt.Color(35, 182, 132));
+        listRelatorio.setFocusable(false);
+        listRelatorio.setSelectionBackground(new java.awt.Color(35, 182, 132));
+        listRelatorio.setSelectionForeground(new java.awt.Color(255, 255, 255));
+        scrollPaneRelatorio.setViewportView(listRelatorio);
+
+        javax.swing.GroupLayout contentLayout = new javax.swing.GroupLayout(content);
+        content.setLayout(contentLayout);
+        contentLayout.setHorizontalGroup(
+            contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(contentLayout.createSequentialGroup()
+                .addGroup(contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(contentLayout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addGroup(contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(scrollPaneBatedores, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                            .addComponent(lblBatedoresDePenaltisList, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)))
+                    .addGroup(contentLayout.createSequentialGroup()
+                        .addGap(61, 61, 61)
+                        .addComponent(btnSuaVez, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblRelatorioTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(scrollPaneRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        contentLayout.setVerticalGroup(
+            contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(contentLayout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addGroup(contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblRelatorioTitle)
+                    .addComponent(lblBatedoresDePenaltisList))
+                .addGap(18, 18, 18)
+                .addGroup(contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(contentLayout.createSequentialGroup()
+                        .addComponent(scrollPaneBatedores, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnSuaVez, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(scrollPaneRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(101, Short.MAX_VALUE))
+        );
 
         header.setBackground(new java.awt.Color(35, 182, 132));
 
@@ -88,7 +170,7 @@ public class InGameWindow extends javax.swing.JFrame {
         selectedIndicator.setOpaque(true);
 
         closeButton.setFont(new java.awt.Font("ADAM.CG PRO", 1, 24)); // NOI18N
-        closeButton.setForeground(new java.awt.Color(4, 61, 93));
+        closeButton.setForeground(new java.awt.Color(255, 255, 255));
         closeButton.setText("X");
         closeButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -197,95 +279,6 @@ public class InGameWindow extends javax.swing.JFrame {
                 .addComponent(separator, javax.swing.GroupLayout.PREFERRED_SIZE, 7, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        content.setBackground(new java.awt.Color(255, 255, 255));
-        content.setForeground(new java.awt.Color(4, 61, 93));
-        content.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-
-        listRelatorio.setFont(new java.awt.Font("PT Sans", 1, 14)); // NOI18N
-        listRelatorio.setForeground(new java.awt.Color(4, 61, 93));
-        listRelatorio.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        listRelatorio.setFocusable(false);
-        listRelatorio.setMaximumSize(new java.awt.Dimension(50, 57));
-        listRelatorio.setMinimumSize(new java.awt.Dimension(50, 57));
-        listRelatorio.setPreferredSize(new java.awt.Dimension(50, 57));
-        listRelatorio.setSelectionBackground(new java.awt.Color(4, 61, 93));
-        listRelatorio.setSelectionForeground(new java.awt.Color(255, 255, 255));
-        listRelatorio.setVisibleRowCount(1);
-        scrollPaneRelatorio.setViewportView(listRelatorio);
-
-        lblRelatorioTitle.setFont(new java.awt.Font("PT Sans", 1, 16)); // NOI18N
-        lblRelatorioTitle.setForeground(new java.awt.Color(4, 61, 93));
-        lblRelatorioTitle.setText("O que aconteceu !?");
-
-        lblBatedoresDePenaltisList.setFont(new java.awt.Font("PT Sans", 1, 16)); // NOI18N
-        lblBatedoresDePenaltisList.setForeground(new java.awt.Color(4, 61, 93));
-        lblBatedoresDePenaltisList.setText("Batedores de Pênaltis");
-
-        scrollPaneBatedores.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        scrollPaneBatedores.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-
-        listJogadoresTimePlayer.setFont(new java.awt.Font("PT Sans", 1, 14)); // NOI18N
-        listJogadoresTimePlayer.setForeground(new java.awt.Color(4, 61, 93));
-        listJogadoresTimePlayer.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 1", "Item 2", "Item 1", "Item 2", "Item 1", "Item 2" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        listJogadoresTimePlayer.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        listJogadoresTimePlayer.setFocusable(false);
-        listJogadoresTimePlayer.setMaximumSize(new java.awt.Dimension(50, 57));
-        listJogadoresTimePlayer.setMinimumSize(new java.awt.Dimension(50, 57));
-        listJogadoresTimePlayer.setPreferredSize(new java.awt.Dimension(50, 57));
-        listJogadoresTimePlayer.setSelectionBackground(new java.awt.Color(4, 61, 93));
-        listJogadoresTimePlayer.setSelectionForeground(new java.awt.Color(255, 255, 255));
-        listJogadoresTimePlayer.setVisibleRowCount(1);
-        scrollPaneBatedores.setViewportView(listJogadoresTimePlayer);
-
-        btnSuaVez.setBackground(new java.awt.Color(15, 89, 94));
-        btnSuaVez.setFont(new java.awt.Font("PT Sans", 1, 18)); // NOI18N
-        btnSuaVez.setForeground(new java.awt.Color(255, 255, 255));
-        btnSuaVez.setText("SUA VEZ");
-        btnSuaVez.setFocusPainted(false);
-        btnSuaVez.setFocusable(false);
-        btnSuaVez.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSuaVezActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout contentLayout = new javax.swing.GroupLayout(content);
-        content.setLayout(contentLayout);
-        contentLayout.setHorizontalGroup(
-            contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(contentLayout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addGroup(contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(scrollPaneBatedores, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                    .addComponent(lblBatedoresDePenaltisList, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                    .addComponent(btnSuaVez, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(31, 31, 31)
-                .addGroup(contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblRelatorioTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(scrollPaneRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        contentLayout.setVerticalGroup(
-            contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(contentLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addGroup(contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblRelatorioTitle)
-                    .addComponent(lblBatedoresDePenaltisList))
-                .addGap(18, 18, 18)
-                .addGroup(contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(scrollPaneRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(contentLayout.createSequentialGroup()
-                        .addComponent(scrollPaneBatedores, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnSuaVez)))
-                .addContainerGap(63, Short.MAX_VALUE))
-        );
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -304,31 +297,31 @@ public class InGameWindow extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void closeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeButtonMouseClicked
-        inGameWindowController.closeButtonOnClick();
-    }//GEN-LAST:event_closeButtonMouseClicked
-
     private void btnSuaVezActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSuaVezActionPerformed
         inGameWindowController.btnSuaVezOnClick();
     }//GEN-LAST:event_btnSuaVezActionPerformed
 
+    private void jogarSectionTitleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jogarSectionTitleMouseClicked
+        selectedIndicator.setBounds(jogarSectionTitle.getX(), selectedIndicator.getY(), jogarSectionTitle.getWidth(), selectedIndicator.getHeight());
+    }//GEN-LAST:event_jogarSectionTitleMouseClicked
+
+    private void closeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeButtonMouseClicked
+        inGameWindowController.closeButtonOnClick();
+    }//GEN-LAST:event_closeButtonMouseClicked
+
     private void btnTirarParOuImparMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTirarParOuImparMouseClicked
         if(!btnTirarParOuImpar.isEnabled()) return;
         selectedIndicator.setBounds(btnTirarParOuImpar.getX(), selectedIndicator.getY(), btnTirarParOuImpar.getWidth(), selectedIndicator.getHeight());
-        inGameWindowController.btnTirarParOuImparOnClick();        
+        inGameWindowController.btnTirarParOuImparOnClick();
     }//GEN-LAST:event_btnTirarParOuImparMouseClicked
 
     private void btnReagirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReagirMouseClicked
         selectedIndicator.setBounds(btnReagir.getX(), selectedIndicator.getY(), btnReagir.getWidth(), selectedIndicator.getHeight());
     }//GEN-LAST:event_btnReagirMouseClicked
 
-    private void jogarSectionTitleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jogarSectionTitleMouseClicked
-        selectedIndicator.setBounds(jogarSectionTitle.getX(), selectedIndicator.getY(), jogarSectionTitle.getWidth(), selectedIndicator.getHeight());
-    }//GEN-LAST:event_jogarSectionTitleMouseClicked
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel btnReagir;
-    private javax.swing.JButton btnSuaVez;
+    private de.craften.ui.swingmaterial.MaterialButton btnSuaVez;
     private javax.swing.JLabel btnTirarParOuImpar;
     private javax.swing.JLabel closeButton;
     private javax.swing.JPanel content;

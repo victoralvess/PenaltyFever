@@ -151,9 +151,21 @@ public class InGameWindowController {
 
     public void alterarPlacarDe(Equipe equipe) {
         if (equipe.getGoleiro().equals(getGoleiroEquipePlayer())) {
-            inGameWindow.getLblPlacarTimePlayer().setText("" + (Integer.parseInt(inGameWindow.getLblPlacarTimePlayer().getText()) + 1));
+            int placar = Integer.parseInt(inGameWindow.getLblPlacarTimePlayer().getText());
+            int novoPlacar = (placar + 1);
+            if (novoPlacar < 10) {
+                inGameWindow.getLblPlacarTimePlayer().setText("0" + novoPlacar);
+            } else {
+                inGameWindow.getLblPlacarTimePlayer().setText("" + novoPlacar);
+            }
         } else {
-            inGameWindow.getLblPlacarTimeIA().setText("" + (Integer.parseInt(inGameWindow.getLblPlacarTimeIA().getText()) + 1));
+            int placar = Integer.parseInt(inGameWindow.getLblPlacarTimeIA().getText());
+            int novoPlacar = (placar + 1);
+            if (novoPlacar < 10) {
+                inGameWindow.getLblPlacarTimeIA().setText("0" + novoPlacar);
+            } else {
+                inGameWindow.getLblPlacarTimeIA().setText("" + novoPlacar);
+            }
         }
     }
 
@@ -237,10 +249,10 @@ public class InGameWindowController {
         this.haVencedor = haVencedor;
     }
 
-    public void btnTirarParOuImparOnClick() {
-        inGameWindow.setVisible(false);
+    public void btnTirarParOuImparOnClick() {        
         ParOuImparDialog parOuImparDialog = new ParOuImparDialog(inGameWindow, true);
         parOuImparDialog.setVisible(true);
+        inGameWindow.setVisible(false);
         if (parOuImparDialog.getParOuImparDialogController().isJogou()) {
             JLabel btn = inGameWindow.getBtnTirarParOuImpar();
             btn.setText(parOuImparDialog.getParOuImparDialogController().getQuemComeca().toUpperCase());

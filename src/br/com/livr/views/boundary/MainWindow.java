@@ -47,12 +47,6 @@ public class MainWindow extends javax.swing.JFrame {
         selectedIndicator = new javax.swing.JLabel();
         closeButton = new javax.swing.JLabel();
         content = new javax.swing.JPanel();
-        lblSeuNome = new javax.swing.JLabel();
-        lblSuaEquipe = new javax.swing.JLabel();
-        txtNome = new javax.swing.JTextField();
-        txtEquipe = new javax.swing.JTextField();
-        linha01 = new javax.swing.JLabel();
-        linha02 = new javax.swing.JLabel();
         scrollPaneListaGoleiros = new javax.swing.JScrollPane();
         listGoleiros = new javax.swing.JList<>();
         lblGoleirosList = new javax.swing.JLabel();
@@ -61,7 +55,9 @@ public class MainWindow extends javax.swing.JFrame {
         scrollPaneListaBatedoresPenaltis = new javax.swing.JScrollPane();
         listBatedoresPenaltis = new javax.swing.JList<>();
         lblQuantidadeBatedoresDePenaltis = new javax.swing.JLabel();
-        btnLogin = new javax.swing.JButton();
+        txtNome = new de.craften.ui.swingmaterial.MaterialTextField();
+        txtEquipe = new de.craften.ui.swingmaterial.MaterialTextField();
+        btnJogar = new de.craften.ui.swingmaterial.MaterialButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Penalty Fever");
@@ -89,7 +85,7 @@ public class MainWindow extends javax.swing.JFrame {
         selectedIndicator.setOpaque(true);
 
         closeButton.setFont(new java.awt.Font("ADAM.CG PRO", 1, 24)); // NOI18N
-        closeButton.setForeground(new java.awt.Color(4, 61, 93));
+        closeButton.setForeground(new java.awt.Color(255, 255, 255));
         closeButton.setText("X");
         closeButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -102,9 +98,9 @@ public class MainWindow extends javax.swing.JFrame {
         headerLayout.setHorizontalGroup(
             headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headerLayout.createSequentialGroup()
-                .addContainerGap(202, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(title)
-                .addContainerGap(203, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(separator, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(headerLayout.createSequentialGroup()
                 .addGap(80, 80, 80)
@@ -136,104 +132,67 @@ public class MainWindow extends javax.swing.JFrame {
         content.setForeground(new java.awt.Color(4, 61, 93));
         content.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        lblSeuNome.setFont(new java.awt.Font("PT Sans", 1, 16)); // NOI18N
-        lblSeuNome.setForeground(new java.awt.Color(4, 61, 93));
-        lblSeuNome.setLabelFor(txtNome);
-        lblSeuNome.setText("Nome");
-
-        lblSuaEquipe.setFont(new java.awt.Font("PT Sans", 1, 16)); // NOI18N
-        lblSuaEquipe.setForeground(new java.awt.Color(4, 61, 93));
-        lblSuaEquipe.setLabelFor(txtEquipe);
-        lblSuaEquipe.setText("Time");
-
-        txtNome.setFont(new java.awt.Font("PT Sans", 0, 14)); // NOI18N
-        txtNome.setForeground(new java.awt.Color(4, 61, 93));
-        txtNome.setBorder(null);
-        txtNome.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-
-        txtEquipe.setFont(new java.awt.Font("PT Sans", 0, 14)); // NOI18N
-        txtEquipe.setForeground(new java.awt.Color(4, 61, 93));
-        txtEquipe.setBorder(null);
-        txtEquipe.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-
-        linha01.setBackground(new java.awt.Color(3, 46, 70));
-        linha01.setForeground(new java.awt.Color(3, 46, 70));
-        linha01.setText("jLabel1");
-        linha01.setOpaque(true);
-
-        linha02.setBackground(new java.awt.Color(3, 46, 70));
-        linha02.setForeground(new java.awt.Color(3, 46, 70));
-        linha02.setText("jLabel1");
-        linha02.setOpaque(true);
-
         scrollPaneListaGoleiros.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         scrollPaneListaGoleiros.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
         listGoleiros.setFont(new java.awt.Font("PT Sans", 1, 14)); // NOI18N
-        listGoleiros.setForeground(new java.awt.Color(4, 61, 93));
-        listGoleiros.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
+        listGoleiros.setForeground(new java.awt.Color(35, 182, 132));
         listGoleiros.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         listGoleiros.setFocusable(false);
         listGoleiros.setMaximumSize(new java.awt.Dimension(50, 57));
         listGoleiros.setMinimumSize(new java.awt.Dimension(50, 57));
         listGoleiros.setPreferredSize(new java.awt.Dimension(50, 57));
-        listGoleiros.setSelectionBackground(new java.awt.Color(4, 61, 93));
+        listGoleiros.setSelectionBackground(new java.awt.Color(35, 182, 132));
         listGoleiros.setSelectionForeground(new java.awt.Color(255, 255, 255));
         listGoleiros.setVisibleRowCount(1);
         scrollPaneListaGoleiros.setViewportView(listGoleiros);
 
         lblGoleirosList.setFont(new java.awt.Font("PT Sans", 1, 16)); // NOI18N
-        lblGoleirosList.setForeground(new java.awt.Color(4, 61, 93));
-        lblGoleirosList.setLabelFor(txtNome);
+        lblGoleirosList.setForeground(new java.awt.Color(35, 182, 132));
         lblGoleirosList.setText("Goleiros");
 
-        lblQuantidadeGoleiros.setFont(new java.awt.Font("PT Sans", 1, 12)); // NOI18N
-        lblQuantidadeGoleiros.setForeground(new java.awt.Color(15, 89, 94));
-        lblQuantidadeGoleiros.setLabelFor(txtNome);
+        lblQuantidadeGoleiros.setFont(new java.awt.Font("PT Sans", 1, 10)); // NOI18N
+        lblQuantidadeGoleiros.setForeground(new java.awt.Color(35, 182, 132));
         lblQuantidadeGoleiros.setText("*Selecione um goleiro");
 
         lblBatedoresDePenaltisList.setFont(new java.awt.Font("PT Sans", 1, 16)); // NOI18N
-        lblBatedoresDePenaltisList.setForeground(new java.awt.Color(4, 61, 93));
-        lblBatedoresDePenaltisList.setLabelFor(txtNome);
+        lblBatedoresDePenaltisList.setForeground(new java.awt.Color(35, 182, 132));
         lblBatedoresDePenaltisList.setText("Batedores de Pênaltis");
 
         scrollPaneListaBatedoresPenaltis.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         scrollPaneListaBatedoresPenaltis.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
         listBatedoresPenaltis.setFont(new java.awt.Font("PT Sans", 1, 14)); // NOI18N
-        listBatedoresPenaltis.setForeground(new java.awt.Color(4, 61, 93));
-        listBatedoresPenaltis.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 1", "Item 2", "Item 1", "Item 2", "Item 1", "Item 2" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
+        listBatedoresPenaltis.setForeground(new java.awt.Color(35, 182, 132));
         listBatedoresPenaltis.setFocusable(false);
         listBatedoresPenaltis.setMaximumSize(new java.awt.Dimension(50, 57));
         listBatedoresPenaltis.setMinimumSize(new java.awt.Dimension(50, 57));
         listBatedoresPenaltis.setPreferredSize(new java.awt.Dimension(50, 57));
-        listBatedoresPenaltis.setSelectionBackground(new java.awt.Color(4, 61, 93));
+        listBatedoresPenaltis.setSelectionBackground(new java.awt.Color(35, 182, 132));
         listBatedoresPenaltis.setSelectionForeground(new java.awt.Color(255, 255, 255));
         listBatedoresPenaltis.setVisibleRowCount(1);
         scrollPaneListaBatedoresPenaltis.setViewportView(listBatedoresPenaltis);
 
-        lblQuantidadeBatedoresDePenaltis.setFont(new java.awt.Font("PT Sans", 1, 12)); // NOI18N
-        lblQuantidadeBatedoresDePenaltis.setForeground(new java.awt.Color(15, 89, 94));
-        lblQuantidadeBatedoresDePenaltis.setLabelFor(txtNome);
+        lblQuantidadeBatedoresDePenaltis.setFont(new java.awt.Font("PT Sans", 1, 10)); // NOI18N
+        lblQuantidadeBatedoresDePenaltis.setForeground(new java.awt.Color(35, 182, 132));
         lblQuantidadeBatedoresDePenaltis.setText("*Selecione quatro batedores de pênaltis");
 
-        btnLogin.setBackground(new java.awt.Color(15, 89, 94));
-        btnLogin.setFont(new java.awt.Font("PT Sans", 1, 18)); // NOI18N
-        btnLogin.setForeground(new java.awt.Color(255, 255, 255));
-        btnLogin.setText("LOGIN");
-        btnLogin.setFocusPainted(false);
-        btnLogin.setFocusable(false);
-        btnLogin.addActionListener(new java.awt.event.ActionListener() {
+        txtNome.setForeground(new java.awt.Color(35, 182, 132));
+        txtNome.setFont(new java.awt.Font("PT Sans", 0, 16)); // NOI18N
+        txtNome.setHint("Nome");
+
+        txtEquipe.setForeground(new java.awt.Color(35, 182, 132));
+        txtEquipe.setFont(new java.awt.Font("PT Sans", 0, 16)); // NOI18N
+        txtEquipe.setHint("Time");
+
+        btnJogar.setBackground(new java.awt.Color(35, 182, 132));
+        btnJogar.setForeground(new java.awt.Color(255, 255, 255));
+        btnJogar.setText("JOGAR");
+        btnJogar.setFont(new java.awt.Font("PT Sans", 1, 18)); // NOI18N
+        btnJogar.setType(de.craften.ui.swingmaterial.MaterialButton.Type.FLAT);
+        btnJogar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLoginActionPerformed(evt);
+                btnJogarActionPerformed(evt);
             }
         });
 
@@ -242,33 +201,26 @@ public class MainWindow extends javax.swing.JFrame {
         contentLayout.setHorizontalGroup(
             contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(contentLayout.createSequentialGroup()
-                .addGap(80, 80, 80)
                 .addGroup(contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(contentLayout.createSequentialGroup()
+                        .addGap(80, 80, 80)
                         .addGroup(contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(linha01, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtNome, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(lblSeuNome, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(lblSuaEquipe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
+                            .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtEquipe, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(95, 95, 95)
                         .addGroup(contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblGoleirosList, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(scrollPaneListaGoleiros, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblQuantidadeGoleiros, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE))
-                    .addGroup(contentLayout.createSequentialGroup()
+                        .addGap(95, 95, 95)
                         .addGroup(contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtEquipe, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(linha02, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGroup(contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblBatedoresDePenaltisList, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(scrollPaneListaBatedoresPenaltis, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblQuantidadeBatedoresDePenaltis, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lblBatedoresDePenaltisList, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(scrollPaneListaBatedoresPenaltis, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblQuantidadeBatedoresDePenaltis, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(contentLayout.createSequentialGroup()
+                        .addGap(164, 164, 164)
+                        .addComponent(btnJogar, javax.swing.GroupLayout.PREFERRED_SIZE, 547, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(80, 80, 80))
-            .addComponent(btnLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         contentLayout.setVerticalGroup(
             contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -276,32 +228,25 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGap(60, 60, 60)
                 .addGroup(contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(contentLayout.createSequentialGroup()
-                        .addGroup(contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblSeuNome)
-                            .addComponent(lblGoleirosList))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(contentLayout.createSequentialGroup()
-                                .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(linha01, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(scrollPaneListaGoleiros, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblSuaEquipe)
-                            .addComponent(lblQuantidadeGoleiros))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtEquipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(linha02, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(contentLayout.createSequentialGroup()
                         .addComponent(lblBatedoresDePenaltisList)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(scrollPaneListaBatedoresPenaltis, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblQuantidadeBatedoresDePenaltis)))
-                .addGap(18, 18, Short.MAX_VALUE)
-                .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lblQuantidadeBatedoresDePenaltis))
+                    .addGroup(contentLayout.createSequentialGroup()
+                        .addGroup(contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(contentLayout.createSequentialGroup()
+                                .addComponent(lblGoleirosList)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(scrollPaneListaGoleiros, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblQuantidadeGoleiros)
+                            .addComponent(txtEquipe, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(50, 50, 50)
+                .addComponent(btnJogar, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -322,13 +267,13 @@ public class MainWindow extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        mainWindowController.btnLoginClick();
-    }//GEN-LAST:event_btnLoginActionPerformed
-
     private void closeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeButtonMouseClicked
-        mainWindowController.closeButtonOnClick();
+          mainWindowController.closeButtonOnClick();
     }//GEN-LAST:event_closeButtonMouseClicked
+
+    private void btnJogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJogarActionPerformed
+        mainWindowController.btnLoginClick();
+    }//GEN-LAST:event_btnJogarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -340,7 +285,7 @@ public class MainWindow extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnLogin;
+    private de.craften.ui.swingmaterial.MaterialButton btnJogar;
     private javax.swing.JLabel cadastroSectionTitle;
     private javax.swing.JLabel closeButton;
     private javax.swing.JPanel content;
@@ -349,10 +294,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel lblGoleirosList;
     private javax.swing.JLabel lblQuantidadeBatedoresDePenaltis;
     private javax.swing.JLabel lblQuantidadeGoleiros;
-    private javax.swing.JLabel lblSeuNome;
-    private javax.swing.JLabel lblSuaEquipe;
-    private javax.swing.JLabel linha01;
-    private javax.swing.JLabel linha02;
     private javax.swing.JList<String> listBatedoresPenaltis;
     private javax.swing.JList<String> listGoleiros;
     private javax.swing.JScrollPane scrollPaneListaBatedoresPenaltis;
@@ -360,8 +301,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel selectedIndicator;
     private javax.swing.JLabel separator;
     private javax.swing.JLabel title;
-    private javax.swing.JTextField txtEquipe;
-    private javax.swing.JTextField txtNome;
+    private de.craften.ui.swingmaterial.MaterialTextField txtEquipe;
+    private de.craften.ui.swingmaterial.MaterialTextField txtNome;
     // End of variables declaration//GEN-END:variables
 
     public javax.swing.JTextField getTxtEquipe() {
