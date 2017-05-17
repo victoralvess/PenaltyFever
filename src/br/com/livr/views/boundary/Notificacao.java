@@ -36,10 +36,12 @@ public class Notificacao {
     }
 
     public void exibirNotificacao(BatedorDePenaltis bp) {
+        getSimpleManager().setLocation(Location.NORTH);
         ImageIcon icon = new ImageIcon(InGameWindow.class.getResource("/br/com/livr/assets/soccer.png"));
         IconNotification iconNotification = this.getNotificationFactory().buildIconNotification("Goooooooool", bp.getNomeJogador() + getMensagensAtaque()[new Random().nextInt(getMensagensAtaque().length)], icon);
         iconNotification.setCloseOnClick(true);
         getSimpleManager().addNotification(iconNotification, Time.seconds(getTempoDefaultDeDuracaoDaNotificacao()));
+        getSimpleManager().setLocation(Location.SOUTHEAST);//RESET TO DEFAULT
     }
 
     public void exibirNotificacao(Goleiro g) {

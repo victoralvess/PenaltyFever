@@ -30,7 +30,7 @@ public abstract class Sessao {
     private static Tecnico tecnico;
     private static Gandula gandula;
     private static Bandeirinha bandeirinha;
-    private static Juiz juiz;
+    private static Juiz juiz = new Juiz(65);
     private static Torcida torcidaEducadaEquipePlayer, torcidaEducadaEquipeAdversaria, torcidaMalEducadaEquipePlayer, torcidaMalEducadaEquipeAdversaria;
     private static final int JOGADORES_POR_TIME = 4;
     private static final int GOLEIROS_POR_TIME = 1;

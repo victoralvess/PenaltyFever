@@ -11,9 +11,6 @@
       <Dimension value="[585, 240]"/>
     </Property>
     <Property name="undecorated" type="boolean" value="true"/>
-    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[885, 652]"/>
-    </Property>
     <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
@@ -53,7 +50,7 @@
     <Container class="javax.swing.JPanel" name="pnlContent">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="84" green="b6" red="23" type="rgb"/>
+          <Color blue="5e" green="59" red="f" type="rgb"/>
         </Property>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[885, 286]"/>
@@ -93,7 +90,7 @@
         <Component class="javax.swing.JLabel" name="lblTituloParOuImpar">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="84" green="b6" red="23" type="rgb"/>
+              <Color blue="5e" green="59" red="f" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="ADAM.CG PRO" size="48" style="1"/>
@@ -108,7 +105,7 @@
         <Component class="javax.swing.JLabel" name="closeButton">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="84" green="b6" red="23" type="rgb"/>
+              <Color blue="5e" green="59" red="f" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="ADAM.CG PRO" size="24" style="1"/>
@@ -126,10 +123,10 @@
         <Component class="javax.swing.JLabel" name="separator">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="5e" green="59" red="f" type="rgb"/>
+              <Color blue="84" green="b6" red="23" type="rgb"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="5e" green="59" red="f" type="rgb"/>
+              <Color blue="84" green="b6" red="23" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="."/>
             <Property name="opaque" type="boolean" value="true"/>
@@ -173,8 +170,8 @@
                       <Component id="sliderQuantidadeDedos" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="btnJogar" pref="53" max="32767" attributes="0"/>
-                  <EmptySpace pref="129" max="32767" attributes="0"/>
+                  <Component id="btnJogar" pref="54" max="32767" attributes="0"/>
+                  <EmptySpace pref="128" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
@@ -258,7 +255,7 @@
         <Component class="de.craften.ui.swingmaterial.MaterialButton" name="btnJogar">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="84" green="b6" red="23" type="rgb"/>
+              <Color blue="5e" green="59" red="f" type="rgb"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>

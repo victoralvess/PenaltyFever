@@ -24,6 +24,7 @@ public class InGameWindow extends javax.swing.JFrame {
         inGameWindowController.initListaJogadores();
         inGameWindowController.setarNomeEquipe(lblNomeEquipePlayer, Sessao.getEquipePlayer().getNomeEquipe());
         inGameWindowController.setarNomeEquipe(lblNomeEquipeIA, Sessao.getEquipeAdversaria().getNomeEquipe());
+        btnPlayAgain.setVisible(false);
         super.setLocationRelativeTo(null);
     }
 
@@ -44,6 +45,7 @@ public class InGameWindow extends javax.swing.JFrame {
         btnSuaVez = new de.craften.ui.swingmaterial.MaterialButton();
         scrollPaneRelatorio = new javax.swing.JScrollPane();
         listRelatorio = new javax.swing.JList<>();
+        btnPlayAgain = new de.craften.ui.swingmaterial.MaterialButton();
         header = new javax.swing.JPanel();
         title = new javax.swing.JLabel();
         separator = new javax.swing.JLabel();
@@ -107,6 +109,15 @@ public class InGameWindow extends javax.swing.JFrame {
         listRelatorio.setSelectionForeground(new java.awt.Color(255, 255, 255));
         scrollPaneRelatorio.setViewportView(listRelatorio);
 
+        btnPlayAgain.setBackground(new java.awt.Color(35, 182, 132));
+        btnPlayAgain.setForeground(new java.awt.Color(255, 255, 255));
+        btnPlayAgain.setText("JOGAR NOVAMENTE");
+        btnPlayAgain.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPlayAgainActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout contentLayout = new javax.swing.GroupLayout(content);
         content.setLayout(contentLayout);
         contentLayout.setHorizontalGroup(
@@ -123,9 +134,14 @@ public class InGameWindow extends javax.swing.JFrame {
                         .addComponent(btnSuaVez, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblRelatorioTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(scrollPaneRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(contentLayout.createSequentialGroup()
+                        .addComponent(lblRelatorioTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(contentLayout.createSequentialGroup()
+                        .addComponent(scrollPaneRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnPlayAgain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         contentLayout.setVerticalGroup(
             contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -140,7 +156,8 @@ public class InGameWindow extends javax.swing.JFrame {
                         .addComponent(scrollPaneBatedores, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnSuaVez, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(scrollPaneRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(scrollPaneRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPlayAgain, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(101, Short.MAX_VALUE))
         );
 
@@ -317,9 +334,16 @@ public class InGameWindow extends javax.swing.JFrame {
 
     private void btnReagirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReagirMouseClicked
         selectedIndicator.setBounds(btnReagir.getX(), selectedIndicator.getY(), btnReagir.getWidth(), selectedIndicator.getHeight());
+        inGameWindowController.btnReagirMouseClicked();
     }//GEN-LAST:event_btnReagirMouseClicked
 
+    private void btnPlayAgainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayAgainActionPerformed
+        this.dispose();
+        new InGameWindow().setVisible(true);
+    }//GEN-LAST:event_btnPlayAgainActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private de.craften.ui.swingmaterial.MaterialButton btnPlayAgain;
     private javax.swing.JLabel btnReagir;
     private de.craften.ui.swingmaterial.MaterialButton btnSuaVez;
     private javax.swing.JLabel btnTirarParOuImpar;
@@ -373,5 +397,9 @@ public class InGameWindow extends javax.swing.JFrame {
 
     public javax.swing.JLabel getLblPlacarTimePlayer() {
         return lblPlacarTimePlayer;
+    }
+
+    public de.craften.ui.swingmaterial.MaterialButton getBtnPlayAgain() {
+        return btnPlayAgain;
     }
 }

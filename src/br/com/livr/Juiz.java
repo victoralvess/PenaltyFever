@@ -8,6 +8,8 @@ package br.com.livr;
 import br.com.livr.statics.Arbitro;
 import br.com.livr.statics.enums.Cartao;
 import br.com.livr.statics.Jogador;
+import br.com.livr.views.boundary.Notificacao;
+import com.notification.NotificationFactory;
 
 /**
  *
@@ -29,5 +31,9 @@ public class Juiz extends Arbitro {
         } else if (corCartao.equals(Cartao.VERMELHO)) {
             jogador.setCartaoVermelho(true);
         }
+    }
+
+    public void autorizarBatida() {
+        new Notificacao().exibirNotificacao("Juiz", "Autorizado!", "whistle.png", true, 3, NotificationFactory.Location.NORTH);
     }
 }

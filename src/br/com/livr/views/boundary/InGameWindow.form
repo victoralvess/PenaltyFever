@@ -72,10 +72,17 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="lblRelatorioTitle" min="-2" pref="200" max="-2" attributes="0"/>
-                      <Component id="scrollPaneRelatorio" min="-2" pref="250" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Component id="lblRelatorioTitle" min="-2" pref="200" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="scrollPaneRelatorio" min="-2" pref="250" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="btnPlayAgain" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -95,6 +102,7 @@
                           <Component id="btnSuaVez" min="-2" pref="70" max="-2" attributes="0"/>
                       </Group>
                       <Component id="scrollPaneRelatorio" min="-2" pref="147" max="-2" attributes="0"/>
+                      <Component id="btnPlayAgain" min="-2" pref="85" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="101" max="32767" attributes="0"/>
               </Group>
@@ -223,6 +231,20 @@
             </Component>
           </SubComponents>
         </Container>
+        <Component class="de.craften.ui.swingmaterial.MaterialButton" name="btnPlayAgain">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="84" green="b6" red="23" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="JOGAR NOVAMENTE"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPlayAgainActionPerformed"/>
+          </Events>
+        </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="header">

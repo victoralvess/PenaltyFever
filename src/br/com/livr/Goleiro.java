@@ -14,7 +14,7 @@ import java.util.Random;
  */
 public class Goleiro extends Jogador {
 
-    private final int precisaoMinimaParaDefender = 65;
+    private final int precisaoMinimaParaDefender = 75;
     public Goleiro(String nomeGoleiro) {
         super();
         super.setNomeJogador(nomeGoleiro);

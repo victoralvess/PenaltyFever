@@ -62,7 +62,25 @@ public class Torcida implements IAmanteDoFutebol {
 
     @Override
     public void comemorar(String comemoracao) {
+        Notificacao notificacao = new Notificacao();
+        NotificationFactory.Location location = null;
+        boolean torceParaOPlayer = this.getEquipe().equals(Sessao.getEquipePlayer());
 
+        if (isEducado()) {
+            if (torceParaOPlayer) {
+                location = NotificationFactory.Location.NORTHWEST;
+            } else {
+                location = NotificationFactory.Location.SOUTHWEST;
+            }
+            notificacao.exibirNotificacao(this.getEquipe().getNomeEquipe(), comemoracao, "crying.png", true, 3, location);
+        } else {
+            if (torceParaOPlayer) {
+                location = NotificationFactory.Location.NORTHEAST;
+            } else {
+                location = NotificationFactory.Location.SOUTHEAST;
+            }
+            notificacao.exibirNotificacao(this.getEquipe().getNomeEquipe(), comemoracao, "angry.png", true, 3, location);
+        }
     }
 
     @Override
@@ -70,23 +88,21 @@ public class Torcida implements IAmanteDoFutebol {
         Notificacao notificacao = new Notificacao();
         NotificationFactory.Location location = null;
         boolean torceParaOPlayer = this.getEquipe().equals(Sessao.getEquipePlayer());
-        System.err.println(this.getEquipe().id);
-        System.err.println(Sessao.getEquipePlayer().id);
-        System.err.println(Sessao.getEquipeAdversaria().id);
+        
         if (isEducado()) {
             if (torceParaOPlayer) {
                 location = NotificationFactory.Location.NORTHEAST;
             } else {
-                location = NotificationFactory.Location.NORTHWEST;
-            }
-            notificacao.exibirNotificacao("Que peninha!", "Torcida de " + this.getEquipe().getNomeEquipe() + ":\nPelo menos o goleiro tentou.", "crying.png", true, 3, location);
-        } else {            
-            if (torceParaOPlayer) {
                 location = NotificationFactory.Location.SOUTHEAST;
+            }
+            notificacao.exibirNotificacao(this.getEquipe().getNomeEquipe(), "Pelo menos o goleiro tentou.", "crying.png", true, 3, location);
+        } else {
+            if (torceParaOPlayer) {
+                location = NotificationFactory.Location.NORTHWEST;
             } else {
                 location = NotificationFactory.Location.SOUTHWEST;
             }
-            notificacao.exibirNotificacao("QUE POR**! -" + ((torceParaOPlayer) ? "T P1": "T IA"), "Vai todo mundo se ...", "angry.png", true, 3, location);
+            notificacao.exibirNotificacao(this.getEquipe().getNomeEquipe(), "Vai todo mundo se ...", "angry.png", true, 3, location);
         }
     }
 

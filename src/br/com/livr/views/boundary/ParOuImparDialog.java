@@ -59,19 +59,18 @@ public class ParOuImparDialog extends javax.swing.JDialog {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(585, 240));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(885, 652));
         setResizable(false);
 
-        pnlContent.setBackground(new java.awt.Color(35, 182, 132));
+        pnlContent.setBackground(new java.awt.Color(15, 89, 94));
         pnlContent.setPreferredSize(new java.awt.Dimension(885, 286));
 
-        lblTituloParOuImpar.setBackground(new java.awt.Color(35, 182, 132));
+        lblTituloParOuImpar.setBackground(new java.awt.Color(15, 89, 94));
         lblTituloParOuImpar.setFont(new java.awt.Font("ADAM.CG PRO", 1, 48)); // NOI18N
         lblTituloParOuImpar.setForeground(new java.awt.Color(255, 255, 255));
         lblTituloParOuImpar.setText("Quem começa?");
         lblTituloParOuImpar.setOpaque(true);
 
-        closeButton.setBackground(new java.awt.Color(35, 182, 132));
+        closeButton.setBackground(new java.awt.Color(15, 89, 94));
         closeButton.setFont(new java.awt.Font("ADAM.CG PRO", 1, 24)); // NOI18N
         closeButton.setForeground(new java.awt.Color(255, 255, 255));
         closeButton.setText("X");
@@ -82,8 +81,8 @@ public class ParOuImparDialog extends javax.swing.JDialog {
             }
         });
 
-        separator.setBackground(new java.awt.Color(15, 89, 94));
-        separator.setForeground(new java.awt.Color(15, 89, 94));
+        separator.setBackground(new java.awt.Color(35, 182, 132));
+        separator.setForeground(new java.awt.Color(35, 182, 132));
         separator.setText(".");
         separator.setOpaque(true);
 
@@ -142,7 +141,7 @@ public class ParOuImparDialog extends javax.swing.JDialog {
         rbImpar.setForeground(new java.awt.Color(35, 182, 132));
         rbImpar.setText("Ímpar");
 
-        btnJogar.setBackground(new java.awt.Color(35, 182, 132));
+        btnJogar.setBackground(new java.awt.Color(15, 89, 94));
         btnJogar.setForeground(new java.awt.Color(255, 255, 255));
         btnJogar.setText("JOGAR");
         btnJogar.setFont(new java.awt.Font("PT Sans", 1, 18)); // NOI18N
@@ -178,8 +177,8 @@ public class ParOuImparDialog extends javax.swing.JDialog {
                     .addComponent(lblDedos)
                     .addComponent(sliderQuantidadeDedos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(btnJogar, javax.swing.GroupLayout.DEFAULT_SIZE, 53, Short.MAX_VALUE)
-                .addContainerGap(129, Short.MAX_VALUE))
+                .addComponent(btnJogar, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
+                .addContainerGap(128, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(40, 40, 40)
                 .addComponent(rbPar)

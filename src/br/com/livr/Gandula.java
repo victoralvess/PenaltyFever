@@ -1,16 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.livr;
 
-/**
- *
- * @author Aluno_2
- */
+import br.com.livr.views.boundary.Notificacao;
+import com.notification.NotificationFactory;
 public class Gandula {
     public void posicionarBolaNaMarcaDoPenalti() {
-        //Exibir Notificação
+        new Notificacao().exibirNotificacao("Gandula", "Bola posicionada na marca!", "soccer.png", true, 3, NotificationFactory.Location.SOUTH);
     }
 }
