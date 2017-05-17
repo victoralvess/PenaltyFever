@@ -63,7 +63,6 @@ public class MainWindowListController implements ListSelectionListener {
             for (int indice = 0; indice < getLimiteDeEscolhas(); indice++) {
                 if (getLimiteDeEscolhas() == 4) { //Verifica se a quantidade máxima bate com a qtd de bp ou de goleiros
                     getBatedoresEquipePlayer().add(getBatedoresParticipantes().get(getIndicesSelecionados()[indice]));
-
                 } else {
                     setGoleiroEquipePlayer(getGoleirosParticipantes().get(getIndicesSelecionados()[indice]));
                     setGoleiroEquipeAdversaria(cadastrarGoleiroAdversario(getGoleiroEquipePlayer()));

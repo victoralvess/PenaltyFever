@@ -339,7 +339,7 @@ public class InGameWindow extends javax.swing.JFrame {
 
     private void btnPlayAgainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayAgainActionPerformed
         this.dispose();
-        new InGameWindow().setVisible(true);
+        new MainWindow().setVisible(true);
     }//GEN-LAST:event_btnPlayAgainActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

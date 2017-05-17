@@ -15,6 +15,7 @@ import static br.com.livr.statics.Sessao.getEquipePlayer;
 import static br.com.livr.statics.Sessao.getGoleiroEquipePlayer;
 import static br.com.livr.statics.Sessao.getJogadoresPorTime;
 import static br.com.livr.statics.Sessao.getTecnico;
+import br.com.livr.views.boundary.ErrorDialog;
 import br.com.livr.views.boundary.InGameWindow;
 import br.com.livr.views.boundary.Notificacao;
 import br.com.livr.views.boundary.ParOuImparDialog;
@@ -25,7 +26,6 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JLabel;
 import javax.swing.JList;
-import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.Timer;
 
@@ -102,16 +102,19 @@ public class InGameWindowController {
                     setPenaltisBatidosPelaIA(getPenaltisBatidosPelaIA() + 1);
                     setNumeroBatedorIA(getNumeroBatedorIA() + 1);
                     verificarPlacar(Sessao.getEquipeAdversaria());
-                    inGameWindow.getBtnSuaVez().setEnabled(!isHaVencedor());     
+                    inGameWindow.getBtnSuaVez().setEnabled(!isHaVencedor());
                 }
-                
-                if(!foiGol) {
-                    if(bp.getImpacienciaTorcida() >= 95) {
-                        inGameWindow.getBtnSuaVez().setVisible(false);
-                        inGameWindow.getBtnPlayAgain().setVisible(true);
+
+                if (!foiGol) {
+                    if (bp.getImpacienciaTorcida() >= 95) {
+                        endMatch();
                     }
                 }
-                
+
+                if (haVencedor) {
+                    endMatch();
+                }
+
             }));
             esperar.setRepeats(false);
             esperar.start();
@@ -295,7 +298,7 @@ public class InGameWindowController {
     }
 
     public void btnSuaVezOnClick() {
-        if (!inGameWindow.getBtnTirarParOuImpar().isEnabled()) {
+        if ((!inGameWindow.getBtnTirarParOuImpar().isEnabled())) {
             int selecionado = inGameWindow.getListJogadoresTimePlayer().getSelectedIndex();
             boolean temCartaoVermelho = Sessao.getBatedoresEquipePlayer().get(selecionado).getCartaoVermelho();
 
@@ -311,8 +314,10 @@ public class InGameWindowController {
                     runIA();
                 }
 
+            } else if(temCartaoVermelho) {
+                new ErrorDialog(inGameWindow, true, "Jogador Expulso", "Este jogador foi expulso!!!");
             } else {
-                JOptionPane.showMessageDialog(null, "Escolha Outro");
+                new ErrorDialog(inGameWindow, true, "Já Foi", "Este jogador já foi escolhido!!!");
             }
         } else {
             btnTirarParOuImparOnClick();
@@ -330,5 +335,10 @@ public class InGameWindowController {
     public void btnReagirMouseClicked() {
         ReacaoDialog reacaoDialog = new ReacaoDialog(inGameWindow);
         reacaoDialog.setVisible(true);
+    }
+
+    private void endMatch() {
+        inGameWindow.getBtnSuaVez().setVisible(false);
+        inGameWindow.getBtnPlayAgain().setVisible(true);
     }
 }

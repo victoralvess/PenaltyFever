@@ -2,6 +2,7 @@ package br.com.livr;
 
 import br.com.livr.statics.Jogador;
 import br.com.livr.statics.Sessao;
+import br.com.livr.statics.enums.Cartao;
 import br.com.livr.statics.enums.TipoTorcida;
 import br.com.livr.views.boundary.Notificacao;
 import br.com.livr.views.control.InGameWindowController;
@@ -57,12 +58,16 @@ public class BatedorDePenaltis extends Jogador {
                     return this.getNomeJogador() + " marcou o gol em " + g.getNomeJogador();
                 } else {
                     setMarcouGol(false);
-                    
+
                     setImpacienciaTorcida(new Random().nextInt(101));
-                    if(getImpacienciaTorcida() >= 95) { 
-                        new Notificacao().exibirNotificacao("Invasão", "O Juizão roubou\n E a torcida invadiu o campo", "reclamar.png", true, 600, NotificationFactory.Location.NORTH);
+                    if (getImpacienciaTorcida() >= 95) {
+                        notificacao.exibirNotificacao("Invasão", "O Juizão roubou\n E a torcida invadiu o campo", "reclamar.png", true, 600, NotificationFactory.Location.NORTH);
+                    } else if (new Bandeirinha(45).comunicarIrregularidadeAoJuiz()) {
+                        notificacao.exibirNotificacao("Bandeirinha", "É pra Cartão!", "flag.png", true, 4, NotificationFactory.Location.NORTHEAST);
+                        notificacao.exibirNotificacao("Juiz", "Cartão!", "card.png", true, 4, NotificationFactory.Location.EAST);
+                        Sessao.getJuiz().penalizar(this, Cartao.AMARELO);
                     }
-                    
+
                     return "O juiz invalidou o gol roubando";
                 }
             } else {

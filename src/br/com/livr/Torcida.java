@@ -72,14 +72,14 @@ public class Torcida implements IAmanteDoFutebol {
             } else {
                 location = NotificationFactory.Location.SOUTHWEST;
             }
-            notificacao.exibirNotificacao(this.getEquipe().getNomeEquipe(), comemoracao, "crying.png", true, 3, location);
+            notificacao.exibirNotificacao(this.getEquipe().getNomeEquipe(), comemoracao, "crying.png", true, 6, location);
         } else {
             if (torceParaOPlayer) {
                 location = NotificationFactory.Location.NORTHEAST;
             } else {
                 location = NotificationFactory.Location.SOUTHEAST;
             }
-            notificacao.exibirNotificacao(this.getEquipe().getNomeEquipe(), comemoracao, "angry.png", true, 3, location);
+            notificacao.exibirNotificacao(this.getEquipe().getNomeEquipe(), comemoracao, "angry.png", true, 6, location);
         }
     }
 
@@ -95,14 +95,14 @@ public class Torcida implements IAmanteDoFutebol {
             } else {
                 location = NotificationFactory.Location.SOUTHEAST;
             }
-            notificacao.exibirNotificacao(this.getEquipe().getNomeEquipe(), "Pelo menos o goleiro tentou.", "crying.png", true, 3, location);
+            notificacao.exibirNotificacao(this.getEquipe().getNomeEquipe(), "Pelo menos o goleiro tentou.", "crying.png", true, 6, location);
         } else {
             if (torceParaOPlayer) {
                 location = NotificationFactory.Location.NORTHWEST;
             } else {
                 location = NotificationFactory.Location.SOUTHWEST;
             }
-            notificacao.exibirNotificacao(this.getEquipe().getNomeEquipe(), "Vai todo mundo se ...", "angry.png", true, 3, location);
+            notificacao.exibirNotificacao(this.getEquipe().getNomeEquipe(), "Vai todo mundo se ...", "angry.png", true, 6, location);
         }
     }
 
