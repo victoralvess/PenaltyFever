@@ -91,8 +91,8 @@ public class InGameWindowController {
                 boolean foiGol = BatedorDePenaltis.isMarcouGol();
                 if (foiGol) {
                     alterarPlacarDe(equipeDoBatedor);
-                }
-                if (Sessao.getTecnico().getEquipe().equals(equipeDoBatedor)) {
+                    
+                    if (Sessao.getTecnico().getEquipe().equals(equipeDoBatedor)) {
                     setPenaltisBatidosPeloPlayer(getPenaltisBatidosPeloPlayer() + 1);
                     if (getPenaltisBatidosPeloPlayer() == getTotalCobrancasPorTime()) {
                         initListaJogadores();
@@ -100,19 +100,12 @@ public class InGameWindowController {
                     inGameWindow.getBtnSuaVez().setEnabled(false);
                 } else {
                     setPenaltisBatidosPelaIA(getPenaltisBatidosPelaIA() + 1);
-                    setNumeroBatedorIA(getNumeroBatedorIA() + 1);
-                    verificarPlacar(Sessao.getEquipeAdversaria());
-                    inGameWindow.getBtnSuaVez().setEnabled(!isHaVencedor());
                 }
-
-                if (!foiGol) {
+                    
+                } else {
                     if (bp.getImpacienciaTorcida() >= 95) {
                         endMatch();
                     }
-                }
-
-                if (haVencedor) {
-                    endMatch();
                 }
 
             }));
@@ -134,7 +127,7 @@ public class InGameWindowController {
     }
 
     public void runIA() {
-        Timer t = new Timer(delayParaIAJogar, (ActionEvent e) -> {
+        Timer esperaIA = new Timer(delayParaIAJogar, (ActionEvent e) -> {
             int numeroBatedorPenaltiIA = getNumeroBatedorIA();
             if (numeroBatedorPenaltiIA >= getJogadoresPorTime()) {
                 numeroBatedorPenaltiIA = 0;
@@ -143,9 +136,21 @@ public class InGameWindowController {
             Equipe equipeDaIA = getEquipeAdversaria();
             BatedorDePenaltis bp = equipeDaIA.getTecnico().escolherBatedor(numeroBatedorPenaltiIA);
             gerarRelatorio(bp, equipeDaIA);
+            Timer esperaBatida = new Timer(12 * 1000, (ActionEvent ae) -> {
+                setNumeroBatedorIA(getNumeroBatedorIA() + 1);
+                verificarPlacar(Sessao.getEquipeAdversaria());
+                inGameWindow.getBtnSuaVez().setEnabled(!isHaVencedor());            
+                
+                if (isHaVencedor()) {
+                    endMatch();
+                }
+            });
+
+            esperaBatida.setRepeats(false);
+            esperaBatida.start();
         });
-        t.setRepeats(false);
-        t.start();
+        esperaIA.setRepeats(false);
+        esperaIA.start();
     }
 
     private void naoHaVencedor(Equipe ultimaEquipeQueBateu) {
@@ -217,7 +222,7 @@ public class InGameWindowController {
     public void verificarPlacar(Equipe ultimaEquipeQueBateu) {
         int penaltisBatidos = getPenaltisBatidosPelaIA() + getPenaltisBatidosPeloPlayer();
         boolean todosBateram = verificarSeTodosJaBateram(penaltisBatidos);
-        boolean atingiuQuantidadeMinimaCobrancas = penaltisBatidos >= getTotalCobrancasPorTime() * 2;
+        boolean atingiuQuantidadeMinimaCobrancas = (penaltisBatidos >= getTotalCobrancasPorTime() * 2);
         if (atingiuQuantidadeMinimaCobrancas && todosBateram) {
             int placarIA = Integer.parseInt(inGameWindow.getLblPlacarTimeIA().getText());
             int placarPlayer = Integer.parseInt(inGameWindow.getLblPlacarTimePlayer().getText());
@@ -298,7 +303,10 @@ public class InGameWindowController {
     }
 
     public void btnSuaVezOnClick() {
-        if ((!inGameWindow.getBtnTirarParOuImpar().isEnabled())) {
+        verificarPlacar(getEquipePlayer());
+        if (isHaVencedor()) {
+            endMatch();
+        } else if ((!inGameWindow.getBtnTirarParOuImpar().isEnabled())) {
             int selecionado = inGameWindow.getListJogadoresTimePlayer().getSelectedIndex();
             boolean temCartaoVermelho = Sessao.getBatedoresEquipePlayer().get(selecionado).getCartaoVermelho();
 
@@ -314,7 +322,7 @@ public class InGameWindowController {
                     runIA();
                 }
 
-            } else if(temCartaoVermelho) {
+            } else if (temCartaoVermelho) {
                 new ErrorDialog(inGameWindow, true, "Jogador Expulso", "Este jogador foi expulso!!!");
             } else {
                 new ErrorDialog(inGameWindow, true, "Já Foi", "Este jogador já foi escolhido!!!");

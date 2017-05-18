@@ -1,5 +1,8 @@
 package br.com.livr.statics;
 
+import br.com.livr.views.boundary.Notificacao;
+import com.notification.NotificationFactory;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,7 +12,7 @@ package br.com.livr.statics;
  *
  * @author Aluno_2
  */
-public abstract class Jogador implements IComponenteDoTime, IAmanteDoFutebol {
+public abstract class Jogador implements IAmanteDoFutebol {
 
     private boolean cartaoAmarelo, cartaoVermelho;
     private String nomeJogador;
@@ -61,26 +64,22 @@ public abstract class Jogador implements IComponenteDoTime, IAmanteDoFutebol {
     }
 
     @Override
-    public void reclamar(String reclamacao) {
-        
+    public void reclamar(String reclamacao) {        
+    new Notificacao().exibirNotificacao(this.getNomeJogador(), "Disse: \n" + reclamacao, "reclamar.png", true, 4, NotificationFactory.Location.SOUTH);
     }
 
     @Override
-    public void elogiar(IComponenteDoTime componenteDoTime, String elogio) {
-        
+    public void elogiar(String elogio) {
+        new Notificacao().exibirNotificacao(this.getNomeJogador(), "Disse: \n" + elogio, "elogiar.png", true, 4, NotificationFactory.Location.SOUTH);
     }
 
     @Override
     public void comemorar(String comemoracao) {
-        
+        new Notificacao().exibirNotificacao(this.getNomeJogador(), "Disse: \n" + comemoracao, "comemorar.png", true, 4, NotificationFactory.Location.SOUTH);
     }
 
     @Override
-    public void lamentar() {
-    }
-    
-    @Override
-    public void darEntrevista(String discurso) {
-        
+    public void lamentar(String lamentacao) {
+        new Notificacao().exibirNotificacao(this.getNomeJogador(), "Disse: \n" + lamentacao, "lamentar.png", true, 4, NotificationFactory.Location.SOUTH);
     }
 }

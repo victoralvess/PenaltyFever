@@ -43,28 +43,35 @@ public class BatedorDePenaltis extends Jogador {
                 decisaoJuiz = Sessao.getJuiz().roubar(Sessao.getJuiz().getNivelHonestidade(), isMarcouGol());
                 if (decisaoJuiz == isMarcouGol()) {
                     notificacao.exibirNotificacao(this);
+                    this.comemorar("Golaço!");
                     if (equipeDoBatedor.equals(Sessao.getEquipePlayer())) {
                         Sessao.getEquipePlayer().getTorcidas().get(TipoTorcida.EDUCADA).comemorar("Aeee que Gol Maravilhoso");
                         Sessao.getEquipePlayer().getTorcidas().get(TipoTorcida.MAL_EDUCADA).comemorar("Aeee Gol Porr*");
-                        Sessao.getEquipeAdversaria().getTorcidas().get(TipoTorcida.EDUCADA).lamentar();
-                        Sessao.getEquipeAdversaria().getTorcidas().get(TipoTorcida.MAL_EDUCADA).lamentar();
+                        Sessao.getEquipeAdversaria().getTorcidas().get(TipoTorcida.EDUCADA).lamentar("Pelo menos o goleiro tentou.");
+                        Sessao.getEquipeAdversaria().getTorcidas().get(TipoTorcida.MAL_EDUCADA).lamentar("Vai todo mundo se ...");
                     } else {
                         Sessao.getEquipeAdversaria().getTorcidas().get(TipoTorcida.EDUCADA).comemorar("Aeee que Gol Maravilhoso");
                         Sessao.getEquipeAdversaria().getTorcidas().get(TipoTorcida.MAL_EDUCADA).comemorar("Aeee Gol Porr*");
-                        Sessao.getEquipePlayer().getTorcidas().get(TipoTorcida.EDUCADA).lamentar();
-                        Sessao.getEquipePlayer().getTorcidas().get(TipoTorcida.MAL_EDUCADA).lamentar();
+                        Sessao.getEquipePlayer().getTorcidas().get(TipoTorcida.EDUCADA).lamentar("Pelo menos o goleiro tentou.");
+                        Sessao.getEquipePlayer().getTorcidas().get(TipoTorcida.MAL_EDUCADA).lamentar("Vai todo mundo se ...");
                     }
 
                     return this.getNomeJogador() + " marcou o gol em " + g.getNomeJogador();
                 } else {
                     setMarcouGol(false);
-
+                    this.reclamar("Juiz Ladrão!");
                     setImpacienciaTorcida(new Random().nextInt(101));
                     if (getImpacienciaTorcida() >= 95) {
-                        notificacao.exibirNotificacao("Invasão", "O Juizão roubou\n E a torcida invadiu o campo", "reclamar.png", true, 600, NotificationFactory.Location.NORTH);
-                    } else if (new Bandeirinha(45).comunicarIrregularidadeAoJuiz()) {
-                        notificacao.exibirNotificacao("Bandeirinha", "É pra Cartão!", "flag.png", true, 4, NotificationFactory.Location.NORTHEAST);
-                        notificacao.exibirNotificacao("Juiz", "Cartão!", "card.png", true, 4, NotificationFactory.Location.EAST);
+                        if (equipeDoBatedor.equals(Sessao.getEquipePlayer())) {
+                            Sessao.getTorcidaEducadaEquipePlayer().invadirCampo();
+                            Sessao.getTorcidaMalEducadaEquipePlayer().invadirCampo();
+                        } else {
+                            Sessao.getTorcidaEducadaEquipeAdversaria().invadirCampo();
+                            Sessao.getTorcidaMalEducadaEquipeAdversaria().invadirCampo();
+                        }
+
+                    } else if (Sessao.getBandeirinha().verificarIrregularidadeAoJuiz()) {
+                        Sessao.getBandeirinha().comunicarIrregularidadeAoJuiz();
                         Sessao.getJuiz().penalizar(this, Cartao.AMARELO);
                     }
 
@@ -73,10 +80,12 @@ public class BatedorDePenaltis extends Jogador {
             } else {
                 setMarcouGol(false);
                 notificacao.exibirNotificacao(g);
+                this.elogiar("Defendeu bem!");
                 return g.getNomeJogador() + " defendeu o chute de " + this.getNomeJogador();
             }
         } else {
             setMarcouGol(false);
+            this.lamentar("Poderia ter marcado...");
             notificacao.exibirNotificacao("Errooou", "Pelas barbas do profeta!", "goal-missed.png", true, 5, NotificationFactory.Location.SOUTHEAST);
             return this.getNomeJogador() + " errou o gol!";
         }

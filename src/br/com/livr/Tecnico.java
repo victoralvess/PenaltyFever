@@ -3,7 +3,8 @@ package br.com.livr;
 
 import br.com.livr.statics.IAmanteDoFutebol;
 import java.util.Random;
-import br.com.livr.statics.IComponenteDoTime;
+import br.com.livr.views.boundary.Notificacao;
+import com.notification.NotificationFactory;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -14,7 +15,7 @@ import br.com.livr.statics.IComponenteDoTime;
  *
  * @author Aluno_2
  */
-public class Tecnico implements IComponenteDoTime, IAmanteDoFutebol {
+public class Tecnico implements IAmanteDoFutebol {
 
     private String nome;
     private Equipe equipe;
@@ -42,10 +43,6 @@ public class Tecnico implements IComponenteDoTime, IAmanteDoFutebol {
         return ((resultado % 2 == 0) && par);
     }
     
-//    public void escolherTime(Equipe time, BatedorDePenaltis jogador) {
-//        time.getJogadores().add(jogador);
-//    }
-
     public Equipe getEquipe() {
         return equipe;
     }
@@ -55,27 +52,22 @@ public class Tecnico implements IComponenteDoTime, IAmanteDoFutebol {
     }
 
     @Override
-    public void darEntrevista(String discurso) {
-        
-    }
-
-    @Override
     public void reclamar(String reclamacao) {
-       
+       new Notificacao().exibirNotificacao("Reclamação", reclamacao, "reclamar.png", true, 3, NotificationFactory.Location.NORTHWEST);
     }
 
     @Override
-    public void elogiar(IComponenteDoTime componenteDoTime, String elogio) {
-       
+    public void elogiar(String elogio) {
+       new Notificacao().exibirNotificacao("Elogio", elogio, "elogiar.png", true, 3, NotificationFactory.Location.NORTHWEST);
     }
 
     @Override
     public void comemorar(String comemoracao) {
-        
+        new Notificacao().exibirNotificacao("Comemoração", comemoracao, "comemorar.png", true, 3, NotificationFactory.Location.NORTHWEST);
     }
 
     @Override
-    public void lamentar() {
-       
+    public void lamentar(String lamentacao) {
+        new Notificacao().exibirNotificacao("Lamentação", lamentacao, "lamentar.png", true, 3, NotificationFactory.Location.NORTHWEST);
     }
 }

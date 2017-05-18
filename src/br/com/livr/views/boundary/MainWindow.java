@@ -5,6 +5,7 @@
  */
 package br.com.livr.views.boundary;
 
+import br.com.livr.statics.Sessao;
 import static br.com.livr.statics.Sessao.getGoleirosPorTime;
 import static br.com.livr.statics.Sessao.getJogadoresPorTime;
 import br.com.livr.views.control.MainWindowController;
@@ -29,6 +30,7 @@ public class MainWindow extends javax.swing.JFrame {
         listGoleiros.setListData(MainWindowListController.getNomesGoleiros());
         listGoleiros.addListSelectionListener(new MainWindowListController(getGoleirosPorTime()));
         super.setLocationRelativeTo(null);
+        Sessao.getJuiz().explicarRegras();
     }
 
     /**

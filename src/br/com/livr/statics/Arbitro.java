@@ -27,6 +27,6 @@ public abstract class Arbitro {
     }
 
     public void explicarRegras() {
-        new Notificacao().exibirNotificacao("Regras", "Vale quase tudo!", "angry.png", true, 5, NotificationFactory.Location.NORTHWEST);
+        new Notificacao().exibirNotificacao("Regras", "Vale quase tudo!", "whistle.png", true, 10, NotificationFactory.Location.SOUTHEAST);
     }
 }

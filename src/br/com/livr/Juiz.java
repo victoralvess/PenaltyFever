@@ -31,6 +31,8 @@ public class Juiz extends Arbitro {
         } else if (corCartao.equals(Cartao.VERMELHO)) {
             jogador.setCartaoVermelho(true);
         }
+        
+        new Notificacao().exibirNotificacao("Juiz", "Cartão!", "card.png", true, 4, NotificationFactory.Location.EAST);
     }
 
     public void autorizarBatida() {

@@ -14,10 +14,10 @@ public interface IAmanteDoFutebol {
 
     public void reclamar(String reclamacao);
 
-    public void elogiar(IComponenteDoTime componenteDoTime, String elogio);
+    public void elogiar(String elogio);
 
     public void comemorar(String comemoracao);
     
-    public void lamentar();
+    public void lamentar(String lamentacao);
 
 }

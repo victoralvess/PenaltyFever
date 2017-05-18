@@ -2,7 +2,6 @@ package br.com.livr;
 
 import br.com.livr.views.boundary.Notificacao;
 import br.com.livr.statics.IAmanteDoFutebol;
-import br.com.livr.statics.IComponenteDoTime;
 import br.com.livr.statics.Sessao;
 import com.notification.NotificationFactory;
 
@@ -21,7 +20,7 @@ public class Torcida implements IAmanteDoFutebol {
     private boolean educado;
 
     public void invadirCampo() {
-        new Notificacao().exibirNotificacao("Campo Invadido", "A torcida invadiu o campo", "", true, 5, NotificationFactory.Location.NORTH);
+        new Notificacao().exibirNotificacao("Invasão", "O Juizão roubou\n E a torcida invadiu o campo", "reclamar.png", true, 600, NotificationFactory.Location.NORTH);
     }
 
     public void torcer() {
@@ -36,16 +35,10 @@ public class Torcida implements IAmanteDoFutebol {
         this.time = time;
     }
 
-    /**
-     * @return the educado
-     */
     public boolean isEducado() {
         return educado;
     }
-
-    /**
-     * @param educado the educado to set
-     */
+    
     public void setEducado(boolean educado) {
         this.educado = educado;
     }
@@ -56,7 +49,7 @@ public class Torcida implements IAmanteDoFutebol {
     }
 
     @Override
-    public void elogiar(IComponenteDoTime componenteDoTime, String elogio) {
+    public void elogiar(String elogio) {
 
     }
 
@@ -84,7 +77,7 @@ public class Torcida implements IAmanteDoFutebol {
     }
 
     @Override
-    public void lamentar() {
+    public void lamentar(String lamentacao) {
         Notificacao notificacao = new Notificacao();
         NotificationFactory.Location location = null;
         boolean torceParaOPlayer = this.getEquipe().equals(Sessao.getEquipePlayer());
@@ -95,14 +88,14 @@ public class Torcida implements IAmanteDoFutebol {
             } else {
                 location = NotificationFactory.Location.SOUTHEAST;
             }
-            notificacao.exibirNotificacao(this.getEquipe().getNomeEquipe(), "Pelo menos o goleiro tentou.", "crying.png", true, 6, location);
+            notificacao.exibirNotificacao(this.getEquipe().getNomeEquipe(), lamentacao, "crying.png", true, 6, location);
         } else {
             if (torceParaOPlayer) {
                 location = NotificationFactory.Location.NORTHWEST;
             } else {
                 location = NotificationFactory.Location.SOUTHWEST;
             }
-            notificacao.exibirNotificacao(this.getEquipe().getNomeEquipe(), "Vai todo mundo se ...", "angry.png", true, 6, location);
+            notificacao.exibirNotificacao(this.getEquipe().getNomeEquipe(), lamentacao, "angry.png", true, 6, location);
         }
     }
 
