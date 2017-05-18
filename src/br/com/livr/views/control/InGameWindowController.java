@@ -197,6 +197,7 @@ public class InGameWindowController {
                 }
                 setHaVencedor(true);
                 inGameWindow.getBtnSuaVez().setEnabled(false);
+                inGameWindow.getBtnPlayAgain().setVisible(true);
             } else {
                 naoHaVencedor(ultimaEquipeQueBateu);
             }
