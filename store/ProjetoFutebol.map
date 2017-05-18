@@ -1,0 +1,2102 @@
+br.com.livr.Bandeirinha -> a:
+    void <init>() -> <init>
+br.com.livr.BatedorDePenaltis -> b:
+    boolean marcouGol -> a
+    int impacienciaTorcida -> a
+    void <init>(java.lang.String,int) -> <init>
+    boolean equals(java.lang.Object) -> equals
+br.com.livr.Equipe -> c:
+    java.util.List batedoresDePenaltis -> a
+    java.lang.String nomeEquipe -> a
+    br.com.livr.Tecnico tecnico -> a
+    br.com.livr.Goleiro goleiro -> a
+    java.util.HashMap torcidas -> a
+    long id -> a
+    void <init>(java.lang.String) -> <init>
+    boolean equals(java.lang.Object) -> equals
+br.com.livr.Gandula -> d:
+    void <init>() -> <init>
+br.com.livr.Goleiro -> e:
+    void <init>(java.lang.String) -> <init>
+br.com.livr.Juiz -> f:
+    void <init>() -> <init>
+br.com.livr.Tecnico -> g:
+    br.com.livr.Equipe equipe -> a
+    void <init>(br.com.livr.Equipe) -> <init>
+    br.com.livr.BatedorDePenaltis escolherBatedor(int) -> a
+    boolean tirarParOuImpar(int,boolean) -> a
+br.com.livr.Torcida -> h:
+    br.com.livr.Equipe time -> a
+    boolean educado -> a
+    void <init>() -> <init>
+    void comemorar(java.lang.String) -> a
+    void lamentar() -> a
+br.com.livr.statics.Arbitro -> i:
+    int nivelHonestidade -> a
+    void <init>() -> <init>
+    boolean roubar(int,boolean) -> a
+br.com.livr.statics.Jogador -> j:
+    boolean cartaoAmarelo -> b
+    boolean cartaoVermelho -> c
+    java.lang.String nomeJogador -> a
+    int numeroJogador -> b
+    void <init>() -> <init>
+br.com.livr.statics.Sessao -> k:
+    br.com.livr.Equipe equipePlayer -> a
+    br.com.livr.Equipe equipeAdversaria -> b
+    br.com.livr.Goleiro goleiroEquipePlayer -> a
+    br.com.livr.Goleiro goleiroEquipeAdversaria -> b
+    java.util.List goleirosParticipantes -> a
+    java.util.List batedoresParticipantes -> b
+    java.util.List batedoresEquipePlayer -> c
+    java.util.List batedoresEquipeAdversaria -> d
+    br.com.livr.Tecnico tecnico -> a
+    br.com.livr.Juiz juiz -> a
+    java.lang.String[] nomesJogadores -> a
+    br.com.livr.Equipe getEquipePlayer() -> a
+    br.com.livr.Equipe getEquipeAdversaria() -> b
+    br.com.livr.Goleiro getGoleiroEquipePlayer() -> a
+    br.com.livr.Goleiro getGoleiroEquipeAdversaria() -> b
+    java.util.List getGoleirosParticipantes() -> a
+    java.util.List getBatedoresParticipantes() -> b
+    java.util.List getBatedoresEquipePlayer() -> c
+    java.util.List getBatedoresEquipeAdversaria() -> d
+    br.com.livr.Tecnico getTecnico() -> a
+    br.com.livr.Juiz getJuiz() -> a
+    int getJogadoresPorTime() -> a
+    int getGoleirosPorTime() -> b
+    void setEquipePlayer(br.com.livr.Equipe) -> a
+    void setEquipeAdversaria(br.com.livr.Equipe) -> b
+    void setGoleiroEquipePlayer(br.com.livr.Goleiro) -> a
+    void setGoleiroEquipeAdversaria(br.com.livr.Goleiro) -> b
+    void setGoleirosParticipantes(java.util.List) -> a
+    void setBatedoresParticipantes(java.util.List) -> b
+    void setBatedoresEquipeAdversaria(java.util.List) -> c
+    void setTecnico(br.com.livr.Tecnico) -> a
+    java.lang.String[] getNomesJogadores() -> a
+    void setTorcidaEducadaEquipePlayer$4ecdd065() -> a
+    void setTorcidaEducadaEquipeAdversaria$4ecdd065() -> b
+    void setTorcidaMalEducadaEquipePlayer$4ecdd065() -> c
+    void setTorcidaMalEducadaEquipeAdversaria$4ecdd065() -> d
+    void <clinit>() -> <clinit>
+br.com.livr.statics.enums.Cartao -> l:
+    br.com.livr.statics.enums.Cartao AMARELO -> a
+    br.com.livr.statics.enums.Cartao VERMELHO -> b
+    void <init>(java.lang.String,int) -> <init>
+    void <clinit>() -> <clinit>
+br.com.livr.statics.enums.TipoTorcida -> m:
+    br.com.livr.statics.enums.TipoTorcida EDUCADA -> a
+    br.com.livr.statics.enums.TipoTorcida MAL_EDUCADA -> b
+    void <init>(java.lang.String,int) -> <init>
+    void <clinit>() -> <clinit>
+br.com.livr.views.boundary.ErrorDialog -> n:
+    de.craften.ui.swingmaterial.MaterialButton btnCorrigir -> a
+    javax.swing.JPanel jPanel1 -> a
+    javax.swing.JLabel lblMensagemErro -> a
+    javax.swing.JLabel lblTitulo -> b
+    javax.swing.JPanel pnlContent -> b
+    javax.swing.JLabel separator -> c
+    void <init>(javax.swing.JFrame,java.lang.String,java.lang.String) -> <init>
+    void access$000$52a11ad3(br.com.livr.views.boundary.ErrorDialog) -> a
+br.com.livr.views.boundary.ErrorDialog$1 -> o:
+    br.com.livr.views.boundary.ErrorDialog this$0 -> a
+    void <init>(br.com.livr.views.boundary.ErrorDialog) -> <init>
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+br.com.livr.views.boundary.InGameWindow -> p:
+    br.com.livr.views.control.InGameWindowController inGameWindowController -> a
+    de.craften.ui.swingmaterial.MaterialButton btnPlayAgain -> a
+    javax.swing.JLabel btnReagir -> d
+    de.craften.ui.swingmaterial.MaterialButton btnSuaVez -> b
+    javax.swing.JLabel btnTirarParOuImpar -> a
+    javax.swing.JLabel closeButton -> e
+    javax.swing.JPanel content -> a
+    javax.swing.JPanel header -> b
+    javax.swing.JLabel jogarSectionTitle -> f
+    javax.swing.JLabel lblBatedoresDePenaltisList -> g
+    javax.swing.JLabel lblNomeEquipeIA -> h
+    javax.swing.JLabel lblNomeEquipePlayer -> i
+    javax.swing.JLabel lblPlacarTimeIA -> b
+    javax.swing.JLabel lblPlacarTimePlayer -> c
+    javax.swing.JLabel lblRelatorioTitle -> j
+    javax.swing.JList listJogadoresTimePlayer -> a
+    javax.swing.JList listRelatorio -> b
+    javax.swing.JScrollPane scrollPaneBatedores -> b
+    javax.swing.JScrollPane scrollPaneRelatorio -> a
+    javax.swing.JLabel selectedIndicator -> k
+    javax.swing.JLabel separadorPlacar -> l
+    javax.swing.JLabel separator -> m
+    javax.swing.JLabel title -> n
+    void <init>() -> <init>
+    void access$000$7dbebca8(br.com.livr.views.boundary.InGameWindow) -> a
+    void access$100$7dbebca8(br.com.livr.views.boundary.InGameWindow) -> b
+    void access$200$37c23d31(br.com.livr.views.boundary.InGameWindow) -> c
+    void access$300$37c23d31$7c8b3bf6() -> a
+    void access$400$37c23d31(br.com.livr.views.boundary.InGameWindow) -> d
+    void access$500$37c23d31(br.com.livr.views.boundary.InGameWindow) -> e
+br.com.livr.views.boundary.InGameWindow$1 -> q:
+    br.com.livr.views.boundary.InGameWindow this$0 -> a
+    void <init>(br.com.livr.views.boundary.InGameWindow) -> <init>
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+br.com.livr.views.boundary.InGameWindow$2 -> r:
+    br.com.livr.views.boundary.InGameWindow this$0 -> a
+    void <init>(br.com.livr.views.boundary.InGameWindow) -> <init>
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+br.com.livr.views.boundary.InGameWindow$3 -> s:
+    br.com.livr.views.boundary.InGameWindow this$0 -> a
+    void <init>(br.com.livr.views.boundary.InGameWindow) -> <init>
+    void mouseClicked(java.awt.event.MouseEvent) -> mouseClicked
+br.com.livr.views.boundary.InGameWindow$4 -> t:
+    br.com.livr.views.boundary.InGameWindow this$0 -> a
+    void <init>(br.com.livr.views.boundary.InGameWindow) -> <init>
+    void mouseClicked(java.awt.event.MouseEvent) -> mouseClicked
+br.com.livr.views.boundary.InGameWindow$5 -> u:
+    br.com.livr.views.boundary.InGameWindow this$0 -> a
+    void <init>(br.com.livr.views.boundary.InGameWindow) -> <init>
+    void mouseClicked(java.awt.event.MouseEvent) -> mouseClicked
+br.com.livr.views.boundary.InGameWindow$6 -> v:
+    br.com.livr.views.boundary.InGameWindow this$0 -> a
+    void <init>(br.com.livr.views.boundary.InGameWindow) -> <init>
+    void mouseClicked(java.awt.event.MouseEvent) -> mouseClicked
+br.com.livr.views.boundary.MainWindow -> br.com.livr.views.boundary.MainWindow:
+    br.com.livr.views.control.MainWindowController mainWindowController -> a
+    de.craften.ui.swingmaterial.MaterialButton btnJogar -> a
+    javax.swing.JLabel cadastroSectionTitle -> a
+    javax.swing.JLabel closeButton -> b
+    javax.swing.JPanel content -> a
+    javax.swing.JPanel header -> b
+    javax.swing.JLabel lblBatedoresDePenaltisList -> c
+    javax.swing.JLabel lblGoleirosList -> d
+    javax.swing.JLabel lblQuantidadeBatedoresDePenaltis -> e
+    javax.swing.JLabel lblQuantidadeGoleiros -> f
+    javax.swing.JList listBatedoresPenaltis -> a
+    javax.swing.JList listGoleiros -> b
+    javax.swing.JScrollPane scrollPaneListaBatedoresPenaltis -> a
+    javax.swing.JScrollPane scrollPaneListaGoleiros -> b
+    javax.swing.JLabel selectedIndicator -> g
+    javax.swing.JLabel separator -> h
+    javax.swing.JLabel title -> i
+    de.craften.ui.swingmaterial.MaterialTextField txtEquipe -> a
+    de.craften.ui.swingmaterial.MaterialTextField txtNome -> b
+    void <init>() -> <init>
+    void main(java.lang.String[]) -> main
+    void lambda$main$0() -> b
+    void access$000$f2c5e91$53df5678() -> a
+    void access$100$14a39926(br.com.livr.views.boundary.MainWindow) -> a
+br.com.livr.views.boundary.MainWindow$1 -> w:
+    br.com.livr.views.boundary.MainWindow this$0 -> a
+    void <init>(br.com.livr.views.boundary.MainWindow) -> <init>
+    void mouseClicked(java.awt.event.MouseEvent) -> mouseClicked
+br.com.livr.views.boundary.MainWindow$2 -> x:
+    br.com.livr.views.boundary.MainWindow this$0 -> a
+    void <init>(br.com.livr.views.boundary.MainWindow) -> <init>
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+br.com.livr.views.boundary.Notificacao -> y:
+    com.notification.NotificationFactory notificationFactory -> a
+    com.notification.manager.SimpleManager simpleManager -> a
+    java.lang.String[] mensagensDefesa -> a
+    java.lang.String[] mensagensAtaque -> b
+    void <init>() -> <init>
+    void exibirNotificacao(br.com.livr.Equipe,int,int) -> a
+    void exibirNotificacao$73a6bb4f(java.lang.String,java.lang.String,java.lang.String,int,com.notification.NotificationFactory$Location) -> a
+br.com.livr.views.boundary.ParOuImparDialog -> z:
+    java.util.List rbParEImpar -> a
+    br.com.livr.views.boundary.Notificacao notificacao -> a
+    br.com.livr.views.control.ParOuImparDialogController parOuImparDialogController -> a
+    javax.swing.ButtonGroup btnGroupParOuImpar -> a
+    de.craften.ui.swingmaterial.MaterialButton btnJogar -> a
+    javax.swing.JLabel closeButton -> a
+    javax.swing.JPanel jPanel1 -> a
+    javax.swing.JLabel lblDedos -> b
+    javax.swing.JLabel lblTituloParOuImpar -> c
+    javax.swing.JPanel pnlContent -> b
+    javax.swing.JRadioButton rbImpar -> a
+    javax.swing.JRadioButton rbPar -> b
+    javax.swing.JLabel separator -> d
+    javax.swing.JSlider sliderQuantidadeDedos -> a
+    void <init>(javax.swing.JFrame) -> <init>
+    void access$000$40744cba(br.com.livr.views.boundary.ParOuImparDialog) -> a
+    void access$100$702edb11(br.com.livr.views.boundary.ParOuImparDialog) -> b
+br.com.livr.views.boundary.ParOuImparDialog$1 -> A:
+    br.com.livr.views.boundary.ParOuImparDialog this$0 -> a
+    void <init>(br.com.livr.views.boundary.ParOuImparDialog) -> <init>
+    void mouseClicked(java.awt.event.MouseEvent) -> mouseClicked
+br.com.livr.views.boundary.ParOuImparDialog$2 -> B:
+    br.com.livr.views.boundary.ParOuImparDialog this$0 -> a
+    void <init>(br.com.livr.views.boundary.ParOuImparDialog) -> <init>
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+br.com.livr.views.boundary.ReacaoDialog -> C:
+    br.com.livr.views.control.ReacaoDialogController reacaoDialogController -> a
+    br.com.livr.views.boundary.InGameWindow inGameWindow -> a
+    de.craften.ui.swingmaterial.MaterialButton btnReagir -> a
+    javax.swing.JLabel closeButton -> a
+    javax.swing.JLabel lblSuaReacao -> b
+    javax.swing.JLabel lblTitle -> c
+    javax.swing.ButtonGroup opcoesReacaoButtonGroup -> a
+    javax.swing.JPanel panelContent -> a
+    javax.swing.JPanel panelHeader -> b
+    javax.swing.JRadioButton radioComemorar -> a
+    javax.swing.JRadioButton radioElogiar -> b
+    javax.swing.JRadioButton radioLamentar -> c
+    javax.swing.JRadioButton radioReclamar -> d
+    javax.swing.JLabel separator -> d
+    de.craften.ui.swingmaterial.MaterialTextField txtReacao -> a
+    void <init>(br.com.livr.views.boundary.InGameWindow) -> <init>
+    void access$000$62365a0d(br.com.livr.views.boundary.ReacaoDialog) -> a
+    void access$100$59af3e04(br.com.livr.views.boundary.ReacaoDialog) -> b
+br.com.livr.views.boundary.ReacaoDialog$1 -> D:
+    br.com.livr.views.boundary.ReacaoDialog this$0 -> a
+    void <init>(br.com.livr.views.boundary.ReacaoDialog) -> <init>
+    void mouseClicked(java.awt.event.MouseEvent) -> mouseClicked
+br.com.livr.views.boundary.ReacaoDialog$2 -> E:
+    br.com.livr.views.boundary.ReacaoDialog this$0 -> a
+    void <init>(br.com.livr.views.boundary.ReacaoDialog) -> <init>
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+br.com.livr.views.control.InGameWindowController -> F:
+    int delayParaIAJogar -> a
+    java.util.ArrayList relatorio -> a
+    int numeroBatedorIA -> b
+    int penaltisBatidosPelaIA -> c
+    int penaltisBatidosPeloPlayer -> d
+    int totalCobrancasPorTime -> e
+    java.util.List indicesSelecionados -> a
+    br.com.livr.views.boundary.Notificacao notificacao -> a
+    boolean haVencedor -> a
+    br.com.livr.views.boundary.InGameWindow inGameWindow -> a
+    void <init>(br.com.livr.views.boundary.InGameWindow) -> <init>
+    void gerarRelatorio(br.com.livr.BatedorDePenaltis,br.com.livr.Equipe) -> a
+    void runIA() -> a
+    void naoHaVencedor(br.com.livr.Equipe) -> b
+    void verificarPlacar(br.com.livr.Equipe) -> a
+    void initListaJogadores() -> b
+    void btnTirarParOuImparOnClick() -> c
+    void endMatch() -> d
+    void lambda$initListaJogadores$5(java.util.List,br.com.livr.BatedorDePenaltis) -> a
+    void lambda$runIA$4(java.awt.event.ActionEvent) -> a
+    void lambda$gerarRelatorio$3(br.com.livr.BatedorDePenaltis,br.com.livr.Equipe,java.awt.event.ActionEvent) -> a
+    void lambda$gerarRelatorio$2() -> e
+    void lambda$null$1(java.awt.event.ActionEvent) -> b
+    void lambda$null$0(java.awt.event.ActionEvent) -> c
+br.com.livr.views.control.MainWindowController -> G:
+    br.com.livr.views.boundary.MainWindow mainWindow -> a
+    void <init>(br.com.livr.views.boundary.MainWindow) -> <init>
+    boolean verificarEntradaDe(javax.swing.JTextField) -> a
+br.com.livr.views.control.MainWindowListController -> H:
+    int quantidadeItensSelecionados -> a
+    int[] indicesSelecionados -> a
+    boolean once -> a
+    int limiteDeEscolhas -> b
+    java.lang.String[] nomesBatedoresPenaltis -> a
+    java.lang.String[] nomesGoleiros -> b
+    void <init>(int) -> <init>
+    void valueChanged(javax.swing.event.ListSelectionEvent) -> valueChanged
+    void initListasJogadores() -> a
+    void getNomesJogadores(java.util.List,java.lang.String[]) -> a
+    void getNomesGoleiros(java.util.List,java.lang.String[]) -> b
+    java.lang.String[] getNomesBatedoresPenaltis() -> a
+    java.lang.String[] getNomesGoleiros() -> b
+    void cadastrarEquipeAdversaria() -> b
+    void lambda$cadastrarGoleiroAdversario$0(java.util.List,br.com.livr.Goleiro) -> a
+    void <clinit>() -> <clinit>
+br.com.livr.views.control.ParOuImparDialogController -> I:
+    br.com.livr.views.boundary.ParOuImparDialog parOuImparDialog -> a
+    boolean venceuParOuImpar -> a
+    boolean jogou -> b
+    java.lang.String quemComeca -> a
+    void <init>(br.com.livr.views.boundary.ParOuImparDialog) -> <init>
+br.com.livr.views.control.ReacaoDialogController -> J:
+    br.com.livr.views.boundary.ReacaoDialog reacaoDialog -> a
+    javax.swing.JRadioButton[] botoesReacaoDialog -> a
+    java.lang.String[] tipoReacao -> a
+    java.lang.String[] iconReacao -> b
+    void <init>(br.com.livr.views.boundary.ReacaoDialog) -> <init>
+com.exception.NotificationException -> com.exception.NotificationException:
+    long serialVersionUID -> serialVersionUID
+    void <init>(java.lang.String) -> <init>
+com.notification.Notification -> com.notification.Notification:
+    com.notification.NotificationManager m_manager -> m_manager
+    java.util.List m_listeners -> m_listeners
+    void <init>() -> <init>
+    void addNotificationListener(com.notification.NotificationListener) -> addNotificationListener
+    void removeNotificationListener(com.notification.NotificationListener) -> removeNotificationListener
+    boolean isManaged() -> isManaged
+    com.notification.NotificationManager getNotificationManager() -> getNotificationManager
+    void setNotificationManager(com.notification.NotificationManager) -> setNotificationManager
+    void removeFromManager() -> removeFromManager
+    void fireListeners(java.lang.String) -> fireListeners
+    int getX() -> getX
+    int getY() -> getY
+    void setLocation(int,int) -> setLocation
+    int getWidth() -> getWidth
+    int getHeight() -> getHeight
+    void setSize(int,int) -> setSize
+    double getOpacity() -> getOpacity
+    void setOpacity(double) -> setOpacity
+    void show() -> show
+    void hide() -> hide
+    boolean isShown() -> isShown
+com.notification.NotificationBuilder -> com.notification.NotificationBuilder:
+    com.notification.Notification buildNotification(com.theme.ThemePackage,java.lang.Object[]) -> buildNotification
+com.notification.NotificationFactory -> com.notification.NotificationFactory:
+    com.theme.ThemePackage m_pack -> m_pack
+    java.util.HashMap m_builders -> m_builders
+    void <init>() -> <init>
+    void <init>(com.theme.ThemePackage) -> <init>
+    void setThemePackage(com.theme.ThemePackage) -> setThemePackage
+    void addBuilder(java.lang.Class,com.notification.NotificationBuilder) -> addBuilder
+    void removeBuilder(java.lang.Class) -> removeBuilder
+    com.notification.Notification build(java.lang.Class) -> build
+    com.notification.Notification build(java.lang.Class,java.lang.Object[]) -> build
+    com.notification.types.TextNotification buildTextNotification(java.lang.String,java.lang.String) -> buildTextNotification
+    com.notification.types.AcceptNotification buildAcceptNotification(java.lang.String,java.lang.String) -> buildAcceptNotification
+    com.notification.types.AcceptNotification buildAcceptNotification(java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> buildAcceptNotification
+    com.notification.types.IconNotification buildIconNotification(java.lang.String,java.lang.String,javax.swing.ImageIcon) -> buildIconNotification
+    com.notification.types.ProgressBarNotification buildProgressBarNotification(java.lang.String) -> buildProgressBarNotification
+com.notification.NotificationFactory$AcceptNotificationBuilder -> K:
+    void <init>() -> <init>
+    com.notification.Notification buildNotification(com.theme.ThemePackage,java.lang.Object[]) -> buildNotification
+    void <init>(byte) -> <init>
+com.notification.NotificationFactory$IconNotificationBuilder -> L:
+    void <init>() -> <init>
+    com.notification.Notification buildNotification(com.theme.ThemePackage,java.lang.Object[]) -> buildNotification
+    void <init>(byte) -> <init>
+com.notification.NotificationFactory$Location -> com.notification.NotificationFactory$Location:
+    com.notification.NotificationFactory$Location NORTH -> NORTH
+    com.notification.NotificationFactory$Location NORTHEAST -> NORTHEAST
+    com.notification.NotificationFactory$Location EAST -> EAST
+    com.notification.NotificationFactory$Location SOUTHEAST -> SOUTHEAST
+    com.notification.NotificationFactory$Location SOUTH -> SOUTH
+    com.notification.NotificationFactory$Location SOUTHWEST -> SOUTHWEST
+    com.notification.NotificationFactory$Location WEST -> WEST
+    com.notification.NotificationFactory$Location NORTHWEST -> NORTHWEST
+    com.notification.NotificationFactory$Location[] $VALUES -> $VALUES
+    com.notification.NotificationFactory$Location[] values() -> values
+    com.notification.NotificationFactory$Location valueOf(java.lang.String) -> valueOf
+    void <init>(java.lang.String,int) -> <init>
+    void <clinit>() -> <clinit>
+com.notification.NotificationFactory$ProgressBarNotificationBuilder -> M:
+    void <init>() -> <init>
+    com.notification.Notification buildNotification(com.theme.ThemePackage,java.lang.Object[]) -> buildNotification
+    void <init>(byte) -> <init>
+com.notification.NotificationFactory$TextNotificationBuilder -> N:
+    void <init>() -> <init>
+    com.notification.Notification buildNotification(com.theme.ThemePackage,java.lang.Object[]) -> buildNotification
+    void <init>(byte) -> <init>
+com.notification.NotificationListener -> com.notification.NotificationListener:
+    void actionCompleted(com.notification.Notification,java.lang.String) -> actionCompleted
+com.notification.NotificationManager -> com.notification.NotificationManager:
+    java.util.List m_notifications -> m_notifications
+    void <init>() -> <init>
+    java.util.List getNotifications() -> getNotifications
+    void addNotification(com.notification.Notification,com.utils.Time) -> addNotification
+    void removeNotification(com.notification.Notification) -> removeNotification
+    void notificationAdded(com.notification.Notification,com.utils.Time) -> notificationAdded
+    void notificationRemoved(com.notification.Notification) -> notificationRemoved
+    void scheduleRemoval(com.notification.Notification,com.utils.Time) -> scheduleRemoval
+com.notification.NotificationManager$RemoveTask -> O:
+    com.notification.Notification m_note -> a
+    com.notification.NotificationManager this$0 -> a
+    void <init>(com.notification.NotificationManager,com.notification.Notification) -> <init>
+    void run() -> run
+com.notification.manager.QueueManager -> com.notification.manager.QueueManager:
+    javax.swing.Timer m_timer -> m_timer
+    int m_verticalPadding -> m_verticalPadding
+    double m_snapFactor -> m_snapFactor
+    com.notification.manager.QueueManager$ScrollDirection m_scroll -> m_scroll
+    void <init>() -> <init>
+    void <init>(com.notification.NotificationFactory$Location) -> <init>
+    int getVerticalPadding() -> getVerticalPadding
+    void setVerticalPadding(int) -> setVerticalPadding
+    double getSnapFactor() -> getSnapFactor
+    void setSnapFactor(double) -> setSnapFactor
+    com.notification.manager.QueueManager$ScrollDirection getScrollDirection() -> getScrollDirection
+    void setScrollDirection(com.notification.manager.QueueManager$ScrollDirection) -> setScrollDirection
+    void stop() -> stop
+    int access$100(com.notification.manager.QueueManager) -> a
+    com.notification.manager.QueueManager$ScrollDirection access$200(com.notification.manager.QueueManager) -> a
+    double access$300(com.notification.manager.QueueManager) -> a
+com.notification.manager.QueueManager$MovementManager -> P:
+    com.notification.manager.QueueManager this$0 -> a
+    void <init>(com.notification.manager.QueueManager) -> <init>
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+    void <init>(com.notification.manager.QueueManager,byte) -> <init>
+com.notification.manager.QueueManager$ScrollDirection -> com.notification.manager.QueueManager$ScrollDirection:
+    com.notification.manager.QueueManager$ScrollDirection NORTH -> NORTH
+    com.notification.manager.QueueManager$ScrollDirection SOUTH -> SOUTH
+    com.notification.manager.QueueManager$ScrollDirection[] $VALUES -> $VALUES
+    com.notification.manager.QueueManager$ScrollDirection[] values() -> values
+    com.notification.manager.QueueManager$ScrollDirection valueOf(java.lang.String) -> valueOf
+    void <init>(java.lang.String,int) -> <init>
+    void <clinit>() -> <clinit>
+com.notification.manager.SequenceManager -> com.notification.manager.SequenceManager:
+    java.util.List m_sequence -> m_sequence
+    com.notification.Notification m_currentNotification -> m_currentNotification
+    void <init>() -> <init>
+    void <init>(com.notification.NotificationFactory$Location) -> <init>
+    void notificationAdded(com.notification.Notification,com.utils.Time) -> notificationAdded
+    void superAdded(com.notification.Notification,com.utils.Time) -> superAdded
+    com.notification.Notification access$100(com.notification.manager.SequenceManager) -> a
+    com.notification.Notification access$102(com.notification.manager.SequenceManager,com.notification.Notification) -> a
+    java.util.List access$200(com.notification.manager.SequenceManager) -> a
+    void access$300(com.notification.manager.SequenceManager,com.notification.Notification,com.utils.Time) -> a
+com.notification.manager.SequenceManager$CloseListener -> Q:
+    com.notification.manager.SequenceManager this$0 -> a
+    void <init>(com.notification.manager.SequenceManager) -> <init>
+    void actionCompleted(com.notification.Notification,java.lang.String) -> actionCompleted
+    void <init>(com.notification.manager.SequenceManager,byte) -> <init>
+com.notification.manager.SequenceManager$NotificationShowTime -> R:
+    com.notification.Notification notification -> a
+    com.utils.Time time -> a
+    void <init>(com.notification.Notification,com.utils.Time) -> <init>
+com.notification.manager.SimpleManager -> com.notification.manager.SimpleManager:
+    com.notification.NotificationFactory$Location m_loc -> m_loc
+    com.utils.Screen m_screen -> m_screen
+    boolean m_fadeEnabled -> m_fadeEnabled
+    com.utils.Time m_fadeTime -> m_fadeTime
+    com.notification.manager.SimpleManager$FaderRunnable m_fader -> m_fader
+    java.lang.Thread m_faderThread -> m_faderThread
+    int FADE_DELAY -> FADE_DELAY
+    void <init>() -> <init>
+    void <init>(com.notification.NotificationFactory$Location) -> <init>
+    com.utils.Time getFadeTime() -> getFadeTime
+    void setFadeTime(com.utils.Time) -> setFadeTime
+    boolean isFadeEnabled() -> isFadeEnabled
+    void setFadeEnabled(boolean) -> setFadeEnabled
+    void syncFadeEnabledWithPlatform() -> syncFadeEnabledWithPlatform
+    com.notification.NotificationFactory$Location getLocation() -> getLocation
+    void setLocation(com.notification.NotificationFactory$Location) -> setLocation
+    com.utils.Screen getScreen() -> getScreen
+    void notificationAdded(com.notification.Notification,com.utils.Time) -> notificationAdded
+    void notificationRemoved(com.notification.Notification) -> notificationRemoved
+    void startFade(com.notification.Notification,double) -> startFade
+    double getDeltaFade(double) -> getDeltaFade
+com.notification.manager.SimpleManager$Fader -> S:
+    com.notification.Notification m_note -> a
+    long m_fadeStartTime -> a
+    double m_startFade -> a
+    double m_stopFade -> c
+    double m_deltaFade -> b
+    void <init>(com.notification.Notification,double,double) -> <init>
+    boolean isFinishedFading() -> a
+com.notification.manager.SimpleManager$FaderRunnable -> T:
+    java.util.List m_faders -> a
+    boolean m_shouldStop -> a
+    void <init>() -> <init>
+    void run() -> run
+com.notification.manager.SlideManager -> com.notification.manager.SlideManager:
+    com.notification.NotificationFactory$Location m_loc -> m_loc
+    com.utils.Screen m_standardScreen -> m_standardScreen
+    com.utils.Screen m_noPaddingScreen -> m_noPaddingScreen
+    java.util.HashMap m_sliders -> m_sliders
+    com.notification.manager.SlideManager$SlideDirection m_slideIn -> m_slideIn
+    double m_slideSpeed -> m_slideSpeed
+    java.util.HashMap m_slideStates -> m_slideStates
+    boolean m_overwrite -> m_overwrite
+    void <init>() -> <init>
+    void <init>(com.notification.NotificationFactory$Location) -> <init>
+    com.notification.NotificationFactory$Location getLocation() -> getLocation
+    void setLocation(com.notification.NotificationFactory$Location) -> setLocation
+    com.notification.manager.SlideManager$SlideDirection getSlideDirection() -> getSlideDirection
+    void setSlideDirection(com.notification.manager.SlideManager$SlideDirection) -> setSlideDirection
+    double getSlideSpeed() -> getSlideSpeed
+    void setSlideSpeed(double) -> setSlideSpeed
+    com.utils.Screen getScreen() -> getScreen
+    void recalculateSlideDirection() -> recalculateSlideDirection
+    void notificationAdded(com.notification.Notification,com.utils.Time) -> notificationAdded
+    void notificationRemoved(com.notification.Notification) -> notificationRemoved
+    com.utils.Screen access$400(com.notification.manager.SlideManager) -> a
+    com.utils.Screen access$500(com.notification.manager.SlideManager) -> b
+com.notification.manager.SlideManager$1 -> U:
+    int[] $SwitchMap$com$notification$NotificationFactory$Location -> a
+    void <clinit>() -> <clinit>
+com.notification.manager.SlideManager$EastSlider -> V:
+    com.notification.manager.SlideManager this$0 -> a
+    void <init>(com.notification.manager.SlideManager) -> <init>
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+    void setBorderPosition(com.notification.Notification,com.notification.NotificationFactory$Location) -> a
+    void <init>(com.notification.manager.SlideManager,byte) -> <init>
+com.notification.manager.SlideManager$NorthSlider -> W:
+    com.notification.manager.SlideManager this$0 -> a
+    void <init>(com.notification.manager.SlideManager) -> <init>
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+    void setBorderPosition(com.notification.Notification,com.notification.NotificationFactory$Location) -> a
+    void <init>(com.notification.manager.SlideManager,byte) -> <init>
+com.notification.manager.SlideManager$SlideDirection -> com.notification.manager.SlideManager$SlideDirection:
+    com.notification.manager.SlideManager$SlideDirection NORTH -> NORTH
+    com.notification.manager.SlideManager$SlideDirection SOUTH -> SOUTH
+    com.notification.manager.SlideManager$SlideDirection EAST -> EAST
+    com.notification.manager.SlideManager$SlideDirection WEST -> WEST
+    com.notification.manager.SlideManager$SlideDirection m_opposite -> m_opposite
+    com.notification.manager.SlideManager$SlideDirection[] $VALUES -> $VALUES
+    com.notification.manager.SlideManager$SlideDirection[] values() -> values
+    com.notification.manager.SlideManager$SlideDirection valueOf(java.lang.String) -> valueOf
+    void <init>(java.lang.String,int) -> <init>
+    void <init>(java.lang.String,int,com.notification.manager.SlideManager$SlideDirection) -> <init>
+    com.notification.manager.SlideManager$SlideDirection getOpposite() -> getOpposite
+    void <clinit>() -> <clinit>
+com.notification.manager.SlideManager$SlideState -> X:
+    com.notification.NotificationFactory$Location loc -> a
+    com.notification.manager.SlideManager$SlideDirection returnDirection -> a
+    void <init>(com.notification.NotificationFactory$Location,com.notification.manager.SlideManager$SlideDirection) -> <init>
+com.notification.manager.SlideManager$Slider -> Y:
+    com.notification.Notification m_note -> a
+    double m_delta -> a
+    double m_stopX -> b
+    double m_stopY -> c
+    double m_x -> d
+    double m_y -> e
+    boolean m_slideIn -> a
+    com.notification.NotificationFactory$Location m_startLocation -> a
+    com.notification.manager.SlideManager this$0 -> a
+    void <init>(com.notification.manager.SlideManager) -> <init>
+    void animate$2e4974e(com.notification.Notification,com.notification.NotificationFactory$Location,double,boolean) -> a
+    void manageStop(java.awt.event.ActionEvent) -> a
+    void setBorderPosition(com.notification.Notification,com.notification.NotificationFactory$Location) -> a
+    void <init>(com.notification.manager.SlideManager,byte) -> <init>
+com.notification.manager.SlideManager$SouthSlider -> Z:
+    com.notification.manager.SlideManager this$0 -> a
+    void <init>(com.notification.manager.SlideManager) -> <init>
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+    void setBorderPosition(com.notification.Notification,com.notification.NotificationFactory$Location) -> a
+    void <init>(com.notification.manager.SlideManager,byte) -> <init>
+com.notification.manager.SlideManager$WestSlider -> aa:
+    com.notification.manager.SlideManager this$0 -> a
+    void <init>(com.notification.manager.SlideManager) -> <init>
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+    void setBorderPosition(com.notification.Notification,com.notification.NotificationFactory$Location) -> a
+    void <init>(com.notification.manager.SlideManager,byte) -> <init>
+com.notification.types.AcceptNotification -> com.notification.types.AcceptNotification:
+    javax.swing.JButton m_accept -> m_accept
+    javax.swing.JButton m_decline -> m_decline
+    boolean m_accepted -> m_accepted
+    void <init>() -> <init>
+    boolean blockUntilReply() -> blockUntilReply
+    void setButtonDimensions(java.awt.Dimension) -> setButtonDimensions
+    java.lang.String getAcceptText() -> getAcceptText
+    void setAcceptText(java.lang.String) -> setAcceptText
+    java.lang.String getDeclineText() -> getDeclineText
+    void setDeclineText(java.lang.String) -> setDeclineText
+    void hide() -> hide
+    void setTextTheme(com.theme.TextTheme) -> setTextTheme
+    void setWindowTheme(com.theme.WindowTheme) -> setWindowTheme
+    boolean access$002(com.notification.types.AcceptNotification,boolean) -> a
+com.notification.types.AcceptNotification$1 -> ab:
+    com.notification.types.AcceptNotification this$0 -> a
+    void <init>(com.notification.types.AcceptNotification) -> <init>
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+com.notification.types.AcceptNotification$2 -> ac:
+    com.notification.types.AcceptNotification this$0 -> a
+    void <init>(com.notification.types.AcceptNotification) -> <init>
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+com.notification.types.BorderLayoutNotification -> com.notification.types.BorderLayoutNotification:
+    javax.swing.JPanel m_panel -> m_panel
+    int PANEL_PADDING -> PANEL_PADDING
+    void <init>() -> <init>
+    void addComponent(java.awt.Component,java.lang.String) -> addComponent
+    void removeComponent(java.awt.Component) -> removeComponent
+com.notification.types.IconNotification -> com.notification.types.IconNotification:
+    javax.swing.JLabel m_iconLabel -> m_iconLabel
+    int ICON_PADDING -> ICON_PADDING
+    void <init>() -> <init>
+    void setIcon(javax.swing.Icon) -> setIcon
+    javax.swing.Icon getIcon() -> getIcon
+com.notification.types.ProgressBarNotification -> com.notification.types.ProgressBarNotification:
+    javax.swing.JLabel m_label -> m_label
+    javax.swing.JProgressBar m_progress -> m_progress
+    void <init>() -> <init>
+    void setTextTheme(com.theme.TextTheme) -> setTextTheme
+    java.lang.String getTitle() -> getTitle
+    void setTitle(java.lang.String) -> setTitle
+    void setProgress(int) -> setProgress
+    int getProgress() -> getProgress
+com.notification.types.TextNotification -> com.notification.types.TextNotification:
+    javax.swing.JLabel m_titleLabel -> m_titleLabel
+    javax.swing.JTextArea m_subtitleArea -> m_subtitleArea
+    com.theme.TextTheme m_textTheme -> m_textTheme
+    void <init>() -> <init>
+    java.lang.String getTitle() -> getTitle
+    void setTitle(java.lang.String) -> setTitle
+    java.lang.String getSubtitle() -> getSubtitle
+    void setSubtitle(java.lang.String) -> setSubtitle
+    com.theme.TextTheme getTextTheme() -> getTextTheme
+    void setTextTheme(com.theme.TextTheme) -> setTextTheme
+    void setWindowTheme(com.theme.WindowTheme) -> setWindowTheme
+com.notification.types.WindowNotification -> com.notification.types.WindowNotification:
+    javax.swing.JWindow m_window -> m_window
+    javax.swing.JPanel m_panel -> m_panel
+    boolean m_closeOnClick -> m_closeOnClick
+    java.awt.event.MouseAdapter m_listener -> m_listener
+    com.theme.WindowTheme m_theme -> m_theme
+    int DEFAULT_WIDTH -> DEFAULT_WIDTH
+    int DEFAULT_HEIGHT -> DEFAULT_HEIGHT
+    java.lang.String CLICKED -> CLICKED
+    java.lang.String SHOWN -> SHOWN
+    java.lang.String HIDDEN -> HIDDEN
+    void <init>() -> <init>
+    javax.swing.JWindow getWindow() -> getWindow
+    void setPanel(javax.swing.JPanel) -> setPanel
+    boolean isCloseOnClick() -> isCloseOnClick
+    void setCloseOnClick(boolean) -> setCloseOnClick
+    com.theme.WindowTheme getWindowTheme() -> getWindowTheme
+    void setWindowTheme(com.theme.WindowTheme) -> setWindowTheme
+    void recursiveSetTheme(com.theme.WindowTheme,java.awt.Component) -> recursiveSetTheme
+    int getX() -> getX
+    int getY() -> getY
+    void setLocation(int,int) -> setLocation
+    int getWidth() -> getWidth
+    int getHeight() -> getHeight
+    void setSize(int,int) -> setSize
+    double getOpacity() -> getOpacity
+    void setOpacity(double) -> setOpacity
+    void show() -> show
+    void hide() -> hide
+    boolean isShown() -> isShown
+    void access$000(com.notification.types.WindowNotification,java.lang.String) -> a
+    boolean access$100(com.notification.types.WindowNotification) -> a
+com.notification.types.WindowNotification$1 -> ad:
+    com.notification.types.WindowNotification this$0 -> a
+    void <init>(com.notification.types.WindowNotification) -> <init>
+    void mouseClicked(java.awt.event.MouseEvent) -> mouseClicked
+com.platform.DefaultOperatingSystem -> com.platform.DefaultOperatingSystem:
+    void <init>() -> <init>
+    boolean isSupported(java.lang.String) -> isSupported
+com.platform.Mac -> com.platform.Mac:
+    void <init>() -> <init>
+    boolean isSupported(java.lang.String) -> isSupported
+com.platform.OperatingSystem -> com.platform.OperatingSystem:
+    boolean isSupported(java.lang.String) -> isSupported
+com.platform.Platform -> com.platform.Platform:
+    com.platform.OperatingSystem m_operatingSystem -> m_operatingSystem
+    boolean m_used -> m_used
+    com.platform.Platform INSTANCE -> INSTANCE
+    void <init>() -> <init>
+    com.platform.OperatingSystem getOperatingSystem() -> getOperatingSystem
+    boolean isSupported(java.lang.String) -> isSupported
+    boolean isUsed() -> isUsed
+    void setAdjustForPlatform(boolean) -> setAdjustForPlatform
+    com.platform.Platform instance() -> instance
+com.platform.Unix -> com.platform.Unix:
+    void <init>() -> <init>
+    boolean isSupported(java.lang.String) -> isSupported
+com.platform.Windows -> com.platform.Windows:
+    void <init>() -> <init>
+    boolean isSupported(java.lang.String) -> isSupported
+com.theme.TextTheme -> com.theme.TextTheme:
+    java.awt.Font title -> title
+    java.awt.Font subtitle -> subtitle
+    java.awt.Color titleColor -> titleColor
+    java.awt.Color subtitleColor -> subtitleColor
+    void <init>() -> <init>
+com.theme.ThemePackage -> com.theme.ThemePackage:
+    java.util.Map m_themes -> m_themes
+    void <init>() -> <init>
+    void setTheme(java.lang.Class,java.lang.Object) -> setTheme
+    java.lang.Object getTheme(java.lang.Class) -> getTheme
+com.theme.ThemePackagePresets -> com.theme.ThemePackagePresets:
+    void <init>() -> <init>
+    com.theme.ThemePackage cleanLight() -> cleanLight
+    com.theme.ThemePackage cleanDark() -> cleanDark
+    com.theme.ThemePackage aqua() -> aqua
+com.theme.WindowTheme -> com.theme.WindowTheme:
+    java.awt.Color background -> background
+    java.awt.Color foreground -> foreground
+    double opacity -> opacity
+    int width -> width
+    int height -> height
+    void <init>() -> <init>
+com.utils.IconUtils -> com.utils.IconUtils:
+    void <init>() -> <init>
+    javax.swing.ImageIcon createIcon(java.lang.String,int,int) -> createIcon
+com.utils.MathUtils -> com.utils.MathUtils:
+    void <init>() -> <init>
+    int sign(double) -> sign
+    double clamp(double,double,double) -> clamp
+com.utils.Screen -> com.utils.Screen:
+    int m_width -> m_width
+    int m_height -> m_height
+    int m_leftX -> m_leftX
+    int m_centerX -> m_centerX
+    int m_rightX -> m_rightX
+    int m_topY -> m_topY
+    int m_centerY -> m_centerY
+    int m_bottomY -> m_bottomY
+    int m_padding -> m_padding
+    void <init>(boolean,int) -> <init>
+    com.utils.Screen standard() -> standard
+    com.utils.Screen withSpan(boolean) -> withSpan
+    com.utils.Screen withPadding(int) -> withPadding
+    com.utils.Screen withSpanAndPadding(boolean,int) -> withSpanAndPadding
+    void setupDimensions(boolean) -> setupDimensions
+    void calculatePositions() -> calculatePositions
+    int getX(com.notification.NotificationFactory$Location,com.notification.Notification) -> getX
+    int getY(com.notification.NotificationFactory$Location,com.notification.Notification) -> getY
+    int getPadding() -> getPadding
+com.utils.Screen$1 -> ae:
+    int[] $SwitchMap$com$notification$NotificationFactory$Location -> a
+    void <clinit>() -> <clinit>
+com.utils.Time -> com.utils.Time:
+    int m_milliseconds -> m_milliseconds
+    boolean m_infinite -> m_infinite
+    void <init>(int,boolean) -> <init>
+    com.utils.Time seconds(double) -> seconds
+    com.utils.Time milliseconds(int) -> milliseconds
+    com.utils.Time infinite() -> infinite
+    com.utils.Time add(com.utils.Time) -> add
+    double getSeconds() -> getSeconds
+    int getMilliseconds() -> getMilliseconds
+    boolean isInfinite() -> isInfinite
+de.craften.ui.swingmaterial.ElevationEffect -> de.craften.ui.swingmaterial.ElevationEffect:
+    org.jdesktop.swing.animation.timing.sources.SwingTimerTimingSource timer -> timer
+    javax.swing.JComponent target -> target
+    org.jdesktop.core.animation.timing.Animator animator -> animator
+    de.craften.ui.swingmaterial.util.SafePropertySetter$Property level -> level
+    int targetLevel -> targetLevel
+    void <init>(javax.swing.JComponent,int) -> <init>
+    int getLevel() -> getLevel
+    void setLevel(int) -> setLevel
+    void paint(java.awt.Graphics) -> paint
+    de.craften.ui.swingmaterial.ElevationEffect applyTo(javax.swing.JComponent,int) -> applyTo
+    de.craften.ui.swingmaterial.ElevationEffect applyCirularTo(javax.swing.JComponent,int) -> applyCirularTo
+    void <init>(javax.swing.JComponent,int,byte) -> <init>
+de.craften.ui.swingmaterial.ElevationEffect$Circular -> de.craften.ui.swingmaterial.ElevationEffect$Circular:
+    void <init>(javax.swing.JComponent,int) -> <init>
+    void paint(java.awt.Graphics) -> paint
+    void <init>(javax.swing.JComponent,int,byte) -> <init>
+de.craften.ui.swingmaterial.MaterialButton -> de.craften.ui.swingmaterial.MaterialButton:
+    de.craften.ui.swingmaterial.RippleEffect ripple -> ripple
+    de.craften.ui.swingmaterial.ElevationEffect elevation -> elevation
+    de.craften.ui.swingmaterial.MaterialButton$Type type -> type
+    boolean isMousePressed -> isMousePressed
+    boolean isMouseOver -> isMouseOver
+    java.awt.Color rippleColor -> rippleColor
+    java.awt.Cursor cursor -> cursor
+    void <init>() -> <init>
+    de.craften.ui.swingmaterial.MaterialButton$Type getType() -> getType
+    void setType(de.craften.ui.swingmaterial.MaterialButton$Type) -> setType
+    java.awt.Color getRippleColor() -> getRippleColor
+    void setRippleColor(java.awt.Color) -> setRippleColor
+    void setEnabled(boolean) -> setEnabled
+    void setCursor(java.awt.Cursor) -> setCursor
+    void processFocusEvent(java.awt.event.FocusEvent) -> processFocusEvent
+    void processMouseEvent(java.awt.event.MouseEvent) -> processMouseEvent
+    int getElevation() -> getElevation
+    void paintComponent(java.awt.Graphics) -> paintComponent
+    void paintBorder(java.awt.Graphics) -> paintBorder
+    boolean access$002(de.craften.ui.swingmaterial.MaterialButton,boolean) -> a
+    boolean access$102(de.craften.ui.swingmaterial.MaterialButton,boolean) -> b
+de.craften.ui.swingmaterial.MaterialButton$1 -> af:
+    de.craften.ui.swingmaterial.MaterialButton this$0 -> a
+    void <init>(de.craften.ui.swingmaterial.MaterialButton) -> <init>
+    void mousePressed(java.awt.event.MouseEvent) -> mousePressed
+    void mouseReleased(java.awt.event.MouseEvent) -> mouseReleased
+    void mouseEntered(java.awt.event.MouseEvent) -> mouseEntered
+    void mouseExited(java.awt.event.MouseEvent) -> mouseExited
+de.craften.ui.swingmaterial.MaterialButton$2 -> ag:
+    de.craften.ui.swingmaterial.MaterialButton this$0 -> a
+    void <init>(de.craften.ui.swingmaterial.MaterialButton) -> <init>
+    boolean contains(javax.swing.JComponent,int,int) -> contains
+de.craften.ui.swingmaterial.MaterialButton$Type -> de.craften.ui.swingmaterial.MaterialButton$Type:
+    de.craften.ui.swingmaterial.MaterialButton$Type DEFAULT -> DEFAULT
+    de.craften.ui.swingmaterial.MaterialButton$Type RAISED -> RAISED
+    de.craften.ui.swingmaterial.MaterialButton$Type FLAT -> FLAT
+    de.craften.ui.swingmaterial.MaterialButton$Type[] $VALUES -> $VALUES
+    de.craften.ui.swingmaterial.MaterialButton$Type[] values() -> values
+    de.craften.ui.swingmaterial.MaterialButton$Type valueOf(java.lang.String) -> valueOf
+    void <init>(java.lang.String,int) -> <init>
+    void <clinit>() -> <clinit>
+de.craften.ui.swingmaterial.MaterialColor -> de.craften.ui.swingmaterial.MaterialColor:
+    java.awt.Color RED__50 -> RED__50
+    java.awt.Color RED__100 -> RED__100
+    java.awt.Color RED__200 -> RED__200
+    java.awt.Color RED_300 -> RED_300
+    java.awt.Color RED_400 -> RED_400
+    java.awt.Color RED_500 -> RED_500
+    java.awt.Color RED_600 -> RED_600
+    java.awt.Color RED_700 -> RED_700
+    java.awt.Color RED_800 -> RED_800
+    java.awt.Color RED_900 -> RED_900
+    java.awt.Color REDA_100 -> REDA_100
+    java.awt.Color REDA_200 -> REDA_200
+    java.awt.Color REDA_400 -> REDA_400
+    java.awt.Color REDA_700 -> REDA_700
+    java.awt.Color PINK_50 -> PINK_50
+    java.awt.Color PINK_100 -> PINK_100
+    java.awt.Color PINK_200 -> PINK_200
+    java.awt.Color PINK_300 -> PINK_300
+    java.awt.Color PINK_400 -> PINK_400
+    java.awt.Color PINK_500 -> PINK_500
+    java.awt.Color PINK_600 -> PINK_600
+    java.awt.Color PINK_700 -> PINK_700
+    java.awt.Color PINK_800 -> PINK_800
+    java.awt.Color PINK_900 -> PINK_900
+    java.awt.Color PINKA_100 -> PINKA_100
+    java.awt.Color PINKA_200 -> PINKA_200
+    java.awt.Color PINKA_400 -> PINKA_400
+    java.awt.Color PINKA_700 -> PINKA_700
+    java.awt.Color PURPLE_50 -> PURPLE_50
+    java.awt.Color PURPLE_100 -> PURPLE_100
+    java.awt.Color PURPLE_200 -> PURPLE_200
+    java.awt.Color PURPLE_300 -> PURPLE_300
+    java.awt.Color PURPLE_400 -> PURPLE_400
+    java.awt.Color PURPLE_500 -> PURPLE_500
+    java.awt.Color PURPLE_600 -> PURPLE_600
+    java.awt.Color PURPLE_700 -> PURPLE_700
+    java.awt.Color PURPLE_800 -> PURPLE_800
+    java.awt.Color PURPLE_900 -> PURPLE_900
+    java.awt.Color PURPLEA_100 -> PURPLEA_100
+    java.awt.Color PURPLEA_200 -> PURPLEA_200
+    java.awt.Color PURPLEA_400 -> PURPLEA_400
+    java.awt.Color PURPLEA_700 -> PURPLEA_700
+    java.awt.Color DEEPPURPLE_50 -> DEEPPURPLE_50
+    java.awt.Color DEEPPURPLE_100 -> DEEPPURPLE_100
+    java.awt.Color DEEPPURPLE_200 -> DEEPPURPLE_200
+    java.awt.Color DEEPPURPLE_300 -> DEEPPURPLE_300
+    java.awt.Color DEEPPURPLE_400 -> DEEPPURPLE_400
+    java.awt.Color DEEPPURPLE_500 -> DEEPPURPLE_500
+    java.awt.Color DEEPPURPLE_600 -> DEEPPURPLE_600
+    java.awt.Color DEEPPURPLE_700 -> DEEPPURPLE_700
+    java.awt.Color DEEPPURPLE_800 -> DEEPPURPLE_800
+    java.awt.Color DEEPPURPLE_900 -> DEEPPURPLE_900
+    java.awt.Color DEEPPURPLEA_100 -> DEEPPURPLEA_100
+    java.awt.Color DEEPPURPLEA_200 -> DEEPPURPLEA_200
+    java.awt.Color DEEPPURPLEA_400 -> DEEPPURPLEA_400
+    java.awt.Color DEEPPURPLEA_700 -> DEEPPURPLEA_700
+    java.awt.Color INDIGO_50 -> INDIGO_50
+    java.awt.Color INDIGO_100 -> INDIGO_100
+    java.awt.Color INDIGO_200 -> INDIGO_200
+    java.awt.Color INDIGO_300 -> INDIGO_300
+    java.awt.Color INDIGO_400 -> INDIGO_400
+    java.awt.Color INDIGO_500 -> INDIGO_500
+    java.awt.Color INDIGO_600 -> INDIGO_600
+    java.awt.Color INDIGO_700 -> INDIGO_700
+    java.awt.Color INDIGO_800 -> INDIGO_800
+    java.awt.Color INDIGO_900 -> INDIGO_900
+    java.awt.Color INDIGOA_100 -> INDIGOA_100
+    java.awt.Color INDIGOA_200 -> INDIGOA_200
+    java.awt.Color INDIGOA_400 -> INDIGOA_400
+    java.awt.Color INDIGOA_700 -> INDIGOA_700
+    java.awt.Color BLUE_50 -> BLUE_50
+    java.awt.Color BLUE_100 -> BLUE_100
+    java.awt.Color BLUE_200 -> BLUE_200
+    java.awt.Color BLUE_300 -> BLUE_300
+    java.awt.Color BLUE_400 -> BLUE_400
+    java.awt.Color BLUE_500 -> BLUE_500
+    java.awt.Color BLUE_600 -> BLUE_600
+    java.awt.Color BLUE_700 -> BLUE_700
+    java.awt.Color BLUE_800 -> BLUE_800
+    java.awt.Color BLUE_900 -> BLUE_900
+    java.awt.Color BLUEA_100 -> BLUEA_100
+    java.awt.Color BLUEA_200 -> BLUEA_200
+    java.awt.Color BLUEA_400 -> BLUEA_400
+    java.awt.Color BLUEA_700 -> BLUEA_700
+    java.awt.Color LIGHTBLUE_50 -> LIGHTBLUE_50
+    java.awt.Color LIGHTBLUE_100 -> LIGHTBLUE_100
+    java.awt.Color LIGHTBLUE_200 -> LIGHTBLUE_200
+    java.awt.Color LIGHTBLUE_300 -> LIGHTBLUE_300
+    java.awt.Color LIGHTBLUE_400 -> LIGHTBLUE_400
+    java.awt.Color LIGHTBLUE_500 -> LIGHTBLUE_500
+    java.awt.Color LIGHTBLUE_600 -> LIGHTBLUE_600
+    java.awt.Color LIGHTBLUE_700 -> LIGHTBLUE_700
+    java.awt.Color LIGHTBLUE_800 -> LIGHTBLUE_800
+    java.awt.Color LIGHTBLUE_900 -> LIGHTBLUE_900
+    java.awt.Color LIGHTBLUEA_100 -> LIGHTBLUEA_100
+    java.awt.Color LIGHTBLUEA_200 -> LIGHTBLUEA_200
+    java.awt.Color LIGHTBLUEA_400 -> LIGHTBLUEA_400
+    java.awt.Color LIGHTBLUEA_700 -> LIGHTBLUEA_700
+    java.awt.Color CYAN_50 -> CYAN_50
+    java.awt.Color CYAN_100 -> CYAN_100
+    java.awt.Color CYAN_200 -> CYAN_200
+    java.awt.Color CYAN_300 -> CYAN_300
+    java.awt.Color CYAN_400 -> CYAN_400
+    java.awt.Color CYAN_500 -> CYAN_500
+    java.awt.Color CYAN_600 -> CYAN_600
+    java.awt.Color CYAN_700 -> CYAN_700
+    java.awt.Color CYAN_800 -> CYAN_800
+    java.awt.Color CYAN_900 -> CYAN_900
+    java.awt.Color CYANA_100 -> CYANA_100
+    java.awt.Color CYANA_200 -> CYANA_200
+    java.awt.Color CYANA_400 -> CYANA_400
+    java.awt.Color CYANA_700 -> CYANA_700
+    java.awt.Color TEAL_50 -> TEAL_50
+    java.awt.Color TEAL_100 -> TEAL_100
+    java.awt.Color TEAL_200 -> TEAL_200
+    java.awt.Color TEAL_300 -> TEAL_300
+    java.awt.Color TEAL_400 -> TEAL_400
+    java.awt.Color TEAL_500 -> TEAL_500
+    java.awt.Color TEAL_600 -> TEAL_600
+    java.awt.Color TEAL_700 -> TEAL_700
+    java.awt.Color TEAL_800 -> TEAL_800
+    java.awt.Color TEAL_900 -> TEAL_900
+    java.awt.Color TEALA_100 -> TEALA_100
+    java.awt.Color TEALA_200 -> TEALA_200
+    java.awt.Color TEALA_400 -> TEALA_400
+    java.awt.Color TEALA_700 -> TEALA_700
+    java.awt.Color GREEN_50 -> GREEN_50
+    java.awt.Color GREEN_100 -> GREEN_100
+    java.awt.Color GREEN_200 -> GREEN_200
+    java.awt.Color GREEN_300 -> GREEN_300
+    java.awt.Color GREEN_400 -> GREEN_400
+    java.awt.Color GREEN_500 -> GREEN_500
+    java.awt.Color GREEN_600 -> GREEN_600
+    java.awt.Color GREEN_700 -> GREEN_700
+    java.awt.Color GREEN_800 -> GREEN_800
+    java.awt.Color GREEN_900 -> GREEN_900
+    java.awt.Color GREENA_100 -> GREENA_100
+    java.awt.Color GREENA_200 -> GREENA_200
+    java.awt.Color GREENA_400 -> GREENA_400
+    java.awt.Color GREENA_700 -> GREENA_700
+    java.awt.Color LIGHTGREEN_50 -> LIGHTGREEN_50
+    java.awt.Color LIGHTGREEN_100 -> LIGHTGREEN_100
+    java.awt.Color LIGHTGREEN_200 -> LIGHTGREEN_200
+    java.awt.Color LIGHTGREEN_300 -> LIGHTGREEN_300
+    java.awt.Color LIGHTGREEN_400 -> LIGHTGREEN_400
+    java.awt.Color LIGHTGREEN_500 -> LIGHTGREEN_500
+    java.awt.Color LIGHTGREEN_600 -> LIGHTGREEN_600
+    java.awt.Color LIGHTGREEN_700 -> LIGHTGREEN_700
+    java.awt.Color LIGHTGREEN_800 -> LIGHTGREEN_800
+    java.awt.Color LIGHTGREEN_900 -> LIGHTGREEN_900
+    java.awt.Color LIGHTGREENA_100 -> LIGHTGREENA_100
+    java.awt.Color LIGHTGREENA_200 -> LIGHTGREENA_200
+    java.awt.Color LIGHTGREENA_400 -> LIGHTGREENA_400
+    java.awt.Color LIGHTGREENA_700 -> LIGHTGREENA_700
+    java.awt.Color LIME_50 -> LIME_50
+    java.awt.Color LIME_100 -> LIME_100
+    java.awt.Color LIME_200 -> LIME_200
+    java.awt.Color LIME_300 -> LIME_300
+    java.awt.Color LIME_400 -> LIME_400
+    java.awt.Color LIME_500 -> LIME_500
+    java.awt.Color LIME_600 -> LIME_600
+    java.awt.Color LIME_700 -> LIME_700
+    java.awt.Color LIME_800 -> LIME_800
+    java.awt.Color LIME_900 -> LIME_900
+    java.awt.Color LIMEA_100 -> LIMEA_100
+    java.awt.Color LIMEA_200 -> LIMEA_200
+    java.awt.Color LIMEA_400 -> LIMEA_400
+    java.awt.Color LIMEA_700 -> LIMEA_700
+    java.awt.Color YELLOW_50 -> YELLOW_50
+    java.awt.Color YELLOW_100 -> YELLOW_100
+    java.awt.Color YELLOW_200 -> YELLOW_200
+    java.awt.Color YELLOW_300 -> YELLOW_300
+    java.awt.Color YELLOW_400 -> YELLOW_400
+    java.awt.Color YELLOW_500 -> YELLOW_500
+    java.awt.Color YELLOW_600 -> YELLOW_600
+    java.awt.Color YELLOW_700 -> YELLOW_700
+    java.awt.Color YELLOW_800 -> YELLOW_800
+    java.awt.Color YELLOW_900 -> YELLOW_900
+    java.awt.Color YELLOWA_100 -> YELLOWA_100
+    java.awt.Color YELLOWA_200 -> YELLOWA_200
+    java.awt.Color YELLOWA_400 -> YELLOWA_400
+    java.awt.Color YELLOWA_700 -> YELLOWA_700
+    java.awt.Color AMBER_50 -> AMBER_50
+    java.awt.Color AMBER_100 -> AMBER_100
+    java.awt.Color AMBER_200 -> AMBER_200
+    java.awt.Color AMBER_300 -> AMBER_300
+    java.awt.Color AMBER_400 -> AMBER_400
+    java.awt.Color AMBER_500 -> AMBER_500
+    java.awt.Color AMBER_600 -> AMBER_600
+    java.awt.Color AMBER_700 -> AMBER_700
+    java.awt.Color AMBER_800 -> AMBER_800
+    java.awt.Color AMBER_900 -> AMBER_900
+    java.awt.Color AMBERA_100 -> AMBERA_100
+    java.awt.Color AMBERA_200 -> AMBERA_200
+    java.awt.Color AMBERA_400 -> AMBERA_400
+    java.awt.Color AMBERA_700 -> AMBERA_700
+    java.awt.Color ORANGE_50 -> ORANGE_50
+    java.awt.Color ORANGE_100 -> ORANGE_100
+    java.awt.Color ORANGE_200 -> ORANGE_200
+    java.awt.Color ORANGE_300 -> ORANGE_300
+    java.awt.Color ORANGE_400 -> ORANGE_400
+    java.awt.Color ORANGE_500 -> ORANGE_500
+    java.awt.Color ORANGE_600 -> ORANGE_600
+    java.awt.Color ORANGE_700 -> ORANGE_700
+    java.awt.Color ORANGE_800 -> ORANGE_800
+    java.awt.Color ORANGE_900 -> ORANGE_900
+    java.awt.Color ORANGEA_100 -> ORANGEA_100
+    java.awt.Color ORANGEA_200 -> ORANGEA_200
+    java.awt.Color ORANGEA_400 -> ORANGEA_400
+    java.awt.Color ORANGEA_700 -> ORANGEA_700
+    java.awt.Color DEEPORANGE_50 -> DEEPORANGE_50
+    java.awt.Color DEEPORANGE_100 -> DEEPORANGE_100
+    java.awt.Color DEEPORANGE_200 -> DEEPORANGE_200
+    java.awt.Color DEEPORANGE_300 -> DEEPORANGE_300
+    java.awt.Color DEEPORANGE_400 -> DEEPORANGE_400
+    java.awt.Color DEEPORANGE_500 -> DEEPORANGE_500
+    java.awt.Color DEEPORANGE_600 -> DEEPORANGE_600
+    java.awt.Color DEEPORANGE_700 -> DEEPORANGE_700
+    java.awt.Color DEEPORANGE_800 -> DEEPORANGE_800
+    java.awt.Color DEEPORANGE_900 -> DEEPORANGE_900
+    java.awt.Color DEEPORANGEA_100 -> DEEPORANGEA_100
+    java.awt.Color DEEPORANGEA_200 -> DEEPORANGEA_200
+    java.awt.Color DEEPORANGEA_400 -> DEEPORANGEA_400
+    java.awt.Color DEEPORANGEA_700 -> DEEPORANGEA_700
+    java.awt.Color BROWN_50 -> BROWN_50
+    java.awt.Color BROWN_100 -> BROWN_100
+    java.awt.Color BROWN_200 -> BROWN_200
+    java.awt.Color BROWN_300 -> BROWN_300
+    java.awt.Color BROWN_400 -> BROWN_400
+    java.awt.Color BROWN_500 -> BROWN_500
+    java.awt.Color BROWN_600 -> BROWN_600
+    java.awt.Color BROWN_700 -> BROWN_700
+    java.awt.Color BROWN_800 -> BROWN_800
+    java.awt.Color BROWN_900 -> BROWN_900
+    java.awt.Color BLUEGREY_50 -> BLUEGREY_50
+    java.awt.Color BLUEGREY_100 -> BLUEGREY_100
+    java.awt.Color BLUEGREY_200 -> BLUEGREY_200
+    java.awt.Color BLUEGREY_300 -> BLUEGREY_300
+    java.awt.Color BLUEGREY_400 -> BLUEGREY_400
+    java.awt.Color BLUEGREY_500 -> BLUEGREY_500
+    java.awt.Color BLUEGREY_600 -> BLUEGREY_600
+    java.awt.Color BLUEGREY_700 -> BLUEGREY_700
+    java.awt.Color BLUEGREY_800 -> BLUEGREY_800
+    java.awt.Color BLUEGREY_900 -> BLUEGREY_900
+    java.awt.Color GREY_50 -> GREY_50
+    java.awt.Color GREY_100 -> GREY_100
+    java.awt.Color GREY_200 -> GREY_200
+    java.awt.Color GREY_300 -> GREY_300
+    java.awt.Color GREY_400 -> GREY_400
+    java.awt.Color GREY_500 -> GREY_500
+    java.awt.Color GREY_600 -> GREY_600
+    java.awt.Color GREY_700 -> GREY_700
+    java.awt.Color GREY_800 -> GREY_800
+    java.awt.Color GREY_900 -> GREY_900
+    java.awt.Color BLACK -> BLACK
+    java.awt.Color WHITE -> WHITE
+    java.awt.Color TRANSPARENT -> TRANSPARENT
+    java.awt.Color FULLBLACK -> FULLBLACK
+    java.awt.Color DARK_BLACK -> DARK_BLACK
+    java.awt.Color LIGHT_BLACK -> LIGHT_BLACK
+    java.awt.Color MIN_BLACK -> MIN_BLACK
+    java.awt.Color FAINT_BLACK -> FAINT_BLACK
+    java.awt.Color FULLWHITE -> FULLWHITE
+    java.awt.Color DARK_WHITE -> DARK_WHITE
+    java.awt.Color LIGHT_WHITE -> LIGHT_WHITE
+    void <init>() -> <init>
+    void <clinit>() -> <clinit>
+de.craften.ui.swingmaterial.MaterialComboBox -> de.craften.ui.swingmaterial.MaterialComboBox:
+    void <init>() -> <init>
+    void paint(java.awt.Graphics) -> paint
+de.craften.ui.swingmaterial.MaterialComboBox$1 -> ah:
+    void <init>() -> <init>
+    javax.swing.plaf.basic.ComboPopup createPopup() -> createPopup
+    javax.swing.JButton createArrowButton() -> createArrowButton
+de.craften.ui.swingmaterial.MaterialComboBox$FieldRenderer -> de.craften.ui.swingmaterial.MaterialComboBox$FieldRenderer:
+    de.craften.ui.swingmaterial.MaterialComboBox comboBox -> comboBox
+    java.lang.String text -> text
+    boolean mouseOver -> mouseOver
+    boolean selected -> selected
+    void <init>(de.craften.ui.swingmaterial.MaterialComboBox) -> <init>
+    java.awt.Component getListCellRendererComponent(javax.swing.JList,java.lang.Object,int,boolean,boolean) -> getListCellRendererComponent
+    void paint(java.awt.Graphics) -> paint
+de.craften.ui.swingmaterial.MaterialComboBox$Popup -> de.craften.ui.swingmaterial.MaterialComboBox$Popup:
+    void <init>(javax.swing.JComboBox) -> <init>
+    javax.swing.JScrollPane createScroller() -> createScroller
+    java.awt.Rectangle computePopupBounds(int,int,int,int) -> computePopupBounds
+    void paint(java.awt.Graphics) -> paint
+de.craften.ui.swingmaterial.MaterialComboBox$ScrollBar -> de.craften.ui.swingmaterial.MaterialComboBox$ScrollBar:
+    void <init>(int) -> <init>
+    java.awt.Component add(java.awt.Component) -> add
+    void paint(java.awt.Graphics) -> paint
+de.craften.ui.swingmaterial.MaterialComboBox$ScrollBar$1 -> ai:
+    de.craften.ui.swingmaterial.MaterialComboBox$ScrollBar this$0 -> a
+    void <init>(de.craften.ui.swingmaterial.MaterialComboBox$ScrollBar) -> <init>
+    javax.swing.plaf.basic.BasicScrollBarUI$ScrollListener createScrollListener() -> createScrollListener
+    void paintTrack(java.awt.Graphics,javax.swing.JComponent,java.awt.Rectangle) -> paintTrack
+    javax.swing.JButton createDecreaseButton(int) -> createDecreaseButton
+    javax.swing.JButton createIncreaseButton(int) -> createIncreaseButton
+    java.awt.Dimension getMinimumThumbSize() -> getMinimumThumbSize
+    void paintThumb(java.awt.Graphics,javax.swing.JComponent,java.awt.Rectangle) -> paintThumb
+    void layoutContainer(java.awt.Container) -> layoutContainer
+de.craften.ui.swingmaterial.MaterialFormattedTextField -> de.craften.ui.swingmaterial.MaterialFormattedTextField:
+    de.craften.ui.swingmaterial.MaterialTextField$FloatingLabel floatingLabel -> floatingLabel
+    de.craften.ui.swingmaterial.MaterialTextField$Line line -> line
+    java.lang.String hint -> hint
+    void <init>() -> <init>
+    void <init>(java.lang.Object) -> <init>
+    void <init>(java.text.Format) -> <init>
+    void <init>(javax.swing.JFormattedTextField$AbstractFormatter) -> <init>
+    void <init>(javax.swing.JFormattedTextField$AbstractFormatterFactory) -> <init>
+    void <init>(javax.swing.JFormattedTextField$AbstractFormatterFactory,java.lang.Object) -> <init>
+    void initMaterialFormattedTextField() -> initMaterialFormattedTextField
+    java.lang.String getLabel() -> getLabel
+    void setLabel(java.lang.String) -> setLabel
+    java.lang.String getHint() -> getHint
+    void setHint(java.lang.String) -> setHint
+    void setText(java.lang.String) -> setText
+    void processFocusEvent(java.awt.event.FocusEvent) -> processFocusEvent
+    void processKeyEvent(java.awt.event.KeyEvent) -> processKeyEvent
+    void paintComponent(java.awt.Graphics) -> paintComponent
+    void paintBorder(java.awt.Graphics) -> paintBorder
+    javax.swing.JFormattedTextField$AbstractFormatterFactory getDefaultFormatterFactory(java.lang.Object) -> getDefaultFormatterFactory
+de.craften.ui.swingmaterial.MaterialFormattedTextField$1 -> aj:
+    de.craften.ui.swingmaterial.MaterialFormattedTextField this$0 -> a
+    void <init>(de.craften.ui.swingmaterial.MaterialFormattedTextField) -> <init>
+    void damage(java.awt.Rectangle) -> damage
+de.craften.ui.swingmaterial.MaterialIconButton -> de.craften.ui.swingmaterial.MaterialIconButton:
+    de.craften.ui.swingmaterial.RippleEffect ripple -> ripple
+    void <init>() -> <init>
+    void setIcon(javax.swing.Icon) -> setIcon
+    void setEnabled(boolean) -> setEnabled
+    void processFocusEvent(java.awt.event.FocusEvent) -> processFocusEvent
+    void processMouseEvent(java.awt.event.MouseEvent) -> processMouseEvent
+    void paintComponent(java.awt.Graphics) -> paintComponent
+    void paintBorder(java.awt.Graphics) -> paintBorder
+de.craften.ui.swingmaterial.MaterialPanel -> de.craften.ui.swingmaterial.MaterialPanel:
+    de.craften.ui.swingmaterial.ElevationEffect elevation -> elevation
+    void <init>() -> <init>
+    int getElevation() -> getElevation
+    void setElevation(int) -> setElevation
+    void paintComponent(java.awt.Graphics) -> paintComponent
+de.craften.ui.swingmaterial.MaterialPasswordField -> de.craften.ui.swingmaterial.MaterialPasswordField:
+    de.craften.ui.swingmaterial.MaterialTextField$FloatingLabel floatingLabel -> floatingLabel
+    de.craften.ui.swingmaterial.MaterialTextField$Line line -> line
+    java.lang.String hint -> hint
+    void <init>() -> <init>
+    java.lang.String getLabel() -> getLabel
+    void setLabel(java.lang.String) -> setLabel
+    java.lang.String getHint() -> getHint
+    void setHint(java.lang.String) -> setHint
+    void setText(java.lang.String) -> setText
+    void processFocusEvent(java.awt.event.FocusEvent) -> processFocusEvent
+    void processKeyEvent(java.awt.event.KeyEvent) -> processKeyEvent
+    void paintComponent(java.awt.Graphics) -> paintComponent
+    void paintBorder(java.awt.Graphics) -> paintBorder
+de.craften.ui.swingmaterial.MaterialPasswordField$1 -> ak:
+    de.craften.ui.swingmaterial.MaterialPasswordField this$0 -> a
+    void <init>(de.craften.ui.swingmaterial.MaterialPasswordField) -> <init>
+    void damage(java.awt.Rectangle) -> damage
+de.craften.ui.swingmaterial.MaterialProgressSpinner -> de.craften.ui.swingmaterial.MaterialProgressSpinner:
+    de.craften.ui.swingmaterial.util.SafePropertySetter$Property startArc -> startArc
+    de.craften.ui.swingmaterial.util.SafePropertySetter$Property arcSize -> arcSize
+    de.craften.ui.swingmaterial.util.SafePropertySetter$Property rotation -> rotation
+    void <init>() -> <init>
+    void paintComponent(java.awt.Graphics) -> paintComponent
+de.craften.ui.swingmaterial.MaterialProgressSpinner$1 -> al:
+    org.jdesktop.core.animation.timing.Interpolator spline -> a
+    void <init>() -> <init>
+    double interpolate(double) -> interpolate
+de.craften.ui.swingmaterial.MaterialProgressSpinner$2 -> am:
+    org.jdesktop.core.animation.timing.Interpolator spline -> a
+    void <init>() -> <init>
+    double interpolate(double) -> interpolate
+de.craften.ui.swingmaterial.MaterialShadow -> de.craften.ui.swingmaterial.MaterialShadow:
+    int OFFSET_TOP -> OFFSET_TOP
+    int OFFSET_LEFT -> OFFSET_LEFT
+    int OFFSET_BOTTOM -> OFFSET_BOTTOM
+    int OFFSET_RIGHT -> OFFSET_RIGHT
+    org.jdesktop.core.animation.timing.KeyFrames opacity1 -> opacity1
+    org.jdesktop.core.animation.timing.KeyFrames opacity2 -> opacity2
+    org.jdesktop.core.animation.timing.KeyFrames radius1 -> radius1
+    org.jdesktop.core.animation.timing.KeyFrames radius2 -> radius2
+    org.jdesktop.core.animation.timing.KeyFrames offset1 -> offset1
+    org.jdesktop.core.animation.timing.KeyFrames offset2 -> offset2
+    void <init>() -> <init>
+    java.awt.image.BufferedImage renderShadow(int,int,double) -> renderShadow
+    java.awt.image.BufferedImage renderCircularShadow(int,double) -> renderCircularShadow
+    void makeShadow(java.awt.image.BufferedImage,float,float,float,float) -> makeShadow
+    void makeCircularShadow(java.awt.image.BufferedImage,float,float,float,float) -> makeCircularShadow
+    void <clinit>() -> <clinit>
+de.craften.ui.swingmaterial.MaterialTextField -> de.craften.ui.swingmaterial.MaterialTextField:
+    de.craften.ui.swingmaterial.MaterialTextField$FloatingLabel floatingLabel -> floatingLabel
+    de.craften.ui.swingmaterial.MaterialTextField$Line line -> line
+    java.lang.String hint -> hint
+    void <init>() -> <init>
+    java.lang.String getLabel() -> getLabel
+    void setLabel(java.lang.String) -> setLabel
+    java.lang.String getHint() -> getHint
+    void setHint(java.lang.String) -> setHint
+    void setText(java.lang.String) -> setText
+    void processFocusEvent(java.awt.event.FocusEvent) -> processFocusEvent
+    void processKeyEvent(java.awt.event.KeyEvent) -> processKeyEvent
+    void paintComponent(java.awt.Graphics) -> paintComponent
+    void paintBorder(java.awt.Graphics) -> paintBorder
+de.craften.ui.swingmaterial.MaterialTextField$1 -> an:
+    de.craften.ui.swingmaterial.MaterialTextField this$0 -> a
+    void <init>(de.craften.ui.swingmaterial.MaterialTextField) -> <init>
+    void damage(java.awt.Rectangle) -> damage
+de.craften.ui.swingmaterial.MaterialTextField$FloatingLabel -> de.craften.ui.swingmaterial.MaterialTextField$FloatingLabel:
+    org.jdesktop.swing.animation.timing.sources.SwingTimerTimingSource timer -> timer
+    javax.swing.JTextField target -> target
+    org.jdesktop.core.animation.timing.Animator animator -> animator
+    de.craften.ui.swingmaterial.util.SafePropertySetter$Property y -> y
+    de.craften.ui.swingmaterial.util.SafePropertySetter$Property fontSize -> fontSize
+    de.craften.ui.swingmaterial.util.SafePropertySetter$Property color -> color
+    java.lang.String text -> a
+    void <init>(javax.swing.JTextField) -> <init>
+    void update() -> a
+    void paint(java.awt.Graphics2D) -> a
+    boolean isFloatingAbove() -> a
+de.craften.ui.swingmaterial.MaterialTextField$Line -> de.craften.ui.swingmaterial.MaterialTextField$Line:
+    org.jdesktop.swing.animation.timing.sources.SwingTimerTimingSource timer -> timer
+    javax.swing.JComponent target -> target
+    org.jdesktop.core.animation.timing.Animator animator -> animator
+    de.craften.ui.swingmaterial.util.SafePropertySetter$Property width -> width
+    void <init>(javax.swing.JComponent) -> <init>
+    void update() -> a
+    double getWidth() -> getWidth
+de.craften.ui.swingmaterial.MaterialWindow -> de.craften.ui.swingmaterial.MaterialWindow:
+    void <init>() -> <init>
+de.craften.ui.swingmaterial.MaterialWindow$1 -> ao:
+    de.craften.ui.swingmaterial.MaterialWindow this$0 -> a
+    void <init>(de.craften.ui.swingmaterial.MaterialWindow) -> <init>
+    void componentResized(java.awt.event.ComponentEvent) -> componentResized
+de.craften.ui.swingmaterial.MaterialWindow$ShadowPane -> ap:
+    void <init>() -> <init>
+    void paintComponent(java.awt.Graphics) -> paintComponent
+de.craften.ui.swingmaterial.RippleEffect -> de.craften.ui.swingmaterial.RippleEffect:
+    java.util.List ripples -> ripples
+    javax.swing.JComponent target -> target
+    org.jdesktop.swing.animation.timing.sources.SwingTimerTimingSource timer -> timer
+    void <init>(javax.swing.JComponent) -> <init>
+    void paint(java.awt.Graphics) -> paint
+    void addRipple(java.awt.Point,int) -> addRipple
+    de.craften.ui.swingmaterial.RippleEffect applyTo(javax.swing.JComponent) -> applyTo
+    de.craften.ui.swingmaterial.RippleEffect applyFixedTo(javax.swing.JComponent) -> applyFixedTo
+    javax.swing.JComponent access$400(de.craften.ui.swingmaterial.RippleEffect) -> a
+    java.util.List access$500(de.craften.ui.swingmaterial.RippleEffect) -> a
+de.craften.ui.swingmaterial.RippleEffect$1 -> aq:
+    de.craften.ui.swingmaterial.RippleEffect val$rippleEffect -> a
+    javax.swing.JComponent val$target -> a
+    void <init>(de.craften.ui.swingmaterial.RippleEffect,javax.swing.JComponent) -> <init>
+    void mousePressed(java.awt.event.MouseEvent) -> mousePressed
+de.craften.ui.swingmaterial.RippleEffect$2 -> ar:
+    de.craften.ui.swingmaterial.RippleEffect val$rippleEffect -> a
+    javax.swing.JComponent val$target -> a
+    void <init>(de.craften.ui.swingmaterial.RippleEffect,javax.swing.JComponent) -> <init>
+    void mousePressed(java.awt.event.MouseEvent) -> mousePressed
+de.craften.ui.swingmaterial.RippleEffect$RippleAnimation -> de.craften.ui.swingmaterial.RippleEffect$RippleAnimation:
+    java.awt.Point rippleCenter -> rippleCenter
+    int maxRadius -> a
+    de.craften.ui.swingmaterial.util.SafePropertySetter$Property rippleRadius -> a
+    de.craften.ui.swingmaterial.util.SafePropertySetter$Property rippleOpacity -> b
+    de.craften.ui.swingmaterial.RippleEffect this$0 -> a
+    void <init>(de.craften.ui.swingmaterial.RippleEffect,java.awt.Point,int) -> <init>
+    de.craften.ui.swingmaterial.util.SafePropertySetter$Property access$000(de.craften.ui.swingmaterial.RippleEffect$RippleAnimation) -> a
+    java.awt.Point access$100(de.craften.ui.swingmaterial.RippleEffect$RippleAnimation) -> a
+    de.craften.ui.swingmaterial.util.SafePropertySetter$Property access$200(de.craften.ui.swingmaterial.RippleEffect$RippleAnimation) -> b
+    void <init>(de.craften.ui.swingmaterial.RippleEffect,java.awt.Point,int,byte) -> <init>
+de.craften.ui.swingmaterial.RippleEffect$RippleAnimation$1 -> as:
+    de.craften.ui.swingmaterial.RippleEffect$RippleAnimation this$1 -> a
+    void <init>(de.craften.ui.swingmaterial.RippleEffect$RippleAnimation) -> <init>
+    void end(org.jdesktop.core.animation.timing.Animator) -> end
+de.craften.ui.swingmaterial.Roboto -> de.craften.ui.swingmaterial.Roboto:
+    java.awt.Font BLACK -> BLACK
+    java.awt.Font BLACK_ITALIC -> BLACK_ITALIC
+    java.awt.Font BOLD -> BOLD
+    java.awt.Font BOLD_ITALIC -> BOLD_ITALIC
+    java.awt.Font ITALIC -> ITALIC
+    java.awt.Font LIGHT -> LIGHT
+    java.awt.Font LIGHT_ITALIC -> LIGHT_ITALIC
+    java.awt.Font MEDIUM -> MEDIUM
+    java.awt.Font MEDIUM_ITALIC -> MEDIUM_ITALIC
+    java.awt.Font REGULAR -> REGULAR
+    java.awt.Font THIN -> THIN
+    java.awt.Font THIN_ITALIC -> THIN_ITALIC
+    void <init>() -> <init>
+    java.awt.Font loadFont(java.lang.String) -> loadFont
+    void <clinit>() -> <clinit>
+de.craften.ui.swingmaterial.toast.TextToast -> de.craften.ui.swingmaterial.toast.TextToast:
+    java.lang.String content -> content
+    void <init>(java.lang.String) -> <init>
+    java.lang.String getContent() -> getContent
+    void paint(java.awt.Graphics) -> paint
+de.craften.ui.swingmaterial.toast.Toast -> de.craften.ui.swingmaterial.toast.Toast:
+    java.awt.Color BACKGROUND -> BACKGROUND
+    java.awt.Font FONT -> FONT
+    int MAX_WIDTH -> MAX_WIDTH
+    double yOffset -> a
+    void <init>() -> <init>
+    void paint(java.awt.Graphics) -> paint
+    void <clinit>() -> <clinit>
+de.craften.ui.swingmaterial.toast.ToastBar -> de.craften.ui.swingmaterial.toast.ToastBar:
+    org.jdesktop.swing.animation.timing.sources.SwingTimerTimingSource timer -> timer
+    java.util.Queue toasts -> toasts
+    boolean animationRunning -> animationRunning
+    void <init>() -> <init>
+    void display(de.craften.ui.swingmaterial.toast.Toast) -> display
+    boolean contains(int,int) -> contains
+    void displayNextToast() -> displayNextToast
+    boolean access$002$1bb23fe7(de.craften.ui.swingmaterial.toast.ToastBar) -> a
+    void access$100(de.craften.ui.swingmaterial.toast.ToastBar) -> a
+de.craften.ui.swingmaterial.toast.ToastBar$1 -> at:
+    de.craften.ui.swingmaterial.toast.Toast val$currentToast -> a
+    de.craften.ui.swingmaterial.toast.ToastBar this$0 -> a
+    void <init>(de.craften.ui.swingmaterial.toast.ToastBar,de.craften.ui.swingmaterial.toast.Toast) -> <init>
+    void componentResized(java.awt.event.ComponentEvent) -> componentResized
+de.craften.ui.swingmaterial.toast.ToastBar$2 -> au:
+    de.craften.ui.swingmaterial.toast.Toast val$currentToast -> a
+    void <init>(de.craften.ui.swingmaterial.toast.Toast) -> <init>
+    void end(org.jdesktop.core.animation.timing.Animator) -> end
+de.craften.ui.swingmaterial.toast.ToastBar$3 -> av:
+    de.craften.ui.swingmaterial.toast.Toast val$currentToast -> a
+    de.craften.ui.swingmaterial.toast.ToastBar this$0 -> a
+    void <init>(de.craften.ui.swingmaterial.toast.ToastBar,de.craften.ui.swingmaterial.toast.Toast) -> <init>
+    void setValue(java.lang.Object) -> setValue
+de.craften.ui.swingmaterial.toast.ToastBar$4 -> aw:
+    java.awt.event.ComponentListener val$resizeListener -> a
+    de.craften.ui.swingmaterial.toast.Toast val$currentToast -> a
+    de.craften.ui.swingmaterial.toast.ToastBar this$0 -> a
+    void <init>(de.craften.ui.swingmaterial.toast.ToastBar,java.awt.event.ComponentListener,de.craften.ui.swingmaterial.toast.Toast) -> <init>
+    void end(org.jdesktop.core.animation.timing.Animator) -> end
+de.craften.ui.swingmaterial.toast.ToastBar$4$1 -> ax:
+    de.craften.ui.swingmaterial.toast.ToastBar$4 this$1 -> a
+    void <init>(de.craften.ui.swingmaterial.toast.ToastBar$4) -> <init>
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+de.craften.ui.swingmaterial.toast.ToastBar$5 -> ay:
+    de.craften.ui.swingmaterial.toast.Toast val$currentToast -> a
+    de.craften.ui.swingmaterial.toast.ToastBar this$0 -> a
+    void <init>(de.craften.ui.swingmaterial.toast.ToastBar,de.craften.ui.swingmaterial.toast.Toast) -> <init>
+    void setValue(java.lang.Object) -> setValue
+de.craften.ui.swingmaterial.util.FastGaussianBlur -> de.craften.ui.swingmaterial.util.FastGaussianBlur:
+    void <init>() -> <init>
+    void blur(java.awt.image.BufferedImage,double) -> blur
+    int[] boxesForGauss(double,int) -> boxesForGauss
+    void gaussBlur_4(int[],int[],int,int,double) -> gaussBlur_4
+    void boxBlur_4(int[],int[],int,int,double) -> boxBlur_4
+    void boxBlurH_4(int[],int[],int,int,double) -> boxBlurH_4
+    void boxBlurT_4(int[],int[],int,int,double) -> boxBlurT_4
+de.craften.ui.swingmaterial.util.SafePropertySetter -> de.craften.ui.swingmaterial.util.SafePropertySetter:
+    java.util.concurrent.atomic.AtomicReference keyFrames -> keyFrames
+    boolean isToAnimation -> isToAnimation
+    de.craften.ui.swingmaterial.util.SafePropertySetter$Getter getter -> getter
+    de.craften.ui.swingmaterial.util.SafePropertySetter$Setter setter -> setter
+    void <init>(org.jdesktop.core.animation.timing.KeyFrames,boolean,de.craften.ui.swingmaterial.util.SafePropertySetter$Getter,de.craften.ui.swingmaterial.util.SafePropertySetter$Setter) -> <init>
+    org.jdesktop.core.animation.timing.TimingTarget getTarget(de.craften.ui.swingmaterial.util.SafePropertySetter$Setter,java.lang.Object[]) -> getTarget
+    org.jdesktop.core.animation.timing.TimingTarget getTarget(de.craften.ui.swingmaterial.util.SafePropertySetter$Setter,org.jdesktop.core.animation.timing.KeyFrames) -> getTarget
+    org.jdesktop.core.animation.timing.TimingTarget getTargetTo(de.craften.ui.swingmaterial.util.SafePropertySetter$Getter,de.craften.ui.swingmaterial.util.SafePropertySetter$Setter,java.lang.Object[]) -> getTargetTo
+    org.jdesktop.core.animation.timing.TimingTarget getTargetTo(de.craften.ui.swingmaterial.util.SafePropertySetter$GetterAndSetter,java.lang.Object[]) -> getTargetTo
+    org.jdesktop.core.animation.timing.TimingTarget getTargetTo(de.craften.ui.swingmaterial.util.SafePropertySetter$Getter,de.craften.ui.swingmaterial.util.SafePropertySetter$Setter,org.jdesktop.core.animation.timing.KeyFrames) -> getTargetTo
+    org.jdesktop.core.animation.timing.TimingTarget getTargetTo(de.craften.ui.swingmaterial.util.SafePropertySetter$GetterAndSetter,org.jdesktop.core.animation.timing.KeyFrames) -> getTargetTo
+    de.craften.ui.swingmaterial.util.SafePropertySetter$Property animatableProperty(java.awt.Component,java.lang.Object) -> animatableProperty
+    void timingEvent(org.jdesktop.core.animation.timing.Animator,double) -> timingEvent
+    void begin(org.jdesktop.core.animation.timing.Animator) -> begin
+de.craften.ui.swingmaterial.util.SafePropertySetter$Getter -> de.craften.ui.swingmaterial.util.SafePropertySetter$Getter:
+    java.lang.Object getValue() -> getValue
+de.craften.ui.swingmaterial.util.SafePropertySetter$GetterAndSetter -> de.craften.ui.swingmaterial.util.SafePropertySetter$GetterAndSetter:
+de.craften.ui.swingmaterial.util.SafePropertySetter$Property -> de.craften.ui.swingmaterial.util.SafePropertySetter$Property:
+    java.awt.Component component -> component
+    java.lang.Object value -> value
+    void <init>(java.awt.Component,java.lang.Object) -> <init>
+    java.lang.Object getValue() -> getValue
+    void setValue(java.lang.Object) -> setValue
+de.craften.ui.swingmaterial.util.SafePropertySetter$Setter -> de.craften.ui.swingmaterial.util.SafePropertySetter$Setter:
+    void setValue(java.lang.Object) -> setValue
+org.jdesktop.core.animation.i18n.I18N -> org.jdesktop.core.animation.i18n.I18N:
+    java.util.ResourceBundle ERR -> ERR
+    java.lang.String ERROR_FORMAT -> ERROR_FORMAT
+    java.lang.String getString(java.lang.String,java.lang.Object[]) -> getString
+    java.lang.String err(int) -> err
+    java.lang.String err(int,java.lang.Object[]) -> err
+    void <init>() -> <init>
+    void <clinit>() -> <clinit>
+org.jdesktop.core.animation.rendering.JRenderer -> org.jdesktop.core.animation.rendering.JRenderer:
+    void invokeLater(java.lang.Runnable) -> invokeLater
+    org.jdesktop.core.animation.timing.TimingSource getTimingSource() -> getTimingSource
+    long getFPS() -> getFPS
+    long getAverageCycleTimeNanos() -> getAverageCycleTimeNanos
+    void shutdown() -> shutdown
+org.jdesktop.core.animation.rendering.JRendererTarget -> org.jdesktop.core.animation.rendering.JRendererTarget:
+    void renderSetup(java.lang.Object) -> renderSetup
+    void renderUpdate() -> renderUpdate
+    void render(java.lang.Object,int,int) -> render
+    void renderShutdown() -> renderShutdown
+org.jdesktop.core.animation.rendering.Viewport -> org.jdesktop.core.animation.rendering.Viewport:
+    int f_intoWidth -> f_intoWidth
+    int f_intoHeight -> f_intoHeight
+    int f_x -> a
+    int f_y -> b
+    int f_width -> f_width
+    int f_height -> f_height
+    org.jdesktop.core.animation.timing.Interpolator f_moveI -> f_moveI
+    org.jdesktop.core.animation.rendering.Viewport$MovementRateSource f_rate -> f_rate
+    org.jdesktop.core.animation.timing.Animator f_moveHorizontalAnimator -> f_moveHorizontalAnimator
+    org.jdesktop.core.animation.timing.Animator f_moveVerticalAnimator -> f_moveVerticalAnimator
+    void <init>(int,int) -> <init>
+    void animateHorizontalMovement(org.jdesktop.core.animation.rendering.Viewport$Go) -> animateHorizontalMovement
+    void animateVerticalMovement(org.jdesktop.core.animation.rendering.Viewport$Go) -> animateVerticalMovement
+    void setPositionDelta(int,int) -> setPositionDelta
+    void setPosition(int,int) -> setPosition
+    int getX() -> getX
+    void setX(int) -> setX
+    int getY() -> getY
+    void setY(int) -> setY
+    void setSize(int,int) -> setSize
+    int getWidth() -> getWidth
+    void setWidth(int) -> setWidth
+    int getHeight() -> getHeight
+    void setHeight(int) -> setHeight
+    void setMovementRate(long) -> setMovementRate
+    void setMovementRateSource(org.jdesktop.core.animation.rendering.Viewport$MovementRateSource) -> setMovementRateSource
+    long getMovementRate() -> getMovementRate
+    void dispose() -> dispose
+org.jdesktop.core.animation.rendering.Viewport$DefaultMovementRateSource -> az:
+    long f_nanosPerPixel -> a
+    void <init>(long) -> <init>
+    void <init>() -> <init>
+    long getMovementRateNanosPerPixel() -> getMovementRateNanosPerPixel
+org.jdesktop.core.animation.rendering.Viewport$Go -> org.jdesktop.core.animation.rendering.Viewport$Go:
+    org.jdesktop.core.animation.rendering.Viewport$Go LEFT -> LEFT
+    org.jdesktop.core.animation.rendering.Viewport$Go RIGHT -> RIGHT
+    org.jdesktop.core.animation.rendering.Viewport$Go UP -> UP
+    org.jdesktop.core.animation.rendering.Viewport$Go DOWN -> DOWN
+    org.jdesktop.core.animation.rendering.Viewport$Go STOP -> STOP
+    org.jdesktop.core.animation.rendering.Viewport$Go[] $VALUES -> $VALUES
+    org.jdesktop.core.animation.rendering.Viewport$Go[] values() -> values
+    org.jdesktop.core.animation.rendering.Viewport$Go valueOf(java.lang.String) -> valueOf
+    void <init>(java.lang.String,int) -> <init>
+    void <clinit>() -> <clinit>
+org.jdesktop.core.animation.rendering.Viewport$MovementRateSource -> org.jdesktop.core.animation.rendering.Viewport$MovementRateSource:
+    long getMovementRateNanosPerPixel() -> getMovementRateNanosPerPixel
+org.jdesktop.core.animation.rendering.Viewport$Mover -> aA:
+    int f_pixelsToMove -> a
+    boolean f_horizontal -> a
+    int f_startViewXY -> b
+    boolean f_add -> b
+    org.jdesktop.core.animation.rendering.Viewport this$0 -> a
+    void <init>(org.jdesktop.core.animation.rendering.Viewport,int,boolean,int,boolean) -> <init>
+    void timingEvent(org.jdesktop.core.animation.timing.Animator,double) -> timingEvent
+org.jdesktop.core.animation.timing.Animator -> org.jdesktop.core.animation.timing.Animator:
+    long INFINITE -> INFINITE
+    java.lang.String f_debugName -> f_debugName
+    long f_duration -> f_duration
+    java.util.concurrent.TimeUnit f_durationTimeUnit -> f_durationTimeUnit
+    long f_durationNanos -> f_durationNanos
+    org.jdesktop.core.animation.timing.Animator$EndBehavior f_endBehavior -> f_endBehavior
+    org.jdesktop.core.animation.timing.Interpolator f_interpolator -> f_interpolator
+    org.jdesktop.core.animation.timing.Animator$RepeatBehavior f_repeatBehavior -> f_repeatBehavior
+    long f_repeatCount -> f_repeatCount
+    org.jdesktop.core.animation.timing.Animator$Direction f_startDirection -> a
+    long f_startDelay -> f_startDelay
+    java.util.concurrent.TimeUnit f_startDelayTimeUnit -> f_startDelayTimeUnit
+    long f_startDelayNanos -> f_startDelayNanos
+    org.jdesktop.core.animation.timing.TimingSource f_timingSource -> a
+    boolean f_disposeTimingSource -> a
+    java.util.concurrent.CopyOnWriteArrayList f_targets -> a
+    long f_startTimeNanos -> f_startTimeNanos
+    long f_cycleStartTimeNanos -> f_cycleStartTimeNanos
+    long f_pauseBeginTimeNanos -> f_pauseBeginTimeNanos
+    org.jdesktop.core.animation.timing.Animator$Direction f_currentDirection -> f_currentDirection
+    int f_reverseNowCallCount -> f_reverseNowCallCount
+    java.util.concurrent.CountDownLatch f_runningAnimationLatch -> f_runningAnimationLatch
+    boolean f_stopping -> b
+    void setDefaultTimingSource(org.jdesktop.core.animation.timing.TimingSource) -> setDefaultTimingSource
+    org.jdesktop.core.animation.timing.TimingSource getDefaultTimingSource() -> getDefaultTimingSource
+    java.lang.String getDebugName() -> getDebugName
+    long getDuration() -> getDuration
+    java.util.concurrent.TimeUnit getDurationTimeUnit() -> getDurationTimeUnit
+    org.jdesktop.core.animation.timing.Animator$EndBehavior getEndBehavior() -> getEndBehavior
+    org.jdesktop.core.animation.timing.Interpolator getInterpolator() -> getInterpolator
+    org.jdesktop.core.animation.timing.Animator$RepeatBehavior getRepeatBehavior() -> getRepeatBehavior
+    long getRepeatCount() -> getRepeatCount
+    org.jdesktop.core.animation.timing.Animator$Direction getStartDirection() -> getStartDirection
+    long getStartDelay() -> getStartDelay
+    java.util.concurrent.TimeUnit getStartDelayTimeUnit() -> getStartDelayTimeUnit
+    org.jdesktop.core.animation.timing.TimingSource getTimingSource() -> getTimingSource
+    boolean getDisposeTimingSource() -> getDisposeTimingSource
+    void <init>(java.lang.String,long,java.util.concurrent.TimeUnit,org.jdesktop.core.animation.timing.Animator$EndBehavior,org.jdesktop.core.animation.timing.Interpolator,org.jdesktop.core.animation.timing.Animator$RepeatBehavior,long,org.jdesktop.core.animation.timing.Animator$Direction,long,java.util.concurrent.TimeUnit,org.jdesktop.core.animation.timing.TimingSource,boolean,java.util.Collection) -> <init>
+    void addTarget(org.jdesktop.core.animation.timing.TimingTarget) -> addTarget
+    void addTargets(java.util.Collection) -> addTargets
+    void addTargets(org.jdesktop.core.animation.timing.TimingTarget[]) -> addTargets
+    void removeTarget(org.jdesktop.core.animation.timing.TimingTarget) -> removeTarget
+    void removeTargets(java.util.Collection) -> removeTargets
+    void removeTargets(org.jdesktop.core.animation.timing.TimingTarget[]) -> removeTargets
+    java.util.ArrayList getTargets() -> getTargets
+    void clearTargets() -> clearTargets
+    void start() -> start
+    void restart() -> restart
+    void startReverse() -> startReverse
+    void restartReverse() -> restartReverse
+    boolean isRunning() -> isRunning
+    org.jdesktop.core.animation.timing.Animator$Direction getCurrentDirection() -> getCurrentDirection
+    boolean stop() -> stop
+    void stopAndAwait() -> stopAndAwait
+    boolean cancel() -> cancel
+    void cancelAndAwait() -> cancelAndAwait
+    void pause() -> pause
+    boolean isPaused() -> isPaused
+    void resume() -> resume
+    boolean reverseNow() -> reverseNow
+    void await() -> await
+    long getCycleElapsedTime() -> getCycleElapsedTime
+    long getCycleElapsedTime(long) -> getCycleElapsedTime
+    long getTotalElapsedTime() -> getTotalElapsedTime
+    long getTotalElapsedTime(long) -> getTotalElapsedTime
+    java.lang.String toString() -> toString
+    void startHelper(org.jdesktop.core.animation.timing.Animator$Direction,java.lang.String) -> a
+    boolean stopHelper(boolean) -> stopHelper
+    void latchCountDown() -> a
+    void timingSourceTick(org.jdesktop.core.animation.timing.TimingSource,long) -> timingSourceTick
+org.jdesktop.core.animation.timing.Animator$1 -> aB:
+    org.jdesktop.core.animation.timing.TimingTarget val$target -> a
+    org.jdesktop.core.animation.timing.Animator this$0 -> a
+    void <init>(org.jdesktop.core.animation.timing.Animator,org.jdesktop.core.animation.timing.TimingTarget) -> <init>
+    void run() -> run
+org.jdesktop.core.animation.timing.Animator$2 -> aC:
+    org.jdesktop.core.animation.timing.Animator this$0 -> a
+    void <init>(org.jdesktop.core.animation.timing.Animator) -> <init>
+    void run() -> run
+org.jdesktop.core.animation.timing.Animator$3 -> aD:
+    org.jdesktop.core.animation.timing.Animator this$0 -> a
+    void <init>(org.jdesktop.core.animation.timing.Animator) -> <init>
+    void run() -> run
+org.jdesktop.core.animation.timing.Animator$4 -> aE:
+    org.jdesktop.core.animation.timing.Animator this$0 -> a
+    void <init>(org.jdesktop.core.animation.timing.Animator) -> <init>
+    void run() -> run
+org.jdesktop.core.animation.timing.Animator$5 -> aF:
+    boolean val$notify -> a
+    org.jdesktop.core.animation.timing.Animator this$0 -> a
+    void <init>(org.jdesktop.core.animation.timing.Animator,boolean) -> <init>
+    void run() -> run
+org.jdesktop.core.animation.timing.Animator$6 -> aG:
+    int[] $SwitchMap$org$jdesktop$core$animation$timing$Animator$EndBehavior -> a
+    void <clinit>() -> <clinit>
+org.jdesktop.core.animation.timing.Animator$Builder -> org.jdesktop.core.animation.timing.Animator$Builder:
+    java.util.concurrent.atomic.AtomicReference f_defaultTimingSource -> f_defaultTimingSource
+    java.lang.String f_debugName -> f_debugName
+    long f_duration -> f_duration
+    java.util.concurrent.TimeUnit f_durationTimeUnit -> f_durationTimeUnit
+    org.jdesktop.core.animation.timing.Animator$EndBehavior f_endBehavior -> f_endBehavior
+    org.jdesktop.core.animation.timing.Interpolator f_interpolator -> f_interpolator
+    org.jdesktop.core.animation.timing.Animator$RepeatBehavior f_repeatBehavior -> f_repeatBehavior
+    long f_repeatCount -> f_repeatCount
+    org.jdesktop.core.animation.timing.Animator$Direction f_startDirection -> f_startDirection
+    long f_startDelay -> f_startDelay
+    java.util.concurrent.TimeUnit f_startDelayTimeUnit -> f_startDelayTimeUnit
+    java.util.List f_targets -> f_targets
+    org.jdesktop.core.animation.timing.TimingSource f_timingSource -> f_timingSource
+    boolean f_disposeTimingSource -> f_disposeTimingSource
+    void setDefaultTimingSource(org.jdesktop.core.animation.timing.TimingSource) -> a
+    org.jdesktop.core.animation.timing.TimingSource getDefaultTimingSource() -> a
+    void <init>(org.jdesktop.core.animation.timing.TimingSource) -> <init>
+    void <init>() -> <init>
+    org.jdesktop.core.animation.timing.Animator$Builder addTarget(org.jdesktop.core.animation.timing.TimingTarget) -> addTarget
+    org.jdesktop.core.animation.timing.Animator$Builder addTargets(java.util.Collection) -> addTargets
+    org.jdesktop.core.animation.timing.Animator$Builder addTargets(org.jdesktop.core.animation.timing.TimingTarget[]) -> addTargets
+    org.jdesktop.core.animation.timing.Animator$Builder setDebugName(java.lang.String) -> setDebugName
+    org.jdesktop.core.animation.timing.Animator$Builder setDisposeTimingSource(boolean) -> setDisposeTimingSource
+    org.jdesktop.core.animation.timing.Animator$Builder setDuration(long,java.util.concurrent.TimeUnit) -> setDuration
+    org.jdesktop.core.animation.timing.Animator$Builder setEndBehavior(org.jdesktop.core.animation.timing.Animator$EndBehavior) -> setEndBehavior
+    org.jdesktop.core.animation.timing.Animator$Builder setInterpolator(org.jdesktop.core.animation.timing.Interpolator) -> setInterpolator
+    org.jdesktop.core.animation.timing.Animator$Builder setRepeatBehavior(org.jdesktop.core.animation.timing.Animator$RepeatBehavior) -> setRepeatBehavior
+    org.jdesktop.core.animation.timing.Animator$Builder setRepeatCount(long) -> setRepeatCount
+    org.jdesktop.core.animation.timing.Animator$Builder setStartDirection(org.jdesktop.core.animation.timing.Animator$Direction) -> setStartDirection
+    org.jdesktop.core.animation.timing.Animator$Builder setStartDelay(long,java.util.concurrent.TimeUnit) -> setStartDelay
+    org.jdesktop.core.animation.timing.Animator$Builder copy(org.jdesktop.core.animation.timing.Animator) -> copy
+    org.jdesktop.core.animation.timing.Animator$Builder copy(org.jdesktop.core.animation.timing.Animator,boolean) -> copy
+    org.jdesktop.core.animation.timing.Animator$Builder copy(org.jdesktop.core.animation.timing.Animator$Builder) -> copy
+    org.jdesktop.core.animation.timing.Animator$Builder copy(org.jdesktop.core.animation.timing.Animator$Builder,boolean) -> copy
+    org.jdesktop.core.animation.timing.Animator build() -> build
+    void <clinit>() -> <clinit>
+org.jdesktop.core.animation.timing.Animator$Direction -> org.jdesktop.core.animation.timing.Animator$Direction:
+    org.jdesktop.core.animation.timing.Animator$Direction FORWARD -> FORWARD
+    org.jdesktop.core.animation.timing.Animator$Direction BACKWARD -> BACKWARD
+    org.jdesktop.core.animation.timing.Animator$Direction[] $VALUES -> $VALUES
+    org.jdesktop.core.animation.timing.Animator$Direction[] values() -> values
+    org.jdesktop.core.animation.timing.Animator$Direction valueOf(java.lang.String) -> valueOf
+    void <init>(java.lang.String,int) -> <init>
+    org.jdesktop.core.animation.timing.Animator$Direction getOppositeDirection() -> getOppositeDirection
+    void <init>(java.lang.String,int,byte) -> <init>
+    void <clinit>() -> <clinit>
+org.jdesktop.core.animation.timing.Animator$Direction$1 -> aH:
+    void <init>(java.lang.String) -> <init>
+    org.jdesktop.core.animation.timing.Animator$Direction getOppositeDirection() -> getOppositeDirection
+org.jdesktop.core.animation.timing.Animator$Direction$2 -> aI:
+    void <init>(java.lang.String) -> <init>
+    org.jdesktop.core.animation.timing.Animator$Direction getOppositeDirection() -> getOppositeDirection
+org.jdesktop.core.animation.timing.Animator$EndBehavior -> org.jdesktop.core.animation.timing.Animator$EndBehavior:
+    org.jdesktop.core.animation.timing.Animator$EndBehavior HOLD -> HOLD
+    org.jdesktop.core.animation.timing.Animator$EndBehavior RESET -> RESET
+    org.jdesktop.core.animation.timing.Animator$EndBehavior[] $VALUES -> $VALUES
+    org.jdesktop.core.animation.timing.Animator$EndBehavior[] values() -> values
+    org.jdesktop.core.animation.timing.Animator$EndBehavior valueOf(java.lang.String) -> valueOf
+    void <init>(java.lang.String,int) -> <init>
+    void <clinit>() -> <clinit>
+org.jdesktop.core.animation.timing.Animator$RepeatBehavior -> org.jdesktop.core.animation.timing.Animator$RepeatBehavior:
+    org.jdesktop.core.animation.timing.Animator$RepeatBehavior LOOP -> LOOP
+    org.jdesktop.core.animation.timing.Animator$RepeatBehavior REVERSE -> REVERSE
+    org.jdesktop.core.animation.timing.Animator$RepeatBehavior[] $VALUES -> $VALUES
+    org.jdesktop.core.animation.timing.Animator$RepeatBehavior[] values() -> values
+    org.jdesktop.core.animation.timing.Animator$RepeatBehavior valueOf(java.lang.String) -> valueOf
+    void <init>(java.lang.String,int) -> <init>
+    void <clinit>() -> <clinit>
+org.jdesktop.core.animation.timing.Evaluator -> org.jdesktop.core.animation.timing.Evaluator:
+    java.lang.Object evaluate(java.lang.Object,java.lang.Object,double) -> evaluate
+    java.lang.Class getEvaluatorClass() -> getEvaluatorClass
+org.jdesktop.core.animation.timing.Interpolator -> org.jdesktop.core.animation.timing.Interpolator:
+    double interpolate(double) -> interpolate
+org.jdesktop.core.animation.timing.KeyFrames -> org.jdesktop.core.animation.timing.KeyFrames:
+    org.jdesktop.core.animation.timing.KeyFrames$Frame[] f_frames -> a
+    org.jdesktop.core.animation.timing.Evaluator f_evaluator -> f_evaluator
+    void <init>(org.jdesktop.core.animation.timing.KeyFrames$Frame[],org.jdesktop.core.animation.timing.Evaluator) -> <init>
+    int size() -> size
+    org.jdesktop.core.animation.timing.KeyFrames$Frame getFrame(int) -> getFrame
+    java.util.Iterator iterator() -> iterator
+    int getFrameIndexAt(double) -> getFrameIndexAt
+    java.lang.Object getInterpolatedValueAt(double) -> getInterpolatedValueAt
+org.jdesktop.core.animation.timing.KeyFrames$1It -> aJ:
+    java.util.concurrent.atomic.AtomicInteger f_index -> a
+    org.jdesktop.core.animation.timing.KeyFrames this$0 -> a
+    void <init>(org.jdesktop.core.animation.timing.KeyFrames) -> <init>
+    boolean hasNext() -> hasNext
+    void remove() -> remove
+    java.lang.Object next() -> next
+org.jdesktop.core.animation.timing.KeyFrames$Builder -> org.jdesktop.core.animation.timing.KeyFrames$Builder:
+    org.jdesktop.core.animation.timing.Evaluator f_evaluator -> f_evaluator
+    java.util.List f_values -> f_values
+    java.util.LinkedList f_timeFractions -> f_timeFractions
+    java.util.List f_interpolators -> f_interpolators
+    org.jdesktop.core.animation.timing.Interpolator f_interpolator -> f_interpolator
+    void <init>() -> <init>
+    void <init>(java.lang.Object) -> <init>
+    org.jdesktop.core.animation.timing.KeyFrames$Builder addFrame(java.lang.Object) -> addFrame
+    org.jdesktop.core.animation.timing.KeyFrames$Builder addFrame(java.lang.Object,double) -> addFrame
+    org.jdesktop.core.animation.timing.KeyFrames$Builder addFrame(java.lang.Object,org.jdesktop.core.animation.timing.Interpolator) -> addFrame
+    org.jdesktop.core.animation.timing.KeyFrames$Builder addFrame(java.lang.Object,double,org.jdesktop.core.animation.timing.Interpolator) -> addFrame
+    org.jdesktop.core.animation.timing.KeyFrames$Builder addFrame(org.jdesktop.core.animation.timing.KeyFrames$Frame) -> addFrame
+    org.jdesktop.core.animation.timing.KeyFrames$Builder addFrames(java.lang.Object[]) -> addFrames
+    org.jdesktop.core.animation.timing.KeyFrames$Builder addFrames(java.util.List) -> addFrames
+    org.jdesktop.core.animation.timing.KeyFrames$Builder setInterpolator(org.jdesktop.core.animation.timing.Interpolator) -> setInterpolator
+    org.jdesktop.core.animation.timing.KeyFrames$Builder setEvaluator(org.jdesktop.core.animation.timing.Evaluator) -> setEvaluator
+    org.jdesktop.core.animation.timing.KeyFrames build() -> build
+org.jdesktop.core.animation.timing.KeyFrames$Frame -> org.jdesktop.core.animation.timing.KeyFrames$Frame:
+    double NOT_SET -> NOT_SET
+    java.lang.Object f_value -> f_value
+    double f_timeFraction -> f_timeFraction
+    org.jdesktop.core.animation.timing.Interpolator f_interpolator -> f_interpolator
+    void <init>(java.lang.Object,double,org.jdesktop.core.animation.timing.Interpolator) -> <init>
+    void <init>(java.lang.Object,double) -> <init>
+    void <init>(java.lang.Object,org.jdesktop.core.animation.timing.Interpolator) -> <init>
+    void <init>(java.lang.Object) -> <init>
+    java.lang.Object getValue() -> getValue
+    double getTimeFraction() -> getTimeFraction
+    org.jdesktop.core.animation.timing.Interpolator getInterpolator() -> getInterpolator
+org.jdesktop.core.animation.timing.PropertySetter -> org.jdesktop.core.animation.timing.PropertySetter:
+    org.jdesktop.core.animation.timing.TimingTargetAdapter getTarget(java.lang.Object,java.lang.String,org.jdesktop.core.animation.timing.KeyFrames) -> getTarget
+    org.jdesktop.core.animation.timing.TimingTargetAdapter getTarget(java.lang.Object,java.lang.String,java.lang.Object[]) -> getTarget
+    org.jdesktop.core.animation.timing.TimingTargetAdapter getTarget(java.lang.Object,java.lang.String,org.jdesktop.core.animation.timing.Interpolator,java.lang.Object[]) -> getTarget
+    org.jdesktop.core.animation.timing.TimingTargetAdapter getTargetTo(java.lang.Object,java.lang.String,org.jdesktop.core.animation.timing.KeyFrames) -> getTargetTo
+    org.jdesktop.core.animation.timing.TimingTargetAdapter getTargetTo(java.lang.Object,java.lang.String,java.lang.Object[]) -> getTargetTo
+    org.jdesktop.core.animation.timing.TimingTargetAdapter getTargetTo(java.lang.Object,java.lang.String,org.jdesktop.core.animation.timing.Interpolator,java.lang.Object[]) -> getTargetTo
+    void <init>() -> <init>
+    org.jdesktop.core.animation.timing.TimingTargetAdapter getTargetHelper(java.lang.Object,java.lang.String,org.jdesktop.core.animation.timing.KeyFrames,boolean) -> getTargetHelper
+org.jdesktop.core.animation.timing.PropertySetter$PropertySetterTimingTarget -> aK:
+    java.util.concurrent.atomic.AtomicReference f_keyFrames -> a
+    java.lang.Object f_object -> a
+    java.lang.reflect.Method f_propertySetter -> a
+    void <init>(org.jdesktop.core.animation.timing.KeyFrames,java.lang.Object,java.lang.reflect.Method,java.lang.String) -> <init>
+    void timingEvent(org.jdesktop.core.animation.timing.Animator,double) -> timingEvent
+    void begin(org.jdesktop.core.animation.timing.Animator) -> begin
+org.jdesktop.core.animation.timing.PropertySetter$PropertySetterToTimingTarget -> aL:
+    java.lang.reflect.Method f_propertyGetter -> a
+    void <init>(org.jdesktop.core.animation.timing.KeyFrames,java.lang.Object,java.lang.reflect.Method,java.lang.reflect.Method,java.lang.String) -> <init>
+    void begin(org.jdesktop.core.animation.timing.Animator) -> begin
+org.jdesktop.core.animation.timing.TimingSource -> org.jdesktop.core.animation.timing.TimingSource:
+    java.util.concurrent.CopyOnWriteArraySet f_tickListeners -> f_tickListeners
+    java.util.concurrent.CopyOnWriteArraySet f_postTickListeners -> f_postTickListeners
+    java.util.concurrent.ConcurrentLinkedQueue f_oneShotQueue -> f_oneShotQueue
+    void <init>() -> <init>
+    void init() -> init
+    void dispose() -> dispose
+    boolean isDisposed() -> isDisposed
+    void addTickListener(org.jdesktop.core.animation.timing.TimingSource$TickListener) -> addTickListener
+    void removeTickListener(org.jdesktop.core.animation.timing.TimingSource$TickListener) -> removeTickListener
+    void addPostTickListener(org.jdesktop.core.animation.timing.TimingSource$PostTickListener) -> addPostTickListener
+    void removePostTickListener(org.jdesktop.core.animation.timing.TimingSource$PostTickListener) -> removePostTickListener
+    void submit(java.lang.Runnable) -> submit
+    void runPerTick() -> runPerTick
+org.jdesktop.core.animation.timing.TimingSource$PostTickListener -> org.jdesktop.core.animation.timing.TimingSource$PostTickListener:
+    void timingSourcePostTick(org.jdesktop.core.animation.timing.TimingSource,long) -> timingSourcePostTick
+org.jdesktop.core.animation.timing.TimingSource$TickListener -> org.jdesktop.core.animation.timing.TimingSource$TickListener:
+    void timingSourceTick(org.jdesktop.core.animation.timing.TimingSource,long) -> timingSourceTick
+org.jdesktop.core.animation.timing.TimingTarget -> org.jdesktop.core.animation.timing.TimingTarget:
+    void begin(org.jdesktop.core.animation.timing.Animator) -> begin
+    void end(org.jdesktop.core.animation.timing.Animator) -> end
+    void repeat(org.jdesktop.core.animation.timing.Animator) -> repeat
+    void reverse(org.jdesktop.core.animation.timing.Animator) -> reverse
+    void timingEvent(org.jdesktop.core.animation.timing.Animator,double) -> timingEvent
+org.jdesktop.core.animation.timing.TimingTargetAdapter -> org.jdesktop.core.animation.timing.TimingTargetAdapter:
+    java.lang.String f_debugName -> f_debugName
+    void <init>() -> <init>
+    void begin(org.jdesktop.core.animation.timing.Animator) -> begin
+    void end(org.jdesktop.core.animation.timing.Animator) -> end
+    void repeat(org.jdesktop.core.animation.timing.Animator) -> repeat
+    void reverse(org.jdesktop.core.animation.timing.Animator) -> reverse
+    void timingEvent(org.jdesktop.core.animation.timing.Animator,double) -> timingEvent
+    void setDebugName(java.lang.String) -> setDebugName
+    java.lang.String getDebugName() -> getDebugName
+    java.lang.String toString() -> toString
+org.jdesktop.core.animation.timing.Trigger -> org.jdesktop.core.animation.timing.Trigger:
+    void disarm() -> disarm
+    boolean isArmed() -> isArmed
+org.jdesktop.core.animation.timing.TriggerEvent -> org.jdesktop.core.animation.timing.TriggerEvent:
+    org.jdesktop.core.animation.timing.TriggerEvent getOppositeEvent() -> getOppositeEvent
+org.jdesktop.core.animation.timing.WrappedRunnable -> org.jdesktop.core.animation.timing.WrappedRunnable:
+    java.lang.Runnable f_task -> f_task
+    void <init>(java.lang.Runnable) -> <init>
+    void run() -> run
+org.jdesktop.core.animation.timing.evaluators.EvaluatorByte -> org.jdesktop.core.animation.timing.evaluators.EvaluatorByte:
+    void <init>() -> <init>
+    java.lang.Byte evaluate(java.lang.Byte,java.lang.Byte,double) -> evaluate
+    java.lang.Class getEvaluatorClass() -> getEvaluatorClass
+    java.lang.Object evaluate(java.lang.Object,java.lang.Object,double) -> evaluate
+org.jdesktop.core.animation.timing.evaluators.EvaluatorDouble -> org.jdesktop.core.animation.timing.evaluators.EvaluatorDouble:
+    void <init>() -> <init>
+    java.lang.Double evaluate(java.lang.Double,java.lang.Double,double) -> evaluate
+    java.lang.Class getEvaluatorClass() -> getEvaluatorClass
+    java.lang.Object evaluate(java.lang.Object,java.lang.Object,double) -> evaluate
+org.jdesktop.core.animation.timing.evaluators.EvaluatorFloat -> org.jdesktop.core.animation.timing.evaluators.EvaluatorFloat:
+    void <init>() -> <init>
+    java.lang.Float evaluate(java.lang.Float,java.lang.Float,double) -> evaluate
+    java.lang.Class getEvaluatorClass() -> getEvaluatorClass
+    java.lang.Object evaluate(java.lang.Object,java.lang.Object,double) -> evaluate
+org.jdesktop.core.animation.timing.evaluators.EvaluatorInteger -> org.jdesktop.core.animation.timing.evaluators.EvaluatorInteger:
+    void <init>() -> <init>
+    java.lang.Integer evaluate(java.lang.Integer,java.lang.Integer,double) -> evaluate
+    java.lang.Class getEvaluatorClass() -> getEvaluatorClass
+    java.lang.Object evaluate(java.lang.Object,java.lang.Object,double) -> evaluate
+org.jdesktop.core.animation.timing.evaluators.EvaluatorLong -> org.jdesktop.core.animation.timing.evaluators.EvaluatorLong:
+    void <init>() -> <init>
+    java.lang.Long evaluate(java.lang.Long,java.lang.Long,double) -> evaluate
+    java.lang.Class getEvaluatorClass() -> getEvaluatorClass
+    java.lang.Object evaluate(java.lang.Object,java.lang.Object,double) -> evaluate
+org.jdesktop.core.animation.timing.evaluators.EvaluatorShort -> org.jdesktop.core.animation.timing.evaluators.EvaluatorShort:
+    void <init>() -> <init>
+    java.lang.Short evaluate(java.lang.Short,java.lang.Short,double) -> evaluate
+    java.lang.Class getEvaluatorClass() -> getEvaluatorClass
+    java.lang.Object evaluate(java.lang.Object,java.lang.Object,double) -> evaluate
+org.jdesktop.core.animation.timing.evaluators.KnownEvaluators -> org.jdesktop.core.animation.timing.evaluators.KnownEvaluators:
+    org.jdesktop.core.animation.timing.evaluators.KnownEvaluators INSTANCE -> INSTANCE
+    java.lang.String[] f_nonCoreImmutable -> f_nonCoreImmutable
+    java.util.concurrent.CopyOnWriteArrayList f_immutableImplementations -> f_immutableImplementations
+    org.jdesktop.core.animation.timing.evaluators.KnownEvaluators getInstance() -> getInstance
+    void <init>() -> <init>
+    void register(org.jdesktop.core.animation.timing.Evaluator) -> register
+    void unregister(org.jdesktop.core.animation.timing.Evaluator) -> unregister
+    org.jdesktop.core.animation.timing.Evaluator getEvaluatorFor(java.lang.Class) -> getEvaluatorFor
+    org.jdesktop.core.animation.timing.Evaluator construct(java.lang.Class) -> construct
+    void <clinit>() -> <clinit>
+org.jdesktop.core.animation.timing.interpolators.AccelerationInterpolator -> org.jdesktop.core.animation.timing.interpolators.AccelerationInterpolator:
+    double f_acceleration -> f_acceleration
+    double f_deceleration -> f_deceleration
+    void <init>(double,double) -> <init>
+    double interpolate(double) -> interpolate
+    java.lang.String toString() -> toString
+org.jdesktop.core.animation.timing.interpolators.DiscreteInterpolator -> org.jdesktop.core.animation.timing.interpolators.DiscreteInterpolator:
+    org.jdesktop.core.animation.timing.interpolators.DiscreteInterpolator INSTANCE -> INSTANCE
+    void <init>() -> <init>
+    org.jdesktop.core.animation.timing.interpolators.DiscreteInterpolator getInstance() -> getInstance
+    double interpolate(double) -> interpolate
+    java.lang.String toString() -> toString
+    void <clinit>() -> <clinit>
+org.jdesktop.core.animation.timing.interpolators.LinearInterpolator -> org.jdesktop.core.animation.timing.interpolators.LinearInterpolator:
+    org.jdesktop.core.animation.timing.interpolators.LinearInterpolator INSTANCE -> INSTANCE
+    void <init>() -> <init>
+    org.jdesktop.core.animation.timing.interpolators.LinearInterpolator getInstance() -> getInstance
+    double interpolate(double) -> interpolate
+    java.lang.String toString() -> toString
+    void <clinit>() -> <clinit>
+org.jdesktop.core.animation.timing.interpolators.SplineInterpolator -> org.jdesktop.core.animation.timing.interpolators.SplineInterpolator:
+    double f_x1 -> f_x1
+    double f_y1 -> f_y1
+    double f_x2 -> f_x2
+    double f_y2 -> f_y2
+    java.util.List f_lengths -> f_lengths
+    void <init>(double,double,double,double) -> <init>
+    org.jdesktop.core.animation.timing.interpolators.SplineInterpolator$Point2D getXY(double) -> getXY
+    double getY(double) -> getY
+    double interpolate(double) -> interpolate
+    java.lang.String toString() -> toString
+org.jdesktop.core.animation.timing.interpolators.SplineInterpolator$LengthItem -> aM:
+    double fraction -> a
+    void <init>(double,double,double) -> <init>
+org.jdesktop.core.animation.timing.interpolators.SplineInterpolator$LengthItemBase -> aN:
+    double f_length -> b
+    double f_t -> c
+    void <init>(double,double) -> <init>
+org.jdesktop.core.animation.timing.interpolators.SplineInterpolator$Point2D -> aO:
+    double x -> a
+    double y -> b
+    void <init>(double,double) -> <init>
+org.jdesktop.core.animation.timing.sources.ManualTimingSource -> org.jdesktop.core.animation.timing.sources.ManualTimingSource:
+    java.util.concurrent.atomic.AtomicBoolean f_isDisposed -> f_isDisposed
+    void <init>() -> <init>
+    void init() -> init
+    void tick() -> tick
+    void dispose() -> dispose
+    boolean isDisposed() -> isDisposed
+    java.lang.String toString() -> toString
+org.jdesktop.core.animation.timing.sources.ScheduledExecutorTimingSource -> org.jdesktop.core.animation.timing.sources.ScheduledExecutorTimingSource:
+    java.util.concurrent.ScheduledExecutorService f_executor -> f_executor
+    long f_period -> f_period
+    java.util.concurrent.TimeUnit f_periodTimeUnit -> f_periodTimeUnit
+    void <init>(long,java.util.concurrent.TimeUnit) -> <init>
+    void <init>() -> <init>
+    void init() -> init
+    void dispose() -> dispose
+    boolean isDisposed() -> isDisposed
+    java.lang.String toString() -> toString
+org.jdesktop.core.animation.timing.sources.ScheduledExecutorTimingSource$1 -> aP:
+    org.jdesktop.core.animation.timing.sources.ScheduledExecutorTimingSource this$0 -> a
+    void <init>(org.jdesktop.core.animation.timing.sources.ScheduledExecutorTimingSource) -> <init>
+    void run() -> run
+org.jdesktop.core.animation.timing.triggers.AbstractTrigger -> org.jdesktop.core.animation.timing.triggers.AbstractTrigger:
+    java.util.concurrent.atomic.AtomicBoolean f_disarmed -> f_disarmed
+    org.jdesktop.core.animation.timing.Animator f_target -> f_target
+    org.jdesktop.core.animation.timing.TriggerEvent f_triggerEvent -> f_triggerEvent
+    org.jdesktop.core.animation.timing.TriggerEvent f_oppositeEvent -> f_oppositeEvent
+    void <init>(org.jdesktop.core.animation.timing.Animator,org.jdesktop.core.animation.timing.TriggerEvent,boolean) -> <init>
+    void disarm() -> disarm
+    boolean isArmed() -> isArmed
+    void fire(org.jdesktop.core.animation.timing.TriggerEvent) -> fire
+org.jdesktop.core.animation.timing.triggers.FocusTriggerEvent -> org.jdesktop.core.animation.timing.triggers.FocusTriggerEvent:
+    org.jdesktop.core.animation.timing.triggers.FocusTriggerEvent IN -> IN
+    org.jdesktop.core.animation.timing.triggers.FocusTriggerEvent OUT -> OUT
+    org.jdesktop.core.animation.timing.triggers.FocusTriggerEvent[] $VALUES -> $VALUES
+    org.jdesktop.core.animation.timing.triggers.FocusTriggerEvent[] values() -> values
+    org.jdesktop.core.animation.timing.triggers.FocusTriggerEvent valueOf(java.lang.String) -> valueOf
+    void <init>(java.lang.String,int) -> <init>
+    org.jdesktop.core.animation.timing.triggers.FocusTriggerEvent getOppositeEvent() -> getOppositeEvent
+    org.jdesktop.core.animation.timing.TriggerEvent getOppositeEvent() -> getOppositeEvent
+    void <init>(java.lang.String,int,byte) -> <init>
+    void <clinit>() -> <clinit>
+org.jdesktop.core.animation.timing.triggers.FocusTriggerEvent$1 -> aQ:
+    void <init>(java.lang.String) -> <init>
+    org.jdesktop.core.animation.timing.triggers.FocusTriggerEvent getOppositeEvent() -> getOppositeEvent
+    org.jdesktop.core.animation.timing.TriggerEvent getOppositeEvent() -> getOppositeEvent
+org.jdesktop.core.animation.timing.triggers.FocusTriggerEvent$2 -> aR:
+    void <init>(java.lang.String) -> <init>
+    org.jdesktop.core.animation.timing.triggers.FocusTriggerEvent getOppositeEvent() -> getOppositeEvent
+    org.jdesktop.core.animation.timing.TriggerEvent getOppositeEvent() -> getOppositeEvent
+org.jdesktop.core.animation.timing.triggers.MouseTriggerEvent -> org.jdesktop.core.animation.timing.triggers.MouseTriggerEvent:
+    org.jdesktop.core.animation.timing.triggers.MouseTriggerEvent ENTER -> ENTER
+    org.jdesktop.core.animation.timing.triggers.MouseTriggerEvent EXIT -> EXIT
+    org.jdesktop.core.animation.timing.triggers.MouseTriggerEvent PRESS -> PRESS
+    org.jdesktop.core.animation.timing.triggers.MouseTriggerEvent RELEASE -> RELEASE
+    org.jdesktop.core.animation.timing.triggers.MouseTriggerEvent CLICK -> CLICK
+    org.jdesktop.core.animation.timing.triggers.MouseTriggerEvent[] $VALUES -> $VALUES
+    org.jdesktop.core.animation.timing.triggers.MouseTriggerEvent[] values() -> values
+    org.jdesktop.core.animation.timing.triggers.MouseTriggerEvent valueOf(java.lang.String) -> valueOf
+    void <init>(java.lang.String,int) -> <init>
+    org.jdesktop.core.animation.timing.triggers.MouseTriggerEvent getOppositeEvent() -> getOppositeEvent
+    org.jdesktop.core.animation.timing.TriggerEvent getOppositeEvent() -> getOppositeEvent
+    void <init>(java.lang.String,int,byte) -> <init>
+    void <clinit>() -> <clinit>
+org.jdesktop.core.animation.timing.triggers.MouseTriggerEvent$1 -> aS:
+    void <init>(java.lang.String) -> <init>
+    org.jdesktop.core.animation.timing.triggers.MouseTriggerEvent getOppositeEvent() -> getOppositeEvent
+    org.jdesktop.core.animation.timing.TriggerEvent getOppositeEvent() -> getOppositeEvent
+org.jdesktop.core.animation.timing.triggers.MouseTriggerEvent$2 -> aT:
+    void <init>(java.lang.String) -> <init>
+    org.jdesktop.core.animation.timing.triggers.MouseTriggerEvent getOppositeEvent() -> getOppositeEvent
+    org.jdesktop.core.animation.timing.TriggerEvent getOppositeEvent() -> getOppositeEvent
+org.jdesktop.core.animation.timing.triggers.MouseTriggerEvent$3 -> aU:
+    void <init>(java.lang.String) -> <init>
+    org.jdesktop.core.animation.timing.triggers.MouseTriggerEvent getOppositeEvent() -> getOppositeEvent
+    org.jdesktop.core.animation.timing.TriggerEvent getOppositeEvent() -> getOppositeEvent
+org.jdesktop.core.animation.timing.triggers.MouseTriggerEvent$4 -> aV:
+    void <init>(java.lang.String) -> <init>
+    org.jdesktop.core.animation.timing.triggers.MouseTriggerEvent getOppositeEvent() -> getOppositeEvent
+    org.jdesktop.core.animation.timing.TriggerEvent getOppositeEvent() -> getOppositeEvent
+org.jdesktop.core.animation.timing.triggers.TimingTrigger -> org.jdesktop.core.animation.timing.triggers.TimingTrigger:
+    org.jdesktop.core.animation.timing.Trigger addTrigger(org.jdesktop.core.animation.timing.Animator,org.jdesktop.core.animation.timing.Animator,org.jdesktop.core.animation.timing.triggers.TimingTriggerEvent) -> addTrigger
+    org.jdesktop.core.animation.timing.Trigger addTrigger(org.jdesktop.core.animation.timing.Animator,org.jdesktop.core.animation.timing.Animator,org.jdesktop.core.animation.timing.triggers.TimingTriggerEvent,boolean) -> addTrigger
+    void <init>() -> <init>
+org.jdesktop.core.animation.timing.triggers.TimingTrigger$TimingTriggerHelper -> aW:
+    org.jdesktop.core.animation.timing.Animator f_source -> a
+    void <init>(org.jdesktop.core.animation.timing.Animator,org.jdesktop.core.animation.timing.Animator,org.jdesktop.core.animation.timing.triggers.TimingTriggerEvent,boolean) -> <init>
+    void disarm() -> disarm
+    void begin(org.jdesktop.core.animation.timing.Animator) -> begin
+    void end(org.jdesktop.core.animation.timing.Animator) -> end
+    void repeat(org.jdesktop.core.animation.timing.Animator) -> repeat
+    void reverse(org.jdesktop.core.animation.timing.Animator) -> reverse
+    void timingEvent(org.jdesktop.core.animation.timing.Animator,double) -> timingEvent
+org.jdesktop.core.animation.timing.triggers.TimingTriggerEvent -> org.jdesktop.core.animation.timing.triggers.TimingTriggerEvent:
+    org.jdesktop.core.animation.timing.triggers.TimingTriggerEvent START -> START
+    org.jdesktop.core.animation.timing.triggers.TimingTriggerEvent STOP -> STOP
+    org.jdesktop.core.animation.timing.triggers.TimingTriggerEvent REPEAT -> REPEAT
+    org.jdesktop.core.animation.timing.triggers.TimingTriggerEvent REVERSE -> REVERSE
+    org.jdesktop.core.animation.timing.triggers.TimingTriggerEvent[] $VALUES -> $VALUES
+    org.jdesktop.core.animation.timing.triggers.TimingTriggerEvent[] values() -> values
+    org.jdesktop.core.animation.timing.triggers.TimingTriggerEvent valueOf(java.lang.String) -> valueOf
+    void <init>(java.lang.String,int) -> <init>
+    org.jdesktop.core.animation.timing.triggers.TimingTriggerEvent getOppositeEvent() -> getOppositeEvent
+    org.jdesktop.core.animation.timing.TriggerEvent getOppositeEvent() -> getOppositeEvent
+    void <init>(java.lang.String,int,byte) -> <init>
+    void <clinit>() -> <clinit>
+org.jdesktop.core.animation.timing.triggers.TimingTriggerEvent$1 -> aX:
+    void <init>(java.lang.String) -> <init>
+    org.jdesktop.core.animation.timing.triggers.TimingTriggerEvent getOppositeEvent() -> getOppositeEvent
+    org.jdesktop.core.animation.timing.TriggerEvent getOppositeEvent() -> getOppositeEvent
+org.jdesktop.core.animation.timing.triggers.TimingTriggerEvent$2 -> aY:
+    void <init>(java.lang.String) -> <init>
+    org.jdesktop.core.animation.timing.triggers.TimingTriggerEvent getOppositeEvent() -> getOppositeEvent
+    org.jdesktop.core.animation.timing.TriggerEvent getOppositeEvent() -> getOppositeEvent
+org.jdesktop.swing.animation.rendering.JActiveRenderer -> org.jdesktop.swing.animation.rendering.JActiveRenderer:
+    org.jdesktop.core.animation.timing.sources.ManualTimingSource f_ts -> a
+    java.util.concurrent.ExecutorService f_executor -> f_executor
+    java.util.concurrent.atomic.AtomicBoolean f_renderingStarted -> a
+    java.util.concurrent.atomic.AtomicReference f_edtPaintLatch -> a
+    java.util.concurrent.atomic.AtomicReference f_renderingBuffer -> b
+    java.util.concurrent.atomic.AtomicReference f_replacementBuffer -> c
+    java.util.concurrent.atomic.AtomicBoolean f_shutdownRendering -> b
+    java.util.concurrent.atomic.AtomicLong f_totalRenderTime -> a
+    java.util.concurrent.atomic.AtomicLong f_renderCount -> b
+    java.util.concurrent.atomic.AtomicLong f_paintingRequestedNanos -> c
+    java.util.concurrent.atomic.AtomicLong f_totalPaintWaitTime -> d
+    java.util.concurrent.atomic.AtomicLong f_paintWaitCount -> e
+    java.util.concurrent.atomic.AtomicLong f_totalPaintTime -> f
+    java.util.concurrent.atomic.AtomicLong f_paintCount -> g
+    org.jdesktop.core.animation.rendering.JRendererTarget f_target -> a
+    org.jdesktop.swing.animation.rendering.JRendererPanel f_on -> a
+    boolean f_hasChildren -> a
+    java.lang.Runnable f_renderTask -> a
+    void <init>(org.jdesktop.swing.animation.rendering.JRendererPanel,org.jdesktop.core.animation.rendering.JRendererTarget,boolean) -> <init>
+    void shutdown() -> shutdown
+    long getFPS() -> getFPS
+    long getAverageCycleTimeNanos() -> getAverageCycleTimeNanos
+    long getAverageRenderTimeNanos() -> getAverageRenderTimeNanos
+    long getAveragePaintWaitTimeNanos() -> getAveragePaintWaitTimeNanos
+    long getAveragePaintTimeNanos() -> getAveragePaintTimeNanos
+    org.jdesktop.core.animation.timing.TimingSource getTimingSource() -> getTimingSource
+    void invokeLater(java.lang.Runnable) -> invokeLater
+org.jdesktop.swing.animation.rendering.JActiveRenderer$1 -> aZ:
+    int f_width -> a
+    int f_height -> b
+    org.jdesktop.swing.animation.rendering.JActiveRenderer this$0 -> a
+    void <init>(org.jdesktop.swing.animation.rendering.JActiveRenderer) -> <init>
+    void componentResized(java.awt.event.ComponentEvent) -> componentResized
+org.jdesktop.swing.animation.rendering.JActiveRenderer$1$1 -> ba:
+    java.awt.GraphicsConfiguration val$gc -> a
+    org.jdesktop.swing.animation.rendering.JActiveRenderer$1 this$1 -> a
+    void <init>(org.jdesktop.swing.animation.rendering.JActiveRenderer$1,java.awt.GraphicsConfiguration) -> <init>
+    void run() -> run
+org.jdesktop.swing.animation.rendering.JActiveRenderer$2 -> bb:
+    org.jdesktop.swing.animation.rendering.JActiveRenderer this$0 -> a
+    void <init>(org.jdesktop.swing.animation.rendering.JActiveRenderer) -> <init>
+    void run() -> run
+org.jdesktop.swing.animation.rendering.JActiveRenderer$2$1 -> bc:
+    org.jdesktop.swing.animation.rendering.JActiveRenderer$2 this$1 -> a
+    void <init>(org.jdesktop.swing.animation.rendering.JActiveRenderer$2) -> <init>
+    void run() -> run
+org.jdesktop.swing.animation.rendering.JPassiveRenderer -> org.jdesktop.swing.animation.rendering.JPassiveRenderer:
+    org.jdesktop.swing.animation.rendering.JRendererPanel f_on -> a
+    org.jdesktop.core.animation.rendering.JRendererTarget f_target -> a
+    org.jdesktop.core.animation.timing.TimingSource f_ts -> f_ts
+    org.jdesktop.core.animation.timing.TimingSource$PostTickListener f_postTick -> f_postTick
+    long f_lastRenderTimeNanos -> a
+    long f_totalRenderTime -> b
+    long f_renderCount -> c
+    void <init>(org.jdesktop.swing.animation.rendering.JRendererPanel,org.jdesktop.core.animation.rendering.JRendererTarget,org.jdesktop.core.animation.timing.TimingSource) -> <init>
+    void invokeLater(java.lang.Runnable) -> invokeLater
+    org.jdesktop.core.animation.timing.TimingSource getTimingSource() -> getTimingSource
+    long getFPS() -> getFPS
+    long getAverageCycleTimeNanos() -> getAverageCycleTimeNanos
+    void shutdown() -> shutdown
+org.jdesktop.swing.animation.rendering.JPassiveRenderer$1 -> bd:
+    org.jdesktop.swing.animation.rendering.JPassiveRenderer this$0 -> a
+    void <init>(org.jdesktop.swing.animation.rendering.JPassiveRenderer) -> <init>
+    void timingSourcePostTick(org.jdesktop.core.animation.timing.TimingSource,long) -> timingSourcePostTick
+org.jdesktop.swing.animation.rendering.JRendererFactory -> org.jdesktop.swing.animation.rendering.JRendererFactory:
+    java.lang.String PROPERTY -> PROPERTY
+    org.jdesktop.core.animation.rendering.JRenderer getDefaultRenderer(org.jdesktop.swing.animation.rendering.JRendererPanel,org.jdesktop.core.animation.rendering.JRendererTarget,boolean) -> getDefaultRenderer
+    boolean useActiveRenderer() -> useActiveRenderer
+    void <init>() -> <init>
+org.jdesktop.swing.animation.rendering.JRendererPanel -> org.jdesktop.swing.animation.rendering.JRendererPanel:
+    boolean f_renderingStarted -> f_renderingStarted
+    org.jdesktop.core.animation.rendering.JRendererTarget f_target -> a
+    org.jdesktop.core.animation.timing.TimingSource f_ts -> a
+    org.jdesktop.core.animation.timing.TimingSource$PostTickListener f_postTick -> a
+    long serialVersionUID -> serialVersionUID
+    void <init>() -> <init>
+    void paintComponent(java.awt.Graphics) -> paintComponent
+    void renderChildren(java.awt.Graphics2D) -> a
+org.jdesktop.swing.animation.timing.evaluators.EvaluatorArc2D -> org.jdesktop.swing.animation.timing.evaluators.EvaluatorArc2D:
+    void <init>() -> <init>
+    java.awt.geom.Arc2D evaluate(java.awt.geom.Arc2D,java.awt.geom.Arc2D,double) -> evaluate
+    java.lang.Class getEvaluatorClass() -> getEvaluatorClass
+    java.lang.Object evaluate(java.lang.Object,java.lang.Object,double) -> evaluate
+org.jdesktop.swing.animation.timing.evaluators.EvaluatorColor -> org.jdesktop.swing.animation.timing.evaluators.EvaluatorColor:
+    void <init>() -> <init>
+    java.awt.Color evaluate(java.awt.Color,java.awt.Color,double) -> evaluate
+    java.lang.Class getEvaluatorClass() -> getEvaluatorClass
+    java.lang.Object evaluate(java.lang.Object,java.lang.Object,double) -> evaluate
+org.jdesktop.swing.animation.timing.evaluators.EvaluatorCubicCurve2D -> org.jdesktop.swing.animation.timing.evaluators.EvaluatorCubicCurve2D:
+    void <init>() -> <init>
+    java.awt.geom.CubicCurve2D evaluate(java.awt.geom.CubicCurve2D,java.awt.geom.CubicCurve2D,double) -> evaluate
+    java.lang.Class getEvaluatorClass() -> getEvaluatorClass
+    java.lang.Object evaluate(java.lang.Object,java.lang.Object,double) -> evaluate
+org.jdesktop.swing.animation.timing.evaluators.EvaluatorDimension2D -> org.jdesktop.swing.animation.timing.evaluators.EvaluatorDimension2D:
+    void <init>() -> <init>
+    java.awt.geom.Dimension2D evaluate(java.awt.geom.Dimension2D,java.awt.geom.Dimension2D,double) -> evaluate
+    java.lang.Class getEvaluatorClass() -> getEvaluatorClass
+    java.lang.Object evaluate(java.lang.Object,java.lang.Object,double) -> evaluate
+org.jdesktop.swing.animation.timing.evaluators.EvaluatorEllipse2D -> org.jdesktop.swing.animation.timing.evaluators.EvaluatorEllipse2D:
+    void <init>() -> <init>
+    java.awt.geom.Ellipse2D evaluate(java.awt.geom.Ellipse2D,java.awt.geom.Ellipse2D,double) -> evaluate
+    java.lang.Class getEvaluatorClass() -> getEvaluatorClass
+    java.lang.Object evaluate(java.lang.Object,java.lang.Object,double) -> evaluate
+org.jdesktop.swing.animation.timing.evaluators.EvaluatorLine2D -> org.jdesktop.swing.animation.timing.evaluators.EvaluatorLine2D:
+    void <init>() -> <init>
+    java.awt.geom.Line2D evaluate(java.awt.geom.Line2D,java.awt.geom.Line2D,double) -> evaluate
+    java.lang.Class getEvaluatorClass() -> getEvaluatorClass
+    java.lang.Object evaluate(java.lang.Object,java.lang.Object,double) -> evaluate
+org.jdesktop.swing.animation.timing.evaluators.EvaluatorPoint2D -> org.jdesktop.swing.animation.timing.evaluators.EvaluatorPoint2D:
+    void <init>() -> <init>
+    java.awt.geom.Point2D evaluate(java.awt.geom.Point2D,java.awt.geom.Point2D,double) -> evaluate
+    java.lang.Class getEvaluatorClass() -> getEvaluatorClass
+    java.lang.Object evaluate(java.lang.Object,java.lang.Object,double) -> evaluate
+org.jdesktop.swing.animation.timing.evaluators.EvaluatorQuadCurve2D -> org.jdesktop.swing.animation.timing.evaluators.EvaluatorQuadCurve2D:
+    void <init>() -> <init>
+    java.awt.geom.QuadCurve2D evaluate(java.awt.geom.QuadCurve2D,java.awt.geom.QuadCurve2D,double) -> evaluate
+    java.lang.Class getEvaluatorClass() -> getEvaluatorClass
+    java.lang.Object evaluate(java.lang.Object,java.lang.Object,double) -> evaluate
+org.jdesktop.swing.animation.timing.evaluators.EvaluatorRectangle2D -> org.jdesktop.swing.animation.timing.evaluators.EvaluatorRectangle2D:
+    void <init>() -> <init>
+    java.awt.geom.Rectangle2D evaluate(java.awt.geom.Rectangle2D,java.awt.geom.Rectangle2D,double) -> evaluate
+    java.lang.Class getEvaluatorClass() -> getEvaluatorClass
+    java.lang.Object evaluate(java.lang.Object,java.lang.Object,double) -> evaluate
+org.jdesktop.swing.animation.timing.evaluators.EvaluatorRoundRectangle2D -> org.jdesktop.swing.animation.timing.evaluators.EvaluatorRoundRectangle2D:
+    void <init>() -> <init>
+    java.awt.geom.RoundRectangle2D evaluate(java.awt.geom.RoundRectangle2D,java.awt.geom.RoundRectangle2D,double) -> evaluate
+    java.lang.Class getEvaluatorClass() -> getEvaluatorClass
+    java.lang.Object evaluate(java.lang.Object,java.lang.Object,double) -> evaluate
+org.jdesktop.swing.animation.timing.sources.SwingTimerTimingSource -> org.jdesktop.swing.animation.timing.sources.SwingTimerTimingSource:
+    javax.swing.Timer f_timer -> f_timer
+    void <init>(long,java.util.concurrent.TimeUnit) -> <init>
+    void <init>() -> <init>
+    void init() -> init
+    void dispose() -> dispose
+    boolean isDisposed() -> isDisposed
+    java.lang.String toString() -> toString
+org.jdesktop.swing.animation.timing.sources.SwingTimerTimingSource$1 -> be:
+    org.jdesktop.swing.animation.timing.sources.SwingTimerTimingSource this$0 -> a
+    void <init>(org.jdesktop.swing.animation.timing.sources.SwingTimerTimingSource) -> <init>
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+org.jdesktop.swing.animation.timing.triggers.TriggerUtility -> org.jdesktop.swing.animation.timing.triggers.TriggerUtility:
+    org.jdesktop.core.animation.timing.Trigger addTimingTrigger(org.jdesktop.core.animation.timing.Animator,org.jdesktop.core.animation.timing.Animator,org.jdesktop.core.animation.timing.triggers.TimingTriggerEvent) -> addTimingTrigger
+    org.jdesktop.core.animation.timing.Trigger addTimingTrigger(org.jdesktop.core.animation.timing.Animator,org.jdesktop.core.animation.timing.Animator,org.jdesktop.core.animation.timing.triggers.TimingTriggerEvent,boolean) -> addTimingTrigger
+    org.jdesktop.core.animation.timing.Trigger addActionTrigger(java.lang.Object,org.jdesktop.core.animation.timing.Animator) -> addActionTrigger
+    org.jdesktop.core.animation.timing.Trigger addFocusTrigger(javax.swing.JComponent,org.jdesktop.core.animation.timing.Animator,org.jdesktop.core.animation.timing.triggers.FocusTriggerEvent) -> addFocusTrigger
+    org.jdesktop.core.animation.timing.Trigger addFocusTrigger(javax.swing.JComponent,org.jdesktop.core.animation.timing.Animator,org.jdesktop.core.animation.timing.triggers.FocusTriggerEvent,boolean) -> addFocusTrigger
+    org.jdesktop.core.animation.timing.Trigger addMouseTrigger(javax.swing.JComponent,org.jdesktop.core.animation.timing.Animator,org.jdesktop.core.animation.timing.triggers.MouseTriggerEvent) -> addMouseTrigger
+    org.jdesktop.core.animation.timing.Trigger addMouseTrigger(javax.swing.JComponent,org.jdesktop.core.animation.timing.Animator,org.jdesktop.core.animation.timing.triggers.MouseTriggerEvent,boolean) -> addMouseTrigger
+    void <init>() -> <init>
+org.jdesktop.swing.animation.timing.triggers.TriggerUtility$ActionTriggerHelper -> bf:
+    java.lang.Object f_object -> a
+    void <init>(java.lang.Object,org.jdesktop.core.animation.timing.Animator) -> <init>
+    void disarm() -> disarm
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+org.jdesktop.swing.animation.timing.triggers.TriggerUtility$FocusTriggerHelper -> bg:
+    javax.swing.JComponent f_component -> a
+    void <init>(javax.swing.JComponent,org.jdesktop.core.animation.timing.Animator,org.jdesktop.core.animation.timing.triggers.FocusTriggerEvent,boolean) -> <init>
+    void disarm() -> disarm
+    void focusGained(java.awt.event.FocusEvent) -> focusGained
+    void focusLost(java.awt.event.FocusEvent) -> focusLost
+org.jdesktop.swing.animation.timing.triggers.TriggerUtility$MouseTriggerHelper -> bh:
+    javax.swing.JComponent f_component -> a
+    void <init>(javax.swing.JComponent,org.jdesktop.core.animation.timing.Animator,org.jdesktop.core.animation.timing.triggers.MouseTriggerEvent,boolean) -> <init>
+    void disarm() -> disarm
+    void mouseClicked(java.awt.event.MouseEvent) -> mouseClicked
+    void mousePressed(java.awt.event.MouseEvent) -> mousePressed
+    void mouseReleased(java.awt.event.MouseEvent) -> mouseReleased
+    void mouseEntered(java.awt.event.MouseEvent) -> mouseEntered
+    void mouseExited(java.awt.event.MouseEvent) -> mouseExited

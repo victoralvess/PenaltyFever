@@ -7,7 +7,6 @@ package br.com.livr.views.control;
 
 import br.com.livr.BatedorDePenaltis;
 import br.com.livr.Equipe;
-import br.com.livr.Gandula;
 import br.com.livr.Goleiro;
 import br.com.livr.statics.Sessao;
 import static br.com.livr.statics.Sessao.getEquipeAdversaria;
@@ -26,6 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JLabel;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.Timer;
 
@@ -35,7 +35,7 @@ import javax.swing.Timer;
  */
 public class InGameWindowController {
 
-    int delayParaIAJogar = 20 * 1000;
+    int delayParaIAJogar = 8 * 1000;
 
     public static Goleiro verificarEquipeDoGoleiro(Equipe equipeDoBatedor) {
         if (equipeDoBatedor.getGoleiro().equals(getGoleiroEquipePlayer())) {
@@ -68,49 +68,21 @@ public class InGameWindowController {
     }
 
     public void gerarRelatorio(BatedorDePenaltis bp, Equipe equipeDoBatedor) {
-        Thread thread = new Thread(() -> {
-
-            Timer esperaGandula = new Timer(3 * 1000, (ActionEvent e) -> {
-                new Gandula().posicionarBolaNaMarcaDoPenalti();
-
-                Timer esperaJuiz = new Timer(2 * 1000, ((ActionEvent ae) -> {
-                    Sessao.getJuiz().autorizarBatida();
-                }));
-                esperaJuiz.setRepeats(false);
-                esperaJuiz.start();
-            });
-            esperaGandula.setRepeats(false);
-            esperaGandula.start();
-        });
-        thread.start();
-
-        synchronized (thread) {
-            Timer esperar = new Timer(9 * 1000, ((ActionEvent ae) -> {
-                getRelatorio().add(bp.baterPenalti(equipeDoBatedor));
-                updateScrollPane(inGameWindow.getScrollPaneRelatorio(), inGameWindow.getListRelatorio());
-                boolean foiGol = BatedorDePenaltis.isMarcouGol();
-                if (foiGol) {
-                    alterarPlacarDe(equipeDoBatedor);
-                    
-                    if (Sessao.getTecnico().getEquipe().equals(equipeDoBatedor)) {
-                    setPenaltisBatidosPeloPlayer(getPenaltisBatidosPeloPlayer() + 1);
-                    if (getPenaltisBatidosPeloPlayer() == getTotalCobrancasPorTime()) {
-                        initListaJogadores();
-                    }
-                    inGameWindow.getBtnSuaVez().setEnabled(false);
-                } else {
-                    setPenaltisBatidosPelaIA(getPenaltisBatidosPelaIA() + 1);
-                }
-                    
-                } else {
-                    if (bp.getImpacienciaTorcida() >= 95) {
-                        endMatch();
-                    }
-                }
-
-            }));
-            esperar.setRepeats(false);
-            esperar.start();
+        getRelatorio().add(bp.baterPenalti(equipeDoBatedor));
+        updateScrollPane(inGameWindow.getScrollPaneRelatorio(), inGameWindow.getListRelatorio());
+        boolean foiGol = BatedorDePenaltis.isMarcouGol();
+        if (foiGol) {
+            alterarPlacarDe(equipeDoBatedor);
+        }
+        if (Sessao.getTecnico().getEquipe().equals(equipeDoBatedor)) {
+            setPenaltisBatidosPeloPlayer(getPenaltisBatidosPeloPlayer() + 1);
+            if (getPenaltisBatidosPeloPlayer() == getTotalCobrancasPorTime()) {
+                initListaJogadores();
+            }
+            inGameWindow.getBtnSuaVez().setEnabled(false);
+        } else {
+            setPenaltisBatidosPelaIA(getPenaltisBatidosPelaIA() + 1);
+            inGameWindow.getBtnSuaVez().setEnabled(true);
         }
     }
 
@@ -127,7 +99,7 @@ public class InGameWindowController {
     }
 
     public void runIA() {
-        Timer esperaIA = new Timer(delayParaIAJogar, (ActionEvent e) -> {
+        Timer t = new Timer(delayParaIAJogar, (ActionEvent e) -> {
             int numeroBatedorPenaltiIA = getNumeroBatedorIA();
             if (numeroBatedorPenaltiIA >= getJogadoresPorTime()) {
                 numeroBatedorPenaltiIA = 0;
@@ -136,21 +108,12 @@ public class InGameWindowController {
             Equipe equipeDaIA = getEquipeAdversaria();
             BatedorDePenaltis bp = equipeDaIA.getTecnico().escolherBatedor(numeroBatedorPenaltiIA);
             gerarRelatorio(bp, equipeDaIA);
-            Timer esperaBatida = new Timer(12 * 1000, (ActionEvent ae) -> {
-                setNumeroBatedorIA(getNumeroBatedorIA() + 1);
-                verificarPlacar(Sessao.getEquipeAdversaria());
-                inGameWindow.getBtnSuaVez().setEnabled(!isHaVencedor());            
-                
-                if (isHaVencedor()) {
-                    endMatch();
-                }
-            });
-
-            esperaBatida.setRepeats(false);
-            esperaBatida.start();
+            setNumeroBatedorIA(numeroBatedorPenaltiIA + 1);
+            verificarPlacar(equipeDaIA);
+            inGameWindow.getBtnSuaVez().setEnabled(!isHaVencedor());
         });
-        esperaIA.setRepeats(false);
-        esperaIA.start();
+        t.setRepeats(false);
+        t.start();
     }
 
     private void naoHaVencedor(Equipe ultimaEquipeQueBateu) {
@@ -222,7 +185,7 @@ public class InGameWindowController {
     public void verificarPlacar(Equipe ultimaEquipeQueBateu) {
         int penaltisBatidos = getPenaltisBatidosPelaIA() + getPenaltisBatidosPeloPlayer();
         boolean todosBateram = verificarSeTodosJaBateram(penaltisBatidos);
-        boolean atingiuQuantidadeMinimaCobrancas = (penaltisBatidos >= getTotalCobrancasPorTime() * 2);
+        boolean atingiuQuantidadeMinimaCobrancas = penaltisBatidos >= getTotalCobrancasPorTime() * 2;
         if (atingiuQuantidadeMinimaCobrancas && todosBateram) {
             int placarIA = Integer.parseInt(inGameWindow.getLblPlacarTimeIA().getText());
             int placarPlayer = Integer.parseInt(inGameWindow.getLblPlacarTimePlayer().getText());
@@ -303,10 +266,7 @@ public class InGameWindowController {
     }
 
     public void btnSuaVezOnClick() {
-        verificarPlacar(getEquipePlayer());
-        if (isHaVencedor()) {
-            endMatch();
-        } else if ((!inGameWindow.getBtnTirarParOuImpar().isEnabled())) {
+        if (!inGameWindow.getBtnTirarParOuImpar().isEnabled()) {
             int selecionado = inGameWindow.getListJogadoresTimePlayer().getSelectedIndex();
             boolean temCartaoVermelho = Sessao.getBatedoresEquipePlayer().get(selecionado).getCartaoVermelho();
 
@@ -323,9 +283,9 @@ public class InGameWindowController {
                 }
 
             } else if (temCartaoVermelho) {
-                new ErrorDialog(inGameWindow, true, "Jogador Expulso", "Este jogador foi expulso!!!");
-            } else {
-                new ErrorDialog(inGameWindow, true, "Já Foi", "Este jogador já foi escolhido!!!");
+                new ErrorDialog(inGameWindow, true, "Jogador Expulso", "Este jogador foi expulso").setVisible(true);
+            } else if (jaFoi(selecionado)) {
+                new ErrorDialog(inGameWindow, true, "Já Foi", "Este jogador já foi escolhido").setVisible(true);
             }
         } else {
             btnTirarParOuImparOnClick();
@@ -343,10 +303,5 @@ public class InGameWindowController {
     public void btnReagirMouseClicked() {
         ReacaoDialog reacaoDialog = new ReacaoDialog(inGameWindow);
         reacaoDialog.setVisible(true);
-    }
-
-    private void endMatch() {
-        inGameWindow.getBtnSuaVez().setVisible(false);
-        inGameWindow.getBtnPlayAgain().setVisible(true);
     }
 }

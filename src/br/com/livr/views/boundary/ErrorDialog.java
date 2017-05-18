@@ -27,8 +27,6 @@ public class ErrorDialog extends javax.swing.JDialog {
         lblTitulo.setText(titulo);
         lblMensagemErro.setText(mensagemErro);
         super.setLocationRelativeTo(null);
-        super.toFront();
-        super.setVisible(true);
     }
 
     /**
