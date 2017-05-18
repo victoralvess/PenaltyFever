@@ -177,6 +177,5 @@ public class MainWindowListController implements ListSelectionListener {
     public static void cadastrarEquipeAdversaria() {
         List listaSemRepeticao = new ArrayList(new HashSet(getBatedoresEquipeAdversaria()));
         setBatedoresEquipeAdversaria(listaSemRepeticao);
-        System.out.println(getGoleiroEquipeAdversaria().getNomeJogador());
     }
 }
