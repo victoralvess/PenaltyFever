@@ -46,7 +46,7 @@ public class ReacaoDialog extends javax.swing.JFrame {
 
         lblTitle.setFont(new java.awt.Font("ADAM.CG PRO", 1, 48)); // NOI18N
         lblTitle.setForeground(new java.awt.Color(255, 255, 255));
-        lblTitle.setText("reaja!");
+        lblTitle.setText("REAJA!");
 
         closeButton.setBackground(new java.awt.Color(15, 89, 94));
         closeButton.setFont(new java.awt.Font("ADAM.CG PRO", 1, 24)); // NOI18N
@@ -64,9 +64,9 @@ public class ReacaoDialog extends javax.swing.JFrame {
         panelHeaderLayout.setHorizontalGroup(
             panelHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelHeaderLayout.createSequentialGroup()
-                .addContainerGap(247, Short.MAX_VALUE)
+                .addContainerGap(267, Short.MAX_VALUE)
                 .addComponent(lblTitle)
-                .addContainerGap(247, Short.MAX_VALUE))
+                .addContainerGap(267, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelHeaderLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(closeButton)

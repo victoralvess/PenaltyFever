@@ -49,7 +49,6 @@ public class ErrorDialog extends javax.swing.JDialog {
         setMinimumSize(new java.awt.Dimension(450, 200));
         setModal(true);
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(700, 400));
         setResizable(false);
 
         pnlContent.setBackground(new java.awt.Color(255, 255, 255));
