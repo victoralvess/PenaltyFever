@@ -8,8 +8,8 @@ Link para o repositório: https://github.com/spfrommer/JCommunique <br />
 Lib para utilização de componentes estilizados segundo as ideologias do <i>material design</i><br />
 Link para o repositório: https://github.com/leMaik/swing-material <br />
 ## TODO
-- [ ] Implementar torcida<br />
-- [ ] Implementar arbitragem<br />
-- [ ] Implementar botão <i>restart</i><br />
-- [ ] Aprimorar o uso das notificações
+- [x] Implementar torcida<br />
+- [x] Implementar arbitragem<br />
+- [x] Implementar botão <i>restart</i><br />
+- [x] Aprimorar o uso das notificações
 
