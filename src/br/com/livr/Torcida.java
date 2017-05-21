@@ -5,15 +5,6 @@ import br.com.livr.statics.IAmanteDoFutebol;
 import br.com.livr.statics.Sessao;
 import com.notification.NotificationFactory;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/**
- *
- * @author Aluno_2
- */
 public class Torcida implements IAmanteDoFutebol {
 
     private Equipe time;

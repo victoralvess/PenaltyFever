@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.livr.views.control;
 
 import br.com.livr.BatedorDePenaltis;
@@ -29,17 +24,13 @@ import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.Timer;
 
-/**
- *
- * @author victor
- */
 public class InGameWindowController {
 
     int delayParaIAJogar = 8 * 1000;
 
     public static Goleiro verificarEquipeDoGoleiro(Equipe equipeDoBatedor) {
         if (equipeDoBatedor.getGoleiro().equals(getGoleiroEquipePlayer())) {
-            //Se bp e gk forem do mesmo time
+            
             return getEquipeAdversaria().getGoleiro();
         } else {
             return getEquipePlayer().getGoleiro();

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.livr.views.boundary;
 
 import br.com.livr.BatedorDePenaltis;
@@ -18,10 +13,6 @@ import com.utils.Time;
 import java.util.Random;
 import javax.swing.ImageIcon;
 
-/**
- *
- * @author victor
- */
 public class Notificacao {
 
     private NotificationFactory notificationFactory = new NotificationFactory(ThemePackagePresets.cleanLight());

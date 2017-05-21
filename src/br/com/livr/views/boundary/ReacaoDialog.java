@@ -1,16 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.livr.views.boundary;
 
 import br.com.livr.views.control.ReacaoDialogController;
 
-/**
- *
- * @author victor
- */
 public class ReacaoDialog extends javax.swing.JFrame {
 
     private final ReacaoDialogController reacaoDialogController = new ReacaoDialogController(this);

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.livr.views.control;
 
 import br.com.livr.Equipe;
@@ -26,10 +21,6 @@ import br.com.livr.views.boundary.MainWindow;
 import java.util.HashMap;
 import javax.swing.JTextField;
 
-/**
- *
- * @author victor
- */
 public class MainWindowController {
 
     private final MainWindow mainWindow;
@@ -66,31 +57,10 @@ public class MainWindowController {
             dialogErro.setVisible(true);
         }
 
-        if (!erro) {
-            //Criação das Equipes     
+        if (!erro) {  
             createEquipes();
-            //Autenticação 
             createTecnico();
-            //Criação das Torcidas
             setTorcidasNosTimes();
-//
-
-//            System.out.println(nomeTime);
-//            equipePlayer.getJogadores().forEach((j) -> {
-//                System.out.println(j.getNomeJogador());
-//            });
-//            
-//            System.out.println(equipePlayer.getGoleiro().getNomeJogador() + "(GK)");
-//            System.out.println(equipePlayer.getTecnico().getNome() + "(Coach)");
-//            System.out.println(nomeTimeAdv);
-//            equipeAdversaria.getJogadores().forEach((j) -> {
-//                System.out.println(j.getNomeJogador());
-//            });
-//            
-//            System.out.println(equipeAdversaria.getGoleiro().getNomeJogador() + "(GK)");
-//            System.out.println(equipeAdversaria.getTecnico().getNome() + "(Coach)");
-//
-//            System.out.println();
             new InGameWindow().setVisible(true);            
             mainWindow.dispose();
         }
@@ -104,20 +74,18 @@ public class MainWindowController {
         HashMap<TipoTorcida, Torcida> torcidasPro = new HashMap<>();
         HashMap<TipoTorcida, Torcida> torcidasContra = new HashMap<>();
 
-        //Torcidas do Time do Jogador
-        //Educada
         Torcida torcidaProEducada = new Torcida();
         torcidaProEducada.setEducado(true);
         torcidaProEducada.setTime(getEquipePlayer());
-        //Mal Educada
+        
         Torcida torcidaProMalEducada = new Torcida();
         torcidaProMalEducada.setEducado(false);
         torcidaProMalEducada.setTime(getEquipePlayer());
-        //Setando nos time do Jogador
+        
         torcidasPro.put(TipoTorcida.EDUCADA, torcidaProEducada);
         torcidasPro.put(TipoTorcida.MAL_EDUCADA, torcidaProMalEducada);
         getEquipePlayer().setTorcidas(torcidasPro);
-        //Mesmo processo para o time da IA
+        
         Torcida torcidaContraEducada = new Torcida();
         torcidaContraEducada.setEducado(true);
         torcidaContraEducada.setTime(getEquipeAdversaria());

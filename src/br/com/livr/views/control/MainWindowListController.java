@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.livr.views.control;
 
 import br.com.livr.BatedorDePenaltis;
@@ -11,7 +6,6 @@ import br.com.livr.statics.Sessao;
 import static br.com.livr.statics.Sessao.getBatedoresEquipeAdversaria;
 import static br.com.livr.statics.Sessao.getBatedoresEquipePlayer;
 import static br.com.livr.statics.Sessao.getBatedoresParticipantes;
-import static br.com.livr.statics.Sessao.getGoleiroEquipeAdversaria;
 import static br.com.livr.statics.Sessao.getGoleiroEquipePlayer;
 import static br.com.livr.statics.Sessao.getGoleirosParticipantes;
 import static br.com.livr.statics.Sessao.getGoleirosPorTime;
@@ -28,10 +22,6 @@ import javax.swing.JList;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
-/**
- *
- * @author victor
- */
 public class MainWindowListController implements ListSelectionListener {
 
     private int quantidadeItensSelecionados = 0;
@@ -54,22 +44,21 @@ public class MainWindowListController implements ListSelectionListener {
         if (getQuantidadeItensSelecionados() == getLimiteDeEscolhas() && isOnce()) {
             if (getLimiteDeEscolhas() == 4) {
                 getBatedoresEquipePlayer().clear();
-                //Reestarta lista de adversários
+                
                 getBatedoresEquipeAdversaria().addAll(getBatedoresParticipantes());
             } else {
                 setGoleiroEquipePlayer(null);
             }
             setIndicesSelecionados(lista.getSelectedIndices());
             for (int indice = 0; indice < getLimiteDeEscolhas(); indice++) {
-                if (getLimiteDeEscolhas() == 4) { //Verifica se a quantidade máxima bate com a qtd de bp ou de goleiros
+                if (getLimiteDeEscolhas() == 4) { 
                     getBatedoresEquipePlayer().add(getBatedoresParticipantes().get(getIndicesSelecionados()[indice]));
                 } else {
                     setGoleiroEquipePlayer(getGoleirosParticipantes().get(getIndicesSelecionados()[indice]));
                     setGoleiroEquipeAdversaria(cadastrarGoleiroAdversario(getGoleiroEquipePlayer()));
                 }
             }
-
-            //Pega a lista completa e remove os que são do time do jogador (para formar o time adv)
+            
             getBatedoresEquipeAdversaria().removeAll(getBatedoresEquipePlayer());
 
             setOnce(false);
@@ -97,16 +86,15 @@ public class MainWindowListController implements ListSelectionListener {
     }
 
     public static void initListasJogadores() {
-        //Cadastra os Jogadores
         setBatedoresParticipantes(new ArrayList<>());        
         int cont = 0;
         while (cont < 8) {
             getBatedoresParticipantes().add(new BatedorDePenaltis(Sessao.getNomesJogadores()[cont], (cont +1)));
             cont++;
         }
-        //Até o momento, todos são jogadores adversários
+        
         getBatedoresEquipeAdversaria().addAll(getBatedoresParticipantes());
-        //Cadastro de Goleiros
+        
         setGoleirosParticipantes(new ArrayList<>());
         getGoleirosParticipantes().add(new Goleiro("Tiago"));
         getGoleirosParticipantes().add(new Goleiro("Gabriel"));
@@ -171,7 +159,7 @@ public class MainWindowListController implements ListSelectionListener {
             goleirosParticipantesAux.add(g);
         });
         goleirosParticipantesAux.remove(goleiroEquipePlayer);
-        return goleirosParticipantesAux.get(0); //Retorna Goleiro Adv
+        return goleirosParticipantesAux.get(0); 
     }
 
     public static void cadastrarEquipeAdversaria() {

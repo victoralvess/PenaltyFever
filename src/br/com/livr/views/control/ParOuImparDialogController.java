@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.livr.views.control;
 
 import br.com.livr.Tecnico;
@@ -11,10 +6,6 @@ import br.com.livr.views.boundary.ParOuImparDialog;
 import com.notification.NotificationFactory;
 import javax.swing.JRadioButton;
 
-/**
- *
- * @author victor
- */
 public class ParOuImparDialogController {
 
     private ParOuImparDialog parOuImparDialog;

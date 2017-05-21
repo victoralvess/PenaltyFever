@@ -9,18 +9,9 @@ import br.com.livr.views.control.InGameWindowController;
 import com.notification.NotificationFactory;
 import java.util.Random;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/**
- *
- * @author Aluno_2
- */
 public class BatedorDePenaltis extends Jogador {
 
-    private final int precisaoMinimaParaChutarAoGol = 0;
+    private final int precisaoMinimaParaChutarAoGol = 35;
     private static boolean marcouGol;
     private int impacienciaTorcida;
 

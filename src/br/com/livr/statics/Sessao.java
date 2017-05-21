@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.livr.statics;
 
 import br.com.livr.Bandeirinha;
@@ -16,10 +11,6 @@ import br.com.livr.Torcida;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author victor
- */
 public abstract class Sessao {
 
     private static Equipe equipePlayer, equipeAdversaria;
@@ -29,12 +20,12 @@ public abstract class Sessao {
     ;
     private static Tecnico tecnico;
     private static Gandula gandula;
-    private static Bandeirinha bandeirinha = new Bandeirinha(65);
-    private static Juiz juiz = new Juiz(65);
+    private static Bandeirinha bandeirinha = new Bandeirinha(50);
+    private static Juiz juiz = new Juiz(50);
     private static Torcida torcidaEducadaEquipePlayer, torcidaEducadaEquipeAdversaria, torcidaMalEducadaEquipePlayer, torcidaMalEducadaEquipeAdversaria;
     private static final int JOGADORES_POR_TIME = 4;
     private static final int GOLEIROS_POR_TIME = 1;
-    private static final String[] nomesJogadores = new String[]{
+    private static final String[] NOMES_JOGADORES = new String[]{
         "Renan",
         "Leonardo",
         "Icaro",
@@ -149,7 +140,7 @@ public abstract class Sessao {
     }
 
     public static String[] getNomesJogadores() {
-        return nomesJogadores;
+        return NOMES_JOGADORES;
     }
 
     public static Torcida getTorcidaEducadaEquipePlayer() {

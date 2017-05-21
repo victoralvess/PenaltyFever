@@ -3,15 +3,6 @@ package br.com.livr.statics;
 import br.com.livr.views.boundary.Notificacao;
 import com.notification.NotificationFactory;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/**
- *
- * @author Aluno_2
- */
 public abstract class Jogador implements IAmanteDoFutebol {
 
     private boolean cartaoAmarelo, cartaoVermelho;
