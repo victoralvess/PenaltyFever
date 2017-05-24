@@ -70,6 +70,7 @@ public class InGameWindow extends javax.swing.JFrame {
         listJogadoresTimePlayer.setMinimumSize(new java.awt.Dimension(50, 57));
         listJogadoresTimePlayer.setPreferredSize(new java.awt.Dimension(50, 57));
         listJogadoresTimePlayer.setSelectionBackground(new java.awt.Color(35, 182, 132));
+        listJogadoresTimePlayer.setSelectionForeground(new java.awt.Color(255, 255, 255));
         listJogadoresTimePlayer.setVisibleRowCount(1);
         scrollPaneBatedores.setViewportView(listJogadoresTimePlayer);
 
@@ -88,6 +89,7 @@ public class InGameWindow extends javax.swing.JFrame {
         listRelatorio.setForeground(new java.awt.Color(35, 182, 132));
         listRelatorio.setFocusable(false);
         listRelatorio.setSelectionBackground(new java.awt.Color(35, 182, 132));
+        listRelatorio.setSelectionForeground(new java.awt.Color(255, 255, 255));
         scrollPaneRelatorio.setViewportView(listRelatorio);
 
         btnPlayAgain.setBackground(new java.awt.Color(35, 182, 132));
