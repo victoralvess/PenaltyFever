@@ -11,7 +11,7 @@ import java.util.Random;
 
 public class BatedorDePenaltis extends Jogador {
 
-    private final int precisaoMinimaParaChutarAoGol = 35;
+    private final int precisaoMinimaParaChutarAoGol = 40;
     private static boolean marcouGol;
     private int impacienciaTorcida;
 
